@@ -1,0 +1,42 @@
+{
+  "name": "qualityone",
+  "version": "1.0.0",
+  "description": "To make it easy for you to get started with GitLab, here's a list of recommended next steps.",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development gulp",
+    "build": "cross-env NODE_ENV=production gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/muoivy/qualityone.git"
+  },
+  "author": "Tran Muoi Vy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/muoivy/qualityone/issues"
+  },
+  "homepage": "https://gitlab.com/muoivy/qualityone#readme",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "connect-ssi": "^1.1.1",
+    "cross-env": "^7.0.3",
+    "del": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-noop": "^1.0.1",
+    "gulp-notify": "^4.0.0",
+    "gulp-pleeease": "^2.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-ssi": "^0.1.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-wait": "0.0.2",
+    "sass": "^1.63.3"
+  }
+}
