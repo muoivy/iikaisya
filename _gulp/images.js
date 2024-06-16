@@ -13,17 +13,17 @@ const { src, dest } = gulp;
 // Image optimization task
 const optimizeImages = () => {
   return src(app.image)
-    .pipe(imagemin([
-      gifsicle({ interlaced: true }),
-      mozjpeg({ quality: 75, progressive: true }),
-      optipng({ optimizationLevel: 5 }),
-      svgo({
-        plugins: [
-          { removeViewBox: true },
-          { cleanupIDs: false }
-        ]
-      })
-    ]))
+    // .pipe(imagemin([
+    //   gifsicle({ interlaced: true }),
+    //   mozjpeg({ quality: 75, progressive: true }),
+    //   optipng({ optimizationLevel: 5 })
+    //   svgo({
+    //     plugins: [
+    //       { removeViewBox: true },
+    //       { cleanupIDs: false }
+    //     ]
+    //   })
+    // ]))
     .pipe(dest(dist.dest));
 };
 

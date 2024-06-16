@@ -112,7 +112,7 @@
 /* Header
 ********************************************** */
   var header = $('.l-header'),
-    headerHamburger = $('.js-hamburger'),
+    headerHamburger = $('.l-header_hamburger'),
     headerNav = $('.l-header_nav');
 
   // Header Scroll
@@ -128,7 +128,8 @@
   headerHamburger.click(function () {
     $(this).toggleClass('is-active');
     headerNav.toggleClass('is-active');
-    $('.l-main').toggleClass('is-active');
+    $('.l-header_overlay').toggleClass('is-active');
+    $('.nav-content').toggleClass('is-active');
     $('html').toggleClass('no-scroll');
   });
 
@@ -136,201 +137,12 @@
   $('.l-header_nav .js-anchor').click(function () {
     headerHamburger.toggleClass('is-active');
     headerNav.toggleClass('is-active');
+    $('.l-header_overlay').toggleClass('is-active');
+    $('.nav-content').toggleClass('is-active');
     $('html').toggleClass('no-scroll');
   });
 
 
-/* Splide
-********************************************** */
-if ($(".top-mainvisual_image").length > 0) {
-  const splide01 = new Splide('.top-mainvisual_image', {
-    type: "loop",
-    autoWidth: true,
-    arrows: false,
-    pagination: false,
-    drag: false,
-    autoScroll: {
-      autoStart: true,
-      speed: 0.75,
-      pauseOnHover: false,
-      pauseOnFocus: false,
-    }
-  }).mount(window.splide.Extensions);
-}
-
-if ($(".top-work_img01").length > 0) {
-  const splide02 = new Splide('.top-work_img01', {
-    type: "loop",
-    autoWidth: true,
-    arrows: false,
-    pagination: false,
-    drag: false,
-    autoScroll: {
-      autoStart: true,
-      speed: 0.75,
-      pauseOnHover: false,
-      pauseOnFocus: false,
-    }
-  }).mount(window.splide.Extensions);
-}
-
-if ($(".top-work_img02").length > 0) {
-  const splide03 = new Splide('.top-work_img02', {
-    type: "loop",
-    autoWidth: true,
-    arrows: false,
-    pagination: false,
-    drag: false,
-    autoScroll: {
-      autoStart: true,
-      speed: -0.75,
-      pauseOnHover: false,
-      pauseOnFocus: false,
-    }
-  }).mount(window.splide.Extensions);
-}
-
-if ($(".top-story_image").length > 0) {
-  const splide03 = new Splide('.top-story_image', {
-    type: "loop",
-    autoWidth: true,
-    arrows: false,
-    pagination: false,
-    drag: false,
-    autoScroll: {
-      autoStart: true,
-      speed: 0.75,
-      pauseOnHover: false,
-      pauseOnFocus: false,
-    }
-  }).mount(window.splide.Extensions);
-}
-
-/* Screen
-********************************************** */
-const fh = window.ontouchstart === null;
-const ee = window.matchMedia("(max-width: 767px)").matches;
-
-const screenDirection = () => {
-  if ($(".screen").length > 0) {
-    const t = document.querySelector(".screen").getBoundingClientRect().height / 3;
-    const e = fh || ee;
-
-    gsap.set(".screen__back-image", { scale: 1.2 });
-
-    gsap.to(".screen__wrap--career .screen__back-image", {
-      scale: 1,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".screen",
-        start: "top bottom",
-        end: `top+=${t + window.innerHeight * 0.8} top`,
-        scrub: true
-      }
-    });
-
-    const i = window.innerHeight;
-    // const i = window.innerHeight * 2;
-    const n = e ? `bottom top+=${i}` : "bottom bottom";
-
-    ScrollTrigger.create({
-      trigger: ".screen",
-      start: "top top",
-      anticipatePin: 1,
-      end: n,
-      pin: ".screen__pin-box",
-      pinSpacing: false
-    });
-
-    if (!e) {
-      gsap.set(".screen__wrap--career .screen__back-image-box", { y: "-60vh" });
-      gsap.to(".screen__wrap--career .screen__back-image-box", {
-        y: "0vh",
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".screen",
-          start: "top bottom",
-          end: "top top",
-          scrub: true
-        }
-      });
-    }
-    // let r = gsap.timeline();
-    // r.to(".screen__wrap--career", {
-    //     startAt: {
-    //         opacity: 1
-    //     },
-    //     duration: 1.5,
-    //     opacity: 0,
-    //     ease: "none"
-    // }, "hide"),
-
-    // ScrollTrigger.create({
-    //   trigger: ".screen",
-    //   animation: r,
-    //   start: `top+=${t} top`,
-    //   end: `top+=${t + window.innerHeight * .8} top`,
-    //   scrub: !0,
-    //   onUpdate: c=>{
-    //     document.querySelector(".screen__wrap--career").style.pointerEvents = c.progress > .5 ? "none" : "auto"
-    //   }
-    // });
-
-    // e || gsap.to(".screen", {
-    //   y: `-${window.innerHeight / 5}`,
-    //   ease: "none",
-    //   scrollTrigger: {
-    //     trigger: ".top-history",
-    //     start: "top bottom",
-    //     end: "top top",
-    //     scrub: !0
-    //   }
-    // });
-
-  }
-};
-
-screenDirection()
-
-/* Function to wrap each character in spans
-********************************************** */
-function wrapCharactersInSpans(text) {
-  var wrappedText = '';
-  for (var i = 0; i < text.length; i++) {
-    if (text[i] === ' ') {
-      wrappedText += '<span class="txt-space">' + text[i] + '</span>';
-    } else if (text[i] === '-') {
-      wrappedText += '<span class="txt-chars txt-font01">' + text[i] + '</span>';
-    } else {
-      wrappedText += '<span class="txt-chars">' + text[i] + '</span>';
-    }
-  }
-  return wrappedText;
-}
-
-// Apply the function to the target elements
-$('.js-letter').each(function() {
-  var text = $(this).text();
-  var wrappedText = wrapCharactersInSpans(text);
-  $(this).html(wrappedText);
-});
-
-
-/* TOP STORY
-********************************************** */
-if ($("#story").length > 0) {
-  $(window).scroll(function() {
-    var scrollPosition = $(window).scrollTop();
-    var storyPosition = $('#story').offset().top - 200;
-    var storyHeight = $('#story').outerHeight();
-
-    if (scrollPosition >= storyPosition && scrollPosition < storyPosition + storyHeight) {
-        $('#story').addClass('is-active');
-    } else {
-        $('#story').removeClass('is-active');
-    }
-  });
-}
 
 /* INVIEW
 ********************************************** */
