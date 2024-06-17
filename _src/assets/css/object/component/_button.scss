@@ -34,6 +34,7 @@
     &::after {
       transform: scale(2.25);
       transform-origin: center;
+      background: #1559A6;
     }
   }
   &--white {
@@ -46,6 +47,26 @@
       background: #F9D20E;
       border-color: #fff;
       color: #1559A6;
+    }
+  }
+
+  &_border {
+    background: none !important;
+    border: none !important;
+    border-bottom: 1px solid #222 !important;
+    border-radius: 0 !important;
+    line-height: 1;
+    padding: 0 0 1.2rem;
+    color: #222 !important;
+    min-width: 20.7rem;
+    &::after {
+      right: 0;
+      background: #1559A6;
+      top: calc(50% - 10px);
+    }
+    &:hover {
+      color: #1559A6 !important;
+      border-color: #1559A6 !important;
     }
   }
 

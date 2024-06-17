@@ -28,7 +28,7 @@ body {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.05em;
-  color: #595757;
+  color: #222;
   -webkit-text-size-adjust: 100%;
   @include mq(sp) {
     font-size: vw(14);
@@ -107,10 +107,10 @@ textarea {
 
 .l-inner {
   position: relative;
-  width: 1110px;
+  width: 1160px;
   margin: 0 auto;
   @media only screen and (max-width: 1280px) {
-    width: 111rem;
+    width: 116rem;
   }
   @include mq(sp) {
     padding: 0 vw(21);

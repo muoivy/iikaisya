@@ -15,8 +15,26 @@
     width: 6.8rem;
     line-height: 6.8rem;
     border-right: 1px solid #222;
+    text-align: center;
     &:last-child {
       border-right: none;
     }
   }
+}
+
+.c-hashtag {
+  font-family: $cabin_condensed;
+  font-size: 12rem;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  color: #1559A6;
+  font-weight: 700;
+}
+
+.c-ttl {
+  font-family: $cabin_condensed;
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: 0;
+  margin-bottom: .4rem;
 }
