@@ -1,3 +1,152 @@
-.top-page {
+.top-mainvisual {
+  // background: #F9D20E;
+  // // background: #F9D20E url('../img/top/bg_mainvisual_04.png') no-repeat top right / vw_pc(1255) vw_pc(727);
+  background: url('../img/top/bg_mainvisual_04.png') no-repeat top right / 125.5rem 72.7rem;
+  position: relative;
+  text-align: center;
+  padding: 11.5rem 0 5.5rem;
+  &.is-inview {
+    .top-mainvisual_ttl {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .top-mainvisual_image .image {
+      opacity: 1;
+      visibility: visible;
+      animation: scaleIn 1.2s 2.5s forwards;
+    }
+  }
+  &::before {
+    content: '';
+    width: 100%;
+    height: vw_pc(158);
+    background: url('../img/top/bg_mainvisual_05.png') no-repeat center bottom / contain;
+    position: absolute;
+    top: calc(100% - 16rem);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+  }
+  &::after {
+    content: '';
+    width: 100%;
+    height: calc(100% - 11rem);
+    background: #F9D20E;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 
+
+  &_bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #F9D20E;
+    text-align: right;
+    z-index: 3;
+    img {
+      width: 125.5rem;
+    }
+  }
+
+  &_ttl {
+    max-width: 79.85rem;
+    display: inline-block;
+    margin-left: 4rem;
+    opacity: 0;
+    transform: translateY(30rem);
+    transition: opacity 0.5s 1s, transform 0.5s 2s, top 0.5s 2s;
+
+  }
+
+  &_image {
+    max-width: 132.2rem;
+    height: 53.8rem;
+    position: relative;
+    margin: -12.6rem auto 0;
+    &::before {
+      content: '';
+      width: 32.9rem;
+      height: 11.1rem;
+      background: url('../img/top/icon_mainvisual_13.png') no-repeat center / contain;
+      position: absolute;
+      bottom: 11.6rem;
+      left: calc(50% - 7rem);
+    }
+    .image {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0.7);
+      transition: opacity 1.2s 3s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    .image01 {
+      width: 32rem;
+      top: -3.8rem;
+      left: -2.7rem;
+    }
+    .image02 {
+      width: 34.9rem;
+      top: 10.2rem;
+      left: 14.3rem;
+    }
+    .image03 {
+      width: 29.7rem;
+      top: 9.6rem;
+      left: 42.5rem;
+      z-index: 3;
+    }
+    .image04 {
+      width: 34.65rem;
+      top: 8.2rem;
+      right: 25.7rem;
+      z-index: 2;
+    }
+    .image05 {
+      width: 21rem;
+      top: 1.5rem;
+      right: 13.1rem;
+    }
+    .image06 {
+      width: 18.9rem;
+      top: -3.6rem;
+      right: -1.5rem;
+    }
+  }
+
+  &_illustration {
+    width: 132.2rem;
+    position: absolute;
+    bottom: 9.1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+  }
+
+  &_scroll {
+    position: relative;
+    z-index: 5;
+    color: #fff;
+    font-size: 2rem;
+    font-family: $cabin_condensed;
+    font-weight: 700;
+    letter-spacing: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10.4rem;
+    &::after {
+      content: '';
+      width: 1.8rem;
+      height: 1.7rem;
+      background: url('../img/icon_arrow_01.svg') no-repeat center / contain;
+      display: inline-block;
+      margin-top: .8rem;
+    }
+  }
 }

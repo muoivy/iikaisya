@@ -4,3 +4,19 @@
 .c-heading {
 
 }
+
+.c-lead {
+  display: inline-flex;
+  border: 1px solid #222222;
+  span {
+    font-size: 4.2rem;
+    color: #222222;
+    background: #fff;
+    width: 6.8rem;
+    line-height: 6.8rem;
+    border-right: 1px solid #222;
+    &:last-child {
+      border-right: none;
+    }
+  }
+}

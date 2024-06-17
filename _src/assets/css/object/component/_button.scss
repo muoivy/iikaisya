@@ -2,5 +2,51 @@
 // Button
 // -----------------------------------------------------------------
 .c-btn {
+  display: inline-block;
+  min-width: 23.5rem;
+  line-height: 5.8rem;
+  background: #1559A6;
+  border-radius: 3.7rem;
+  color: #fff;
+  font-family: $cabin_condensed;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  position: relative;
+  border: 2px solid #F9D20E;
+  padding: 0 1rem 0 4rem;
+  text-align: left;
+  &::after {
+    content: '';
+    width: .8rem;
+    height: .8rem;
+    border-radius: 50%;
+    background: #F9D20E;
+    position: absolute;
+    top: calc(50% - .4rem);
+    right: 2.4rem;
+    transition: all .3s ease-in-out;
+  }
+  &:hover {
+    background: #F9D20E;
+    border-color: #1559A6;
+    color: #1559A6;
+    &::after {
+      transform: scale(2.25);
+      transform-origin: center;
+    }
+  }
+  &--white {
+    background: #fff;
+    color: #222222;
+    &::after {
+      background: #1559A6;
+    }
+    &:hover {
+      background: #F9D20E;
+      border-color: #fff;
+      color: #1559A6;
+    }
+  }
 
 }

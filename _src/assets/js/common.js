@@ -19,17 +19,18 @@
 /* Loading
 ********************************************** */
   $(document).ready(function() {
-    if ($(".js-loading").length > 0) {
-      var e = $(".js-loading")
-      setTimeout(function() {
-        e.addClass("is-active")
-      }, 400),
-      setTimeout(function() {
-        inview();
-      }, 4000)
-    } else {
-      inview();
-    }
+    inview();
+    // if ($(".js-loading").length > 0) {
+    //   var e = $(".js-loading")
+    //   setTimeout(function() {
+    //     e.addClass("is-active")
+    //   }, 400),
+    //   setTimeout(function() {
+    //     inview();
+    //   }, 4000)
+    // } else {
+    //   inview();
+    // }
   });
 
 /* SET VW
@@ -142,6 +143,15 @@
     $('html').toggleClass('no-scroll');
   });
 
+
+  /* FOOTER BUTTON
+********************************************** */
+$('.sec-recruit_btn').on( "mouseenter", function() {
+  $('.sec-recruit_image').addClass('is-zoom');
+})
+.on( "mouseleave", function() {
+  $('.sec-recruit_image').removeClass('is-zoom');
+});
 
 
 /* INVIEW
