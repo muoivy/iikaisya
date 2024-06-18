@@ -153,6 +153,23 @@ $('.sec-recruit_btn').on( "mouseenter", function() {
   $('.sec-recruit_image').removeClass('is-zoom');
 });
 
+/* TOP INTERVIEW SLIDER
+********************************************** */
+const swiper = new Swiper('.top-interview_slider', {
+  // Optional parameters
+  slidesPerView: 'auto',
+  autoplay: true,
+  loop: true,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.top-interview_slider_next',
+    prevEl: '.top-interview_slider_prev',
+  },
+
+});
+
+
 
 /* INVIEW
 ********************************************** */
