@@ -1,0 +1,288 @@
+.culture-appeal {
+  padding: 14rem 0 0;
+
+  &_content {
+    position: relative;
+    padding: 5rem 0;
+    &::before {
+      content: '';
+      width: calc(50% + 58rem);
+      height: 100%;
+      background: #FDE467;
+      border-radius: 0 8rem 8rem 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .l-inner {
+    padding-left: 8rem;
+    &::after {
+      content: '';
+      width: 33.5rem;
+      height: 15rem;
+      background: url('../img/culture/icon_01.png') no-repeat center / contain;
+      position: absolute;
+      bottom: -7rem;
+      right: 9rem;
+    }
+  }
+
+  &_lead {
+    font-size: 2.2rem;
+    line-height: 2;
+    font-weight: 700;
+    margin: 3rem 0 3.4rem;
+    letter-spacing: 0.05em;
+  }
+
+  &_copy {
+    font-size: 1.8rem;
+    line-height: 2;
+    font-weight: 700;
+    max-width: 67.4rem;
+    letter-spacing: 0.05em;
+  }
+
+  &_image {
+    width: 56.2rem;
+    position: absolute;
+    top: -8.6rem;
+    right: -6.5rem;
+  }
+}
+
+
+.culture-welfare {
+  padding: 6.5rem 0 0;
+
+  .l-inner {
+    padding: 0 4rem;
+  }
+
+  &_ttl {
+    margin-left: 4rem;
+    margin-bottom: 5.5rem;
+  }
+
+  &_box {
+    background: url('../img/culture/bg_01.png') no-repeat center / cover;
+    border-radius: 1.5rem;
+    border: 1px solid #222;
+    display: flex;
+    padding: 4.3rem 8.5rem 3.2rem 38rem;
+    position: relative;
+
+    & + .culture-welfare_box {
+      margin-top: 3.7rem;
+    }
+
+    &:nth-last-child(2) {
+      .box-image {
+        width: 31.2rem;
+        top: -2.6rem;
+        left: 4.2rem;
+      }
+    }
+
+    .box-image {
+      position: absolute;
+      width: 32.85rem;
+      left: 2.7rem;
+      top: .8rem;
+    }
+
+    .box-ttl {
+      font-size: 2.2rem;
+    }
+
+    .box-copy {
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 2;
+      letter-spacing: 0.05em;
+      margin-top: 3.1rem;
+    }
+  }
+
+  &_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 5.3rem;
+    .item {
+      width: calc(25% - 0.7%);
+      border: 1px solid #643617;
+      background: url('../img/culture/bg_02.png') no-repeat center / cover;
+      border-radius: 1.5rem;
+      padding: 1.6rem 1rem 2rem;
+    }
+    .item-ttl {
+      font-size: 2rem;
+      background: #fff;
+      border: 1px solid #222;
+      border-radius: 3rem;
+      line-height: 1;
+      padding: .8rem 1.8rem;
+      width: max-content;
+      margin: 0 auto 1.4rem;
+      letter-spacing: 0;
+    }
+    .item-icon {
+      width: 11.5rem;
+      margin: 0 auto .8rem;
+    }
+    .item-copy {
+      font-size: 1.6rem;
+      line-height: 1.6;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      padding: 0 .5rem;
+    }
+  }
+}
+
+
+.culture-number {
+  padding: 14rem 0 18.6rem;
+
+  .l-inner {
+    padding: 0 4rem;
+    &::after {
+      content: '';
+      width: 31.65rem;
+      height: 15.35rem;
+      background: url('../img/culture/icon_02.png') no-repeat center / contain;
+      position: absolute;
+      top: -6.5rem;
+      right: 3.5rem;
+    }
+  }
+
+  &_ttl {
+    margin-left: 4rem;
+  }
+
+  &_list {
+    margin-top: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7rem 1rem;
+
+    .item {
+      width: 35.3rem;
+      height: 31.1rem;
+      border: 1px solid #222;
+      background: url('../img/culture/bg_number_01.png') no-repeat center / cover;
+      position: relative;
+
+      &:nth-child(2) {
+        background-image: url('../img/culture/bg_number_02.png');
+      }
+      &:nth-child(3) {
+        background-image: url('../img/culture/bg_number_03.png');
+      }
+      &:nth-child(4) {
+        background-image: url('../img/culture/bg_number_04.png');
+      }
+      &:nth-child(5) {
+        background-image: url('../img/culture/bg_number_05.png');
+      }
+      &:nth-child(6) {
+        background-image: url('../img/culture/bg_number_06.png');
+      }
+      &:nth-child(7) {
+        background-image: url('../img/culture/bg_number_07.png');
+      }
+      &:nth-child(8) {
+        background-image: url('../img/culture/bg_number_08.png');
+      }
+    }
+
+    .item-ttl {
+      width: 28.2rem;
+      line-height: 5.4rem;
+      background: url('../img/culture/bg_ttl_01.png') no-repeat center / contain;
+      border: 1px solid #222;
+      position: absolute;
+      bottom: -2.7rem;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    .item-number {
+      color: #1559A6;
+      font-weight: 700;
+      position: absolute;
+      line-height: 1;
+      &.number01 {
+        top: .8rem;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: max-content;
+      }
+      &.number02 {
+        top: 9rem;
+        right: 3rem;
+      }
+      &.number03 {
+        top: 9rem;
+        left: 2rem;
+      }
+      &.number04 {
+        top: 10rem;
+        left: 3rem;
+      }
+      &.number05 {
+        top: 3rem;
+        left: 0;
+        right: 0;
+        width: max-content;
+        margin: 0 auto;
+      }
+      &.number06,
+      &.number07,
+      &.number08 {
+        top: 2rem;
+        left: 0;
+        right: 0;
+        width: max-content;
+        margin: 0 auto;
+      }
+      dl {
+        display: flex;
+        align-items: center;
+        font-size: 2.2rem;
+        dt {
+          width: 13rem;
+          flex: 0 0 auto;
+        }
+        dd {
+          span {
+            font-family: $cabin_condensed;
+            font-size: 4.2rem;
+          }
+        }
+      }
+      ul {
+        display: flex;
+        gap: 1rem;
+      }
+      .txt01 {
+        font-size: 3.2rem;
+        span {
+          font-family: $cabin_condensed;
+          font-size: 9.6rem;
+        }
+      }
+      .txt02 {
+        font-size: 2.2rem;
+        text-align: center;
+      }
+    }
+  }
+}

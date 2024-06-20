@@ -196,6 +196,15 @@
       left: 13.9rem;
     }
 
+    .splide__number {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      position: absolute;
+      top: 2.8rem;
+      left: 8.5rem;
+    }
+
     .interview-gallery_main {
       border-radius: 1.6rem;
       overflow: hidden;
@@ -251,5 +260,181 @@
       }
     }
   }
-
 }
+
+.interview-detail-page {
+  .sec-recruit {
+    margin-top: vw_pc(-160);
+  }
+}
+
+.interview-detail_mainvisual {
+  .l-inner {
+    width: 98rem;
+    padding: 13.1rem 0 0;
+    height: 100%;
+    &::before {
+      content: '';
+      width: 124.2rem;
+      height: 34.15rem;
+      background: url('../img/interview/bg_mainvisual_detail.png') no-repeat center / contain;
+      position: absolute;
+      bottom: -3.2rem;
+      left: -15rem;
+      z-index: 2;
+    }
+  }
+  .number {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .sub-mainvisual_ttl {
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+    .c-lead span {
+      font-size: 4.2rem;
+      width: 6.2rem;
+      line-height: 6.8rem;
+    }
+    .info {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+  }
+  .copy {
+    width: 56.1rem;
+    height: 21.2rem;
+    background: url('../img/interview/bg_text_01.png') no-repeat center / cover;
+    display: flex;
+    align-items: center;
+    padding: 0 7rem;
+    margin-top: 1.7rem;
+    margin-left: -2.2rem;
+    position: relative;
+    z-index: 3;
+  }
+  .text {
+    font-size: 1.8rem;
+    line-height: 2;
+    font-weight: 700;
+  }
+  .sub-mainvisual_image {
+    width: 24.1rem;
+    position: absolute;
+    right: calc(50% - 42rem);
+    left: auto;
+    transform: unset;
+    bottom: 0;
+  }
+}
+
+.interview-detail {
+  padding: 14.4rem 0 12rem;
+
+  &_content {
+    background: #FDE467;
+    border-radius: 8rem;
+    padding: 7rem 3rem 6rem;
+  }
+
+  .content-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2.7rem;
+    font-family: $noto_san;
+    color: #321200;
+
+    & + .content-text {
+      margin-top: 3rem;
+    }
+
+    &_ttl {
+      background: #fff;
+      border-radius: 2.8rem 2.8rem 2.8rem 0;
+      font-size: 2.4rem;
+      line-height: 1.45833333;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+      display: flex;
+      align-items: flex-start;
+      gap: .8rem;
+      padding: 2rem;
+      span {
+        width: 3.4rem;
+        height: 3.4rem;
+        background: #1559A6;
+        border-radius: 50%;
+        color: #fff;
+        font-family: $cabin_condensed;
+        font-size: 1.6rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &_copy {
+      max-width: 60.4rem;
+      background: #fff;
+      border-radius: 2.8rem 2.8rem 0 2.8rem;
+      padding: 2rem;
+      font-size: 1.5rem;
+      line-height: 2;
+      margin-top: 3rem;
+      letter-spacing: 0;
+    }
+  }
+
+  .content-image {
+    max-width: 91.8rem;
+    margin: 6rem auto;
+    border-radius: 1.6rem;
+    overflow: hidden;
+  }
+}
+
+.interview-list {
+  background: url('../img/interview/bg_01.png') no-repeat center / cover;
+  padding: 10rem 0 vw_pc(240);
+
+  &_ttl {
+    margin-left: 7rem;
+  }
+
+  &_slider {
+    margin-top: 3rem;
+  }
+
+  .top-interview_slider {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    padding-left: vw_pc(133);
+  }
+
+  .top-interview_slider_prev,
+  .top-interview_slider_next {
+    width: 6.4rem;
+    height: 6.4rem;
+    background: url('../img/icon_arrow_02.png') no-repeat center / contain;
+    bottom: .7rem;
+    top: auto;
+    left: auto;
+    right: calc(50% - 30rem);
+    margin-top: 0;
+    &::after {
+      content: none;
+    }
+  }
+  .top-interview_slider_prev {
+    right: calc(50% - 16rem);
+    transform: scale(-1);
+  }
+}
+

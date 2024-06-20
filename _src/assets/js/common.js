@@ -7,7 +7,7 @@
 /* Document Ready
 ********************************************** */
   $(document).ready(function() {
-    console.log('muoivy');
+
   });
 
   $( window ).on( "resize", function() {
@@ -192,7 +192,8 @@ $('.interview-content_item .c-btn').hover(
   }
 );
 
-document.addEventListener( 'DOMContentLoaded', function () {
+
+if ($(".interview-gallery_slider").length > 0) {
   var main = new Splide( '.interview-gallery_main', {
     type      : 'fade',
     rewind    : true,
@@ -210,8 +211,34 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
   main.sync( thumbnails );
   main.mount();
-  thumbnails.mount();
-} );
+  thumbnails.mount({
+    SlideNumber
+  });
+}
+
+function SlideNumber( Splide, Components ) {
+  const { track } = Components.Elements;
+
+  let elm;
+
+  function mount() {
+    elm = document.createElement( 'div' );
+    elm.className = "splide__number";
+
+    track.parentElement.insertBefore( elm, track.nextSibling );
+
+    update();
+    Splide.on( 'move', update );
+  }
+
+  function update() {
+    elm.textContent = `${ Splide.index + 1 }/${ Splide.length }`;
+  }
+
+  return {
+    mount,
+  };
+}
 
 
 /* Function to wrap each character in spans
