@@ -7,17 +7,19 @@
 
 .c-lead {
   display: inline-flex;
-  border: 1px solid #222222;
+  flex-wrap: wrap;
+  padding: 1px 0 0;
   span {
     font-size: 4.2rem;
     color: #222222;
     background: #fff;
     width: 6.8rem;
     line-height: 6.8rem;
-    border-right: 1px solid #222;
+    border: 1px solid #222;
     text-align: center;
+    margin: -1px -1px 0px;
     &:last-child {
-      border-right: none;
+      width: 6.7rem;
     }
   }
 }

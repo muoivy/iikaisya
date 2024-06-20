@@ -1,0 +1,223 @@
+.company-message {
+  padding: 14.2rem 0 0;
+
+  &_content {
+    position: relative;
+    padding-bottom: 5rem;
+    &::before {
+      content: '';
+      width: calc(50% + 58rem);
+      height: 100%;
+      background: #FDE467;
+      border-radius: 0 8rem 8rem 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &::after {
+      content: '';
+      width: calc(50% - 10rem);
+      height: 41.1rem;
+      background: url('../img/company/bg_mainvisual_01.png') no-repeat right bottom / cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 0 0 10rem 0;
+    }
+  }
+
+  &_heading {
+    display: flex;
+    gap: 2.4rem;
+  }
+
+  &_image {
+    width: 51.3rem;
+    height: 41.1rem;
+    flex: 0 0 auto;
+    //
+    position: relative;
+    margin-left: -6rem;
+    z-index: 1;
+    margin-right: 3rem;
+    img {
+      width: 33rem;
+      position: absolute;
+      bottom: -.7rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &_info {
+    padding: 5.2rem 4rem 0 0;
+  }
+
+  &_lead {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.6;
+    margin: 3.6rem 0 2.4rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #222;
+  }
+
+  &_desc {
+    font-size: 2.2rem;
+    line-height: 1.6;
+    font-weight: 700;
+  }
+
+  &_copy {
+    font-size: 1.8rem;
+    line-height: 2;
+    font-weight: 700;
+    margin-top: 3rem;
+    padding: 0 10.4rem 0 5.5rem;
+    letter-spacing: 0.05em;
+  }
+}
+
+
+.company-instruction {
+  padding: 11.9rem 0 15rem;
+
+  &_inner {
+    max-width: 117.8rem;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    &::before {
+      content: '';
+      width: 100%;
+      height: 155.9rem;
+      background: url('../img/company/bg_instruction.png') no-repeat center / contain;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+
+  &_content {
+    position: relative;
+    z-index: 1;
+    padding: 9.8rem 7.8rem 0;
+  }
+
+  &_ttl {
+    max-width: 79.3rem;
+    margin-left: 2.5rem;
+  }
+
+  &_list {
+    margin-top: 6.8rem;
+  }
+
+  &_item {
+    display: flex;
+
+    & + .company-instruction_item {
+      margin-top: 12.2rem;
+    }
+
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+      .item-image {
+        transform: rotate(-2.73deg);
+        left: 1.6rem;
+      }
+    }
+
+    .item-text {
+      width: 51rem;
+      height: 28.8rem;
+      flex: 0 0 auto;
+      background: url('../img/company/bg_01.png') no-repeat center / cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 0 0 2.5rem;
+    }
+
+    .item-ttl {
+      font-size: 2.4rem;
+      line-height: 1.3;
+      letter-spacing: 0.05em;
+      min-height: 6.2rem;
+    }
+
+    .item-copy {
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 2;
+      margin-top: 2.4rem;
+    }
+
+    .item-image {
+      width: 52.1rem;
+      height: 33.9rem;
+      flex: 0 0 auto;
+      position: relative;
+      padding: 1rem;
+      background: #fff;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+      transform: rotate(2.73deg);
+      margin-top: -7.4rem;
+      left: -1.4rem;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+
+
+.company-intro {
+  padding: 11.9rem 0 8.5rem;
+
+  &_content {
+    border: 1px solid #222;
+    border-radius: 8rem;
+    background: #FDE467;
+    padding: 5rem 8rem 11.2rem;
+    position: relative;
+    &::after {
+      content: '';
+      width: 120.7rem;
+      height: 13.6rem;
+      background: url('../img/company/icon_01.png') no-repeat center / contain;
+      position: absolute;
+      bottom: 1.5rem;
+      left: -1.6rem;
+    }
+  }
+
+  &_box {
+    background: #fff;
+    margin-top: 4rem;
+    border-radius: 4rem;
+    padding: 5.6rem 6rem;
+
+    dl {
+      display: flex;
+      border-bottom: 1px solid rgba($color: #222, $alpha: .6);
+      font-size: 2rem;
+      line-height: 1.3;
+      font-weight: 700;
+      padding: 2.8rem 1rem;
+    }
+
+    dt {
+      width: 20rem;
+      flex: 0 0 auto;
+    }
+
+    dd {
+      width: 100%;
+    }
+  }
+}

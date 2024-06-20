@@ -169,7 +169,73 @@ const swiper = new Swiper('.top-interview_slider', {
 
 });
 
+/* BUSINESS MODAL
+********************************************** */
+$('.business-content_btn a').on('click', function(e) {
+  e.preventDefault();
+  var modalId = $(this).attr('href');
+  $(modalId).addClass('is-acitve');
+});
 
+$('.modal-btn, .modal-overlay').on('click', function() {
+  $(this).closest('.business-content_modal').removeClass('is-acitve'); // Close the modal
+});
+
+/* INTERVIEW
+********************************************** */
+$('.interview-content_item .c-btn').hover(
+  function() {
+    $(this).closest('.interview-content_item').find('.item-image').addClass('is-active');
+  },
+  function() {
+    $(this).closest('.interview-content_item').find('.item-image').removeClass('is-active');
+  }
+);
+
+document.addEventListener( 'DOMContentLoaded', function () {
+  var main = new Splide( '.interview-gallery_main', {
+    type      : 'fade',
+    rewind    : true,
+    pagination: false,
+    arrows    : false,
+  } );
+
+  var thumbnails = new Splide( '.interview-gallery_thumbnail', {
+    rewind      : true,
+    pagination  : false,
+    isNavigation: true,
+    perPage: 5,
+    gap: 15
+  } );
+
+  main.sync( thumbnails );
+  main.mount();
+  thumbnails.mount();
+} );
+
+
+/* Function to wrap each character in spans
+********************************************** */
+function wrapCharactersInSpans(text) {
+  var wrappedText = '';
+  for (var i = 0; i < text.length; i++) {
+    if (text[i] === ' ') {
+      wrappedText += '<span class="txt-space">' + text[i] + '</span>';
+    } else if (text[i] === '-') {
+      wrappedText += '<span class="txt-chars txt-font01">' + text[i] + '</span>';
+    } else {
+      wrappedText += '<span class="txt-chars">' + text[i] + '</span>';
+    }
+  }
+  return wrappedText;
+}
+
+// Apply the function to the target elements
+$('.js-letter').each(function() {
+  var text = $(this).text();
+  var wrappedText = wrapCharactersInSpans(text);
+  $(this).html(wrappedText);
+});
 
 /* INVIEW
 ********************************************** */
