@@ -1,0 +1,107 @@
+.program-experience {
+  padding: 14rem 0 0;
+
+  &_content {
+    background: url('../img/program/bg_01.png') no-repeat center / cover;
+    display: flex;
+  }
+
+  &_image {
+    max-width: 49rem;
+    flex: 0 0 auto;
+  }
+
+  &_text {
+    padding: 5rem 10rem 16rem 8rem;
+    position: relative;
+    &::after {
+      content: '';
+      width: 43.1rem;
+      height: 13.15rem;
+      background: url('../img/program/icon_01.png') no-repeat center / contain;
+      position: absolute;
+      bottom: 1.4rem;
+      right: 2rem;
+    }
+  }
+
+  &_ttl {
+    max-width: 33rem;
+  }
+
+  &_lead {
+    font-size: 2.2rem;
+    line-height: 2;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 3rem 0 2.4rem;
+  }
+
+  &_copy {
+    font-size: 1.8rem;
+    line-height: 2;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+}
+
+
+.program-sec01 {
+  padding: 14rem 0 0;
+
+  &_ttl {
+    margin-left: 8rem;
+  }
+
+  &_content {
+    position: relative;
+    padding: 0 7rem;
+    margin-top: 12.7rem;
+  }
+
+  &_image {
+    max-width: 57.65rem;
+    position: absolute;
+    top: -10.4rem;
+    left: 3rem;
+  }
+
+  &_text {
+    max-width: 51rem;
+    min-height: 52.7rem;
+    margin-left: auto;
+    background: url('../img/program/bg_04.png') no-repeat center / cover;
+    border: 1px solid #593134;
+    padding: 4.7rem 2.1rem 4.8rem 2.6rem;
+    position: relative;
+
+    &.text01 {
+      &::after {
+        content: '';
+        width: 47.3rem;
+        height: 14rem;
+        background: url('../img/program/icon_03.png') no-repeat center / contain;
+        position: absolute;
+        bottom: 0;
+        left: .8rem;
+      }
+    }
+
+    .lead {
+      font-size: 2.4rem;
+      line-height: 1.6;
+      letter-spacing: 0.05em;
+    }
+
+    .copy {
+      font-size: 1.8rem;
+      line-height: 2;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin-top: 3rem;
+      p + p {
+        margin-top: 3.5rem;
+      }
+    }
+  }
+}

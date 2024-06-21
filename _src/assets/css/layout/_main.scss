@@ -2,5 +2,18 @@
 // MAIN
 // -----------------------------------------------------------------
 .l-main {
-
+  position: relative;
+  &.bg01 {
+    &::before {
+      content: '';
+      width: calc(100% - 3.4rem);
+      // height: 298.6rem;
+      height: 100%;
+      background: url('../img/bg_01.png') repeat-y;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
