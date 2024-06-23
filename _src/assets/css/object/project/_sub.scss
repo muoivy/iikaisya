@@ -7,6 +7,12 @@
   // background: url('../img/bg_mainvisual_01.png') no-repeat center bottom / cover;
   //
   position: relative;
+  &_bg {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
   .l-inner {
     position: absolute;
     top: 0;

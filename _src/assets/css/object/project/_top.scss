@@ -7,7 +7,6 @@
       font-size: 4.4rem;
     }
   }
-
   .sec-recruit {
     margin-top: vw_pc(-160);
   }
@@ -15,209 +14,189 @@
 
 .top-mainvisual {
   position: relative;
-  text-align: center;
-  padding: vw_pc(115) 0 vw_pc(55);
-  &.is-inview {
-    .top-mainvisual_ttl {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .top-mainvisual_image .image {
-      opacity: 1;
-      visibility: visible;
-      animation: scaleIn 1.2s 2.5s forwards;
-    }
-  }
+  z-index: 5;
+  margin-bottom: vw_pc(104);
   &::before {
     content: '';
     width: 100%;
     height: vw_pc(158);
     background: url('../img/top/bg_mainvisual_03.png') no-repeat center bottom / contain;
     position: absolute;
-    top: calc(100% - #{vw_pc(134)});
+    bottom: vw_pc(-104);
     left: 50%;
     transform: translateX(-50%);
-    z-index: 4;
+    z-index: 1;
   }
   &::after {
     content: '';
-    width: 100%;
-    height: calc(100% - #{vw_pc(110)});
-    background: #F9D20E;
+    width: 132.2rem;
+    height: 17.1rem;
+    background: url('../img/top/bg_mainvisual_02.png') no-repeat center bottom / contain;
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    bottom: -1.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+  &.is-inview {
+    .top-mainvisual_ttl {
+      opacity: 1;
+      // transform: translateY(0);
+      bottom: 32rem;
+    }
+    .top-mainvisual_image img {
+      opacity: 1;
+      visibility: visible;
+      animation: scaleIn 1.2s 2.5s forwards;
+    }
+    .bg-icon {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   &_bg {
-    max-width: vw_pc(1255);
-    height: vw_pc(727);
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-
-  &_icon {
-    position: absolute;
-    &.icon01 {
-      width: vw_pc(57);
-      top: vw_pc(129);
-      left: vw_pc(70);
+    position: relative;
+    .bg-image {
+      width: 100%;
+      height: 76rem;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
     }
-    &.icon02 {
-      width: vw_pc(62);
-      top: vw_pc(222);
-      left: vw_pc(184);
-    }
-    &.icon03 {
-      width: vw_pc(93);
-      top: vw_pc(155);
-      left: vw_pc(261);
-    }
-    &.icon04 {
-      width: vw_pc(60);
-      top: vw_pc(70);
-      left: vw_pc(385);
-    }
-    &.icon05 {
-      width: vw_pc(67);
-      top: vw_pc(140);
-      left: vw_pc(520);
-    }
-    &.icon06 {
-      width: vw_pc(10.3);
-      top: vw_pc(50);
-      left: vw_pc(620);
-    }
-    &.icon07 {
-      width: vw_pc(67);
-      top: vw_pc(60);
-      right: vw_pc(290);
-    }
-    &.icon08 {
-      width: vw_pc(55);
-      top: vw_pc(95);
-      right: vw_pc(205);
-    }
-    &.icon09 {
-      width: vw_pc(123);
-      top: vw_pc(190);
-      right: vw_pc(110);
-    }
-    &.icon10 {
-      width: vw_pc(86);
-      top: vw_pc(180);
-      right: vw_pc(20);
-    }
-    &.icon11 {
-      width: vw_pc(76);
-      top: vw_pc(300);
-      right: vw_pc(200);
-    }
-    &.icon12 {
-      width: vw_pc(45);
-      bottom: vw_pc(170);
-      left: vw_pc(644);
+    .bg-icon {
+      position: absolute;
+      transform: translateY(20px);
+      opacity: 0;
+      transition-duration: 0.5s, 1s;
+      transition-property: opacity, transform;
+      transition-delay: 0s;
+      transition-timing-function: ease, cubic-bezier(0.215, 0.61, 0.355, 1);
+      &.icon01 {
+        // width: vw_pc(57);
+        width: 5.7rem;
+        top: vw_pc(129);
+        left: vw_pc(97);
+      }
+      &.icon02 {
+        // width: vw_pc(62);
+        width: 6.2rem;
+        top: vw_pc(223);
+        left: vw_pc(209);
+      }
+      &.icon03 {
+        // width: vw_pc(93);
+        width: 9.3rem;
+        top: vw_pc(156);
+        left: vw_pc(287);
+      }
+      &.icon04 {
+        // width: vw_pc(60);
+        width: 6rem;
+        top: vw_pc(69);
+        left: vw_pc(411);
+      }
+      &.icon05 {
+        // width: vw_pc(103);
+        width: 10.3rem;
+        top: vw_pc(52);
+        left: vw_pc(644);
+      }
+      &.icon06 {
+        // width: vw_pc(55);
+        width: 5.5rem;
+        top: vw_pc(97);
+        right: vw_pc(205);
+      }
+      &.icon07 {
+        // width: vw_pc(86);
+        width: 8.6rem;
+        top: vw_pc(181);
+        right: vw_pc(20);
+      }
+      &.icon08 {
+        // width: vw_pc(45);
+        width: 4.5rem;
+        bottom: vw_pc(203);
+        left: vw_pc(670);
+      }
+      &.icon09 {
+        // width: vw_pc(329);
+        // left: vw_pc(570);
+        // bottom: 1.8rem;
+        width: 32.9rem;
+        bottom: vw_pc(18);
+        left: calc(50% - 7rem);
+      }
     }
   }
 
   &_ttl {
-    max-width: vw_pc(798.5);
+    // max-width: vw_pc(798.5);
+    width: 79.85rem;
     display: inline-block;
-    margin-left: vw_pc(40);
+    position: absolute;
+    bottom: 0;
+    left: 4rem;
+    right: 0;
+    margin: 0 auto;
     opacity: 0;
-    transform: translateY(30rem);
-    transition: opacity 0.5s 1s, transform 0.5s 2s, top 0.5s 2s;
-    position: relative;
+    // transform: translateY(100%);
+    transition: opacity 0.5s 1s, bottom 0.5s 2s, top 0.5s 2s;
+    z-index: 3;
     & > img {
       position: relative;
-      z-index: 2;
+      z-index: 4;
     }
   }
 
   &_handle {
-    width: vw_pc(106);
-    height: vw_pc(106);
+    // width: vw_pc(106);
+    // height: vw_pc(106);
+    width: 10.6rem;
+    height: 10.6rem;
     background: url('../img/top/bg_handle.png') no-repeat center / cover;
     position: absolute;
-    top: vw_pc(-23);
-    right: vw_pc(44);
+    // top: vw_pc(-23);
+    // right: vw_pc(44);
+    top: -2.3rem;
+    right: 4.4rem;
     display: flex;
     align-items: center;
     justify-content: center;
     .icon-handle {
-      width: vw_pc(86);
+      // width: vw_pc(86);
+      width: 8.6rem;
       animation: rotate 20s linear infinite;
     }
   }
 
   &_image {
-    max-width: vw_pc(1322);
-    height: vw_pc(538);
-    position: relative;
-    margin: vw_pc(-126) auto 0;
-    &::before {
-      content: '';
-      width: vw_pc(329);
-      height: vw_pc(111);
-      background: url('../img/top/icon_mainvisual_13.png') no-repeat center / contain;
-      position: absolute;
-      bottom: vw_pc(116);
-      left: calc(50% - 7rem);
-    }
-    .image {
-      position: absolute;
+    // width: vw_pc(1322);
+    // height: vw_pc(538);
+    width: 132.2rem;
+    // height: 53.8rem;
+    position: absolute;
+    bottom: -6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    img {
+      // position: absolute;
       opacity: 0;
       visibility: hidden;
       transform: scale(0.7);
       transition: opacity 1.2s 3s cubic-bezier(0.19, 1, 0.22, 1);
     }
-    .image01 {
-      width: vw_pc(320);
-      top: vw_pc(-38);
-      left: vw_pc(-27);
-    }
-    .image02 {
-      width: vw_pc(349);
-      top: vw_pc(102);
-      left: vw_pc(143);
-    }
-    .image03 {
-      width: vw_pc(297);
-      top: vw_pc(96);
-      left: vw_pc(425);
-      z-index: 3;
-    }
-    .image04 {
-      width: vw_pc(346.5);
-      top: vw_pc(82);
-      right: vw_pc(257);
-      z-index: 2;
-    }
-    .image05 {
-      width: vw_pc(210);
-      top: vw_pc(15);
-      right: vw_pc(131);
-    }
-    .image06 {
-      width: vw_pc(189);
-      top: vw_pc(-36);
-      right: vw_pc(-15);
-    }
-  }
-
-  &_illustration {
-    width: vw_pc(1322);
-    position: absolute;
-    bottom: vw_pc(67);
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 4;
   }
 
   &_scroll {
-    position: relative;
+    position: absolute;
+    bottom: -2.3rem;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 5;
     color: #fff;
     font-size: 2rem;
@@ -228,7 +207,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: -10.4rem;
     .arrow {
       position: absolute;
       bottom: -1.3rem;
@@ -249,9 +227,6 @@
     }
   }
 }
-
-
-
 
 @keyframes rotate {
   0% {
@@ -276,16 +251,20 @@
 // -----------------------------------------------------------------
 
 .top-company {
-  padding: 18.6rem 0 0;
+  // padding: 26.6rem 0 0;
+  // padding: vw_pc(266) 0 0;
+  padding: 16.2rem 0 0;
   position: relative;
   &::before {
     content: '';
-    width: 124.3rem;
+    width: 127.9rem;
     height: 77.2rem;
     background: url('../img/top/bg_company_02.png') no-repeat center / contain;
     position: absolute;
-    top: -17.8rem;
-    right: 0;
+    top: -20.2rem;
+    right: -3.7rem;
+    @media only screen and (min-width: 1280px) {
+    }
   }
 
   &_content {
@@ -305,6 +284,15 @@
     .l-inner {
       position: relative;
       z-index: 2;
+      &::after {
+        content: '';
+        width: 36.9rem;
+        height: 19.4rem;
+        background: url('../img/top/bg_company_03.png') no-repeat center / contain;
+        position: absolute;
+        top: -10.4rem;
+        right: 8.4rem;
+      }
     }
 
     .c-hashtag {
@@ -326,6 +314,21 @@
       position: absolute;
       top: .6rem;
       left: .6rem;
+      z-index: 1;
+    }
+    figure {
+      overflow: hidden;
+      border: 1px solid #222;
+      img {
+        transition: transform .3s ease-in-out;
+      }
+    }
+    &.is-zoom {
+      figure {
+        img {
+          transform: scale(1.1);
+        }
+      }
     }
   }
 
@@ -372,6 +375,8 @@
       position: absolute;
       top: -4.9rem;
       left: -4.5rem;
+      transform-origin: bottom;
+      animation: boyon_ug4m426 3s linear infinite;
     }
     .pickup-image {
       padding-bottom: 3.2rem;
@@ -394,6 +399,8 @@
         width: 10.4rem;
         display: inline-block;
         position: relative;
+        transform-origin: bottom;
+        transition: all .3s ease-in-out;
       }
       p {
         position: absolute;
@@ -403,6 +410,11 @@
         width: 15.3rem;
         left: 2.1rem;
         bottom: .5rem;
+      }
+      &.is-zoom {
+        img {
+          transform: scale(1.05);
+        }
       }
     }
 
@@ -563,7 +575,10 @@
   }
 
   .l-inner {
-    padding: 10.4rem 0 22.7rem;
+    padding: 3.2rem 0 0;
+    min-height: 62.4rem;
+    display: flex;
+    gap: 8rem;
     &::after {
       content: '';
       width: 34.7rem;
@@ -573,6 +588,12 @@
       bottom: -1.7rem;
       left: -3.2rem;
     }
+  }
+
+  &_text {
+    width: 27rem;
+    flex: 0 0 auto;
+    padding: 7rem 0 0;
   }
 
   .c-hashtag {
@@ -589,20 +610,49 @@
   }
 
   &_slider {
-    position: absolute;
-    top: 3rem;
-    left: 34.9rem;
-    width: 101rem;
-    overflow: hidden;
-    height: 52.2rem;
-    padding-left: 2rem;
+    .splide__list {
+      overflow: unset;
+      height: 53rem;
+      gap: 4.7rem;
+    }
     .item {
-      width: 25.8rem;
-      margin-left: 5.7rem;
-      padding-left: 4.7rem;
+      width: 26rem;
+      // height: 35.1rem;
       opacity: .6;
-      &:first-child {
-        margin-left: 0;
+      position: relative;
+      transition: all .3s ease-in-out;
+      transform-origin: top;
+      &.is-zoom {
+        width: 33.3rem;
+        opacity: 1;
+        a {
+          padding-bottom: 8rem;
+          &::after {
+            height: 46.8rem;
+            // bottom: -11.7rem;
+          }
+        }
+        .item-image {
+          img {
+            max-height: 33.8rem;
+            object-fit: cover;
+          }
+        }
+        .item-text {
+          width: 30.7rem;
+          height: 13rem;
+          padding: 5rem 4rem 0;
+          margin-left: -10rem;
+        }
+        .item-position {
+          font-size: 1.4rem;
+        }
+        .item-name {
+          font-size: 2rem;
+        }
+        &.is-last {
+          margin-left: 6rem;
+        }
       }
       a {
         display: flex;
@@ -613,20 +663,33 @@
         text-align: center;
         position: relative;
         padding-bottom: 6rem;
-
         &::after {
           content: '';
-          width: 25.7rem;
+          width: 100%;
           height: 35.1rem;
           background: #FBFADC;
           border: 1px solid #222;
           border-radius: 16.5rem;
           position: absolute;
           bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
+          right: 0;
           z-index: -1;
           transition: all .3s ease-in-out;
+          transform-origin: top;
+        }
+        &:hover {
+          &::after {
+            background-color: #FFEA28;
+          }
+          .c-btn {
+            pointer-events: none;
+            color: #1559A6 !important;
+            border-color: #1559A6 !important;
+            &::after {
+              width: 1.6rem;
+              height: 1.6rem;
+            }
+          }
         }
       }
       .item-image {
@@ -663,58 +726,39 @@
         font-weight: 700;
         line-height: 1;
         position: absolute;
-        top: 7rem;
-        right: -.2rem;
+        top: 7.3rem;
+        right: 1.8rem;
         transform: rotate(38.07deg);
       }
     }
-    .swiper-slide-active {
-      width: 32.9rem;
-      padding-left: 7rem;
-      opacity: 1;
-      a {
-        padding-bottom: 8rem;
-        &::after {
-          width: 32.9rem;
-          height: 46.8rem;
+    .splide__arrows {
+      position: absolute;
+      bottom: 7.6rem;
+      left: 61.7rem;
+      right: 0;
+      display: flex;
+      width: 20.3rem;
+      height: 6.4rem;
+      justify-content: space-between;
+      .splide__arrow {
+        width: 6.4rem;
+        height: 6.4rem;
+        background: url('../img/icon_arrow_02.png') no-repeat center / contain;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-top: 0;
+        position: relative;
+        transform: unset;
+        svg {
+          display: none;
+        }
+        &--prev {
+          transform: scale(-1);
         }
       }
-      .item-image {
-        img {
-          max-height: 33.8rem;
-        }
-      }
-      .item-text {
-        width: 30.7rem;
-        height: 13rem;
-        padding: 5rem 4rem 0;
-        margin-left: -10rem;
-      }
-      .item-position {
-        font-size: 1.4rem;
-      }
-      .item-name {
-        font-size: 2rem;
-      }
     }
-  }
-  .top-interview_slider_prev,
-  .top-interview_slider_next {
-    width: 6.4rem;
-    height: 6.4rem;
-    background: url('../img/icon_arrow_02.png') no-repeat center / contain;
-    bottom: 6.4rem;
-    top: auto;
-    left: auto;
-    right: 0;
-    margin-top: 0;
-    &::after {
-      content: none;
-    }
-  }
-  .top-interview_slider_prev {
-    right: 14rem;
-    transform: scale(-1);
   }
 }
 
@@ -1022,3 +1066,40 @@
   }
 }
 
+@keyframes boyon_ug4m426 {
+  0% {
+      transform: scale(1)
+  }
+
+  4% {
+      transform: scale(1.1)
+  }
+
+  7% {
+      transform: scale(0.91)
+  }
+
+  11% {
+      transform: scale(1.05)
+  }
+
+  15% {
+      transform: scale(0.99)
+  }
+
+  18% {
+      transform: scale(1.01)
+  }
+
+  22% {
+      transform: scale(1)
+  }
+
+  25% {
+      transform: scale(1)
+  }
+
+  100% {
+      transform: scale(1)
+  }
+}

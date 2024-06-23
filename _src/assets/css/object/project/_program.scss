@@ -49,8 +49,48 @@
 .program-sec01 {
   padding: 14rem 0 0;
 
+  &.sec01 {
+    .l-inner {
+      &::before {
+        content: '';
+        width: 61.4rem;
+        height: 39.3rem;
+        background: url('../img/program/bg_02.png') no-repeat center / contain;
+        position: absolute;
+        top: -22.1rem;
+        left: -2.4rem;
+      }
+    }
+  }
+
+  &.sec02 {
+    padding-bottom: 14rem;
+    .l-inner {
+      &::before {
+        content: '';
+        width: 61.4rem;
+        height: 39.3rem;
+        background: url('../img/program/bg_02.png') no-repeat center / contain;
+        position: absolute;
+        top: -14.1rem;
+        right: -6.4rem;
+      }
+      &::after {
+        content: '';
+        width: 12.2rem;
+        height: 4.9rem;
+        background: url('../img/program/icon_02.png') no-repeat center / contain;
+        position: absolute;
+        top: -11.1rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
   &_ttl {
     margin-left: 8rem;
+    position: relative;
   }
 
   &_content {
@@ -103,5 +143,29 @@
         margin-top: 3.5rem;
       }
     }
+  }
+}
+
+
+.program-flow {
+  background: url('../img/program/bg_05.png') no-repeat center / cover;
+  padding: 6rem 0 9.4rem;
+  margin-bottom: 12rem;
+
+  &_heading {
+    display: flex;
+    align-items: flex-end;
+    gap: 2.4rem;
+    padding-left: 8rem;
+  }
+
+  &_lead {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  &_image {
+    padding: 6rem 4rem 0 2rem;
   }
 }

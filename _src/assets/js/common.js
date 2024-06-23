@@ -146,28 +146,61 @@
 
   /* FOOTER BUTTON
 ********************************************** */
-$('.sec-recruit_btn').on( "mouseenter", function() {
-  $('.sec-recruit_image').addClass('is-zoom');
-})
-.on( "mouseleave", function() {
-  $('.sec-recruit_image').removeClass('is-zoom');
-});
+function addHoverEffect(btnClass, zoomClass) {
+  $(btnClass).on("mouseenter", function() {
+    $(this).closest('section').find(zoomClass).addClass('is-zoom');
+  })
+  .on("mouseleave", function() {
+    $(this).closest('section').find(zoomClass).removeClass('is-zoom');
+  });
+}
+
+addHoverEffect('.js-btn-hover01', '.js-zoom01');
+addHoverEffect('.js-btn-hover02', '.js-zoom02');
 
 /* TOP INTERVIEW SLIDER
 ********************************************** */
-const swiper = new Swiper('.top-interview_slider', {
-  // Optional parameters
-  slidesPerView: 'auto',
-  autoplay: true,
-  loop: true,
+// const swiper = new Swiper('.top-interview_slider', {
+//   // Optional parameters
+//   slidesPerView: 'auto',
+//   autoplay: true,
+//   loop: true,
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.top-interview_slider_next',
-    prevEl: '.top-interview_slider_prev',
-  },
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: '.top-interview_slider_next',
+//     prevEl: '.top-interview_slider_prev',
+//   },
 
-});
+// });
+
+if ($(".top-interview_slider").length > 0) {
+  var interviewSlider = new Splide( '.top-interview_slider', {
+    type: 'loop',
+    // autoplay: true,
+    autoWidth: true,
+    pagination: false,
+    drag: false,
+  }).mount();
+  interviewSlider.on('mounted move', function () {
+    var activeSlide = interviewSlider.Components.Elements.slides[interviewSlider.index];
+    var allSlides = interviewSlider.Components.Elements.slides;
+    var totalSlides = allSlides.length;
+
+    allSlides.forEach(slide => {
+      slide.classList.remove('is-zoom');
+    });
+
+    activeSlide.classList.add('is-zoom');
+
+    if (interviewSlider.index === totalSlides - 1) {
+      activeSlide.classList.add('is-last');
+    }
+  });
+
+  interviewSlider.emit('move');
+
+}
 
 /* BUSINESS MODAL
 ********************************************** */
