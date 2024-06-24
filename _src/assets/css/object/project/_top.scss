@@ -650,8 +650,11 @@
         .item-name {
           font-size: 2rem;
         }
-        &.is-last {
+        &:not(.is-first) {
           margin-left: 6rem;
+        }
+        &.is-last {
+          margin-left: 12rem;
         }
       }
       a {
@@ -735,7 +738,6 @@
       position: absolute;
       bottom: 7.6rem;
       left: 61.7rem;
-      right: 0;
       display: flex;
       width: 20.3rem;
       height: 6.4rem;
@@ -758,6 +760,13 @@
           transform: scale(-1);
         }
       }
+    }
+    .splide__number {
+      font-size: 1.6rem;
+      font-weight: 700;
+      position: absolute;
+      bottom: 9.6rem;
+      left: 70.7rem;
     }
   }
 }
@@ -860,8 +869,7 @@
             border-color: #1559A6 !important;
             &::after {
               background: #1559A6;
-              width: 1.6rem;
-              height: 1.6rem;
+              transform: scale(2.25);
             }
           }
         }
@@ -1016,8 +1024,7 @@
             pointer-events: none;
             &::after {
               background: #fff;
-              width: 1.6rem;
-              height: 1.6rem;
+              transform: scale(2.25);
             }
           }
         }

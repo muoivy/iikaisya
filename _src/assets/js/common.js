@@ -160,28 +160,15 @@ addHoverEffect('.js-btn-hover02', '.js-zoom02');
 
 /* TOP INTERVIEW SLIDER
 ********************************************** */
-// const swiper = new Swiper('.top-interview_slider', {
-//   // Optional parameters
-//   slidesPerView: 'auto',
-//   autoplay: true,
-//   loop: true,
-
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.top-interview_slider_next',
-//     prevEl: '.top-interview_slider_prev',
-//   },
-
-// });
-
 if ($(".top-interview_slider").length > 0) {
   var interviewSlider = new Splide( '.top-interview_slider', {
     type: 'loop',
-    // autoplay: true,
     autoWidth: true,
     pagination: false,
-    drag: false,
-  }).mount();
+  }).mount({
+    SlideNumber
+  });
+
   interviewSlider.on('mounted move', function () {
     var activeSlide = interviewSlider.Components.Elements.slides[interviewSlider.index];
     var allSlides = interviewSlider.Components.Elements.slides;
@@ -193,8 +180,18 @@ if ($(".top-interview_slider").length > 0) {
 
     activeSlide.classList.add('is-zoom');
 
+    // Add is-last class if on the last slide
     if (interviewSlider.index === totalSlides - 1) {
       activeSlide.classList.add('is-last');
+    } else {
+      activeSlide.classList.remove('is-last');
+    }
+
+    // Add is-first class if on the first slide
+    if (interviewSlider.index === 0) {
+      activeSlide.classList.add('is-first');
+    } else {
+      activeSlide.classList.remove('is-first');
     }
   });
 
@@ -296,6 +293,35 @@ $('.js-letter').each(function() {
   var wrappedText = wrapCharactersInSpans(text);
   $(this).html(wrappedText);
 });
+
+/* bounce
+********************************************** */
+  function bounce() {
+    const t = document.querySelectorAll(".js-bounce-trigger");
+      t.length > 0 && t.forEach((t=>{
+          const e = t.querySelectorAll(".js-bounce-target");
+          0 !== e.length && e.forEach((e=>{
+              const n = e.dataset.bounce ?? .5;
+              gsap.fromTo(e, {
+                  scale: 0,
+                  opacity: 1
+              }, {
+                  scale: 1,
+                  duration: .6,
+                  ease: `elastic.out(1, ${n})`,
+                  scrollTrigger: {
+                      trigger: t,
+                      start: "top 75%",
+                      once: !0
+                  }
+              })
+          }
+          ))
+      }
+      ))
+  }
+
+  bounce();
 
 /* INVIEW
 ********************************************** */
