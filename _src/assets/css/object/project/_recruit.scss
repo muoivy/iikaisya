@@ -1,0 +1,254 @@
+.recruit-wanted {
+  padding: 9rem 0 0;
+
+  &_content {
+    max-width: 98rem;
+    width: 100%;
+    margin: 0 auto;
+    background: url('../img/recruit/bg_01.png') no-repeat center / cover;
+    padding: 5.4rem 8rem 10rem;
+  }
+
+  &_ttl {
+    max-width: 64.5rem;
+    margin: 0 auto 2.6rem;
+  }
+
+  &_image {
+    border: .2rem solid #222222;
+  }
+
+  &_copy {
+    font-size: 1.8rem;
+    line-height: 2;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    margin-top: 5rem;
+    padding: 0 0px 0 1.9rem;
+    p + p {
+      margin-top: 1rem;
+    }
+  }
+}
+
+
+.recruit-hero {
+  padding: 13.6rem 0 0;
+  .l-inner {
+    &::before {
+      content: '';
+      width: 61.4rem;
+      height: 39.3rem;
+      background: url('../img/recruit/bg_02.png') no-repeat center / contain;
+      position: absolute;
+      top: -31.2rem;
+      left: -2.6rem;
+    }
+  }
+
+  &_content {
+    padding: 0 8rem;
+    position: relative;
+    &::after {
+      content: '';
+      width: 61.4rem;
+      height: 39.3rem;
+      background: url('../img/recruit/bg_02.png') no-repeat center / contain;
+      position: absolute;
+      bottom: -25rem;
+      right: -2.6rem;
+    }
+  }
+
+  &_box {
+    position: relative;
+    display: flex;
+    z-index: 1;
+
+    &.box01 {
+      margin-top: -2.6rem;
+      .box-image {
+        width: 87.65rem;
+      }
+    }
+
+    &.box02 {
+      flex-direction: row-reverse;
+      margin-top: -4rem;
+      margin-right: -12rem;
+      .box-image {
+        width: 84.75rem;
+      }
+      .box-text {
+        left: 27.5rem;
+      }
+    }
+
+    &.box03 {
+      margin-top: -9.5rem;
+      margin-left: -24rem;
+      .box-image {
+        width: 98.45rem;
+      }
+      .box-text {
+        left: 41rem;
+      }
+      .box-copy {
+        padding-left: 4.8rem;
+      }
+    }
+
+    .box-text {
+      position: absolute;
+      bottom: 1.6rem;
+      left: 0;
+      max-width: 55rem;
+      width: 100%;
+      height: 25.1rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .box-ttl {
+      text-align: center;
+      font-size: 2rem;
+      line-height: 5.5rem;
+      padding-right: 1.6rem;
+    }
+
+    .box-copy {
+      font-size: 1.8rem;
+      line-height: 2;
+      font-weight: 700;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding-bottom: 3rem;
+      padding-left: 6.8rem;
+    }
+  }
+}
+
+
+.recruit-process {
+  padding: 13.3rem 0 0;
+
+  &_ttl {
+    margin-left: 8rem;
+  }
+
+  &_list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.2rem;
+    margin-top: 10.7rem;
+  }
+
+  &_item {
+    width: 34.4rem;
+    height: 28.7rem;
+    background: url('../img/recruit/bg_07.png') no-repeat center / contain;
+    position: relative;
+    padding: 2.7rem 2.5rem;
+
+    .item-step {
+      width: 10rem;
+      height: 9.8rem;
+      background: url('../img/recruit/bg_06.png') no-repeat center / contain;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: $cabin_condensed;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      position: absolute;
+      top: -4.8rem;
+      left: -4.2rem;
+    }
+
+    .item-ttl {
+      min-width: 15.3rem;
+      width: max-content;
+      line-height: 3.8rem;
+      text-align: center;
+      font-size: 1.8rem;
+      margin: 0 auto 1.5rem;
+      background: #FFFBD7;
+      border: 1px solid #222;
+      border-radius: 1.85rem;
+      padding: 0 1.5rem;
+    }
+
+    .item-copy {
+      font-size: 1.6rem;
+      line-height: 2;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .item-image {
+      width: 24.9rem;
+      position: absolute;
+      bottom: 0;
+      right: 2.6rem;
+    }
+  }
+}
+
+.recruit-app {
+  padding: 14rem 0 0;
+
+  &_ttl {
+    margin-left: 8rem;
+  }
+
+  &_list {
+    max-width: 100rem;
+    width: 100%;
+    margin: 4.8rem auto 0;
+  }
+
+  &_item {
+    & + .recruit-app_item {
+      margin-top: 4rem;
+    }
+    dl {
+      display: flex;
+      font-size: 1.6rem;
+      line-height: 1.3;
+      padding: 3rem;
+      background: #FFF1A9;
+      &:nth-child(even) {
+        background: #fff;
+      }
+    }
+    dt {
+      font-weight: 700;
+      width: 21.4rem;
+      flex: 0 0 auto;
+    }
+    dd {
+      font-weight: 500;
+    }
+    .text01 {
+      display: flex;
+      align-items: center;
+      gap: 1.9rem;
+      margin-bottom: 1rem;
+
+      span {
+        &:first-child {
+          font-family: $noto_san;
+          min-width: 3.2rem;
+          line-height: 3.8rem;
+          border: 1px solid #222;
+          flex: 0 0 auto;
+          background: #fff;
+          font-weight: 700;
+          padding: 0 1.5rem;
+        }
+      }
+    }
+  }
+}
