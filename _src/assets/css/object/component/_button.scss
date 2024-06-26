@@ -71,3 +71,27 @@
   }
 
 }
+
+.c-btn-back {
+  font-size: 1.6rem;
+  margin-top: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  display: inline-flex;
+  align-items: center;
+  gap: 4.8rem;
+  &::after {
+    content: '';
+    width: 3.7rem;
+    height: 3.7rem;
+    background: url('../img/icon_arrow_04.svg') no-repeat center / contain;
+    display: inline-block;
+    transition: all .3s ease-in-out;
+  }
+  &:hover {
+    color: #1559A6;
+    &::after {
+      background-image: url('../img/icon_arrow_05.svg');
+    }
+  }
+}
