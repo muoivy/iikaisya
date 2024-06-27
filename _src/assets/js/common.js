@@ -323,6 +323,24 @@ $('.js-letter').each(function() {
 
   bounce();
 
+
+/* TOP CULTURE
+********************************************** */
+const img0 = document.querySelector(".js-hoverImg0");
+const img1 = document.querySelector(".js-hoverImg1");
+const link0 = document.querySelector(".js-hoverLink0");
+const link1 = document.querySelector(".js-hoverLink1");
+link0.addEventListener("mouseover", () => {
+  img0.classList.add("is-hovered");
+  img1.classList.remove("is-hovered");
+});
+
+link1.addEventListener("mouseover", () => {
+  img0.classList.remove("is-hovered");
+  img1.classList.add("is-hovered");
+});
+
+
 /* INVIEW
 ********************************************** */
 function inview() {
