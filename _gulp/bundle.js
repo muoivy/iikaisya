@@ -13,7 +13,7 @@ const jsLibs = [
   `${app.scripts}/_libs/gsap.min.js`,
   `${app.scripts}/_libs/ScrollTrigger.min.js`,
   `${app.scripts}/_libs/splide.min.js`,
-  // `${app.scripts}/_libs/splide-extension-auto-scroll.min.js`,
+  `${app.scripts}/_libs/splide-extension-auto-scroll.min.js`,
   // `${app.scripts}/_libs/swiper-bundle.min.js`,
   `${app.scripts}/_libs/jquery.validationEngine.min.js`,
 ];

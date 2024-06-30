@@ -326,19 +326,39 @@ $('.js-letter').each(function() {
 
 /* TOP CULTURE
 ********************************************** */
-const img0 = document.querySelector(".js-hoverImg0");
-const img1 = document.querySelector(".js-hoverImg1");
-const link0 = document.querySelector(".js-hoverLink0");
-const link1 = document.querySelector(".js-hoverLink1");
-link0.addEventListener("mouseover", () => {
-  img0.classList.add("is-hovered");
-  img1.classList.remove("is-hovered");
-});
+if (($(".js-hoverImg0").length > 0) && ($(".js-hoverImg1").length > 0)) {
+  const img0 = document.querySelector(".js-hoverImg0");
+  const img1 = document.querySelector(".js-hoverImg1");
+  const link0 = document.querySelector(".js-hoverLink0");
+  const link1 = document.querySelector(".js-hoverLink1");
+  link0.addEventListener("mouseover", () => {
+    img0.classList.add("is-hovered");
+    img1.classList.remove("is-hovered");
+  });
 
-link1.addEventListener("mouseover", () => {
-  img0.classList.remove("is-hovered");
-  img1.classList.add("is-hovered");
-});
+  link1.addEventListener("mouseover", () => {
+    img0.classList.remove("is-hovered");
+    img1.classList.add("is-hovered");
+  });
+}
+
+/* top business
+********************************************** */
+if ($(".top-business_sub").length > 0) {
+  const splide01 = new Splide('.top-business_sub', {
+    // type: "loop",
+    autoWidth: true,
+    arrows: false,
+    pagination: false,
+    drag: false,
+    autoScroll: {
+      autoStart: true,
+      speed: 0.75,
+      pauseOnHover: false,
+      pauseOnFocus: false,
+    }
+  }).mount(window.splide.Extensions);
+}
 
 
 /* INVIEW
