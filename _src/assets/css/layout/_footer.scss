@@ -35,6 +35,7 @@
       width: 100vw;
       height: vw(90.5);
       background-image: url('../img/bg_recruit_02_sp.png');
+      bottom: vw(-13);
     }
   }
 
@@ -90,8 +91,8 @@
       .c-lead {
         span {
           font-size: vw(24) !important;
-          width: vw(40);
-          line-height: vw(40);
+          width: vw(40) !important;
+          line-height: vw(40) !important;
         }
       }
     }
@@ -124,12 +125,12 @@
     @include mq(sp) {
       max-width: 100vw;
       height: vw(266);
-      bottom: 0;
+      bottom: .3rem;
       left: 0;
       transform: unset;
-    }
-    &.is-zoom {
-      transform: scale(1.05);
+      &.is-zoom {
+        transform: scale(1.05);
+      }
     }
   }
 }
@@ -174,7 +175,7 @@
     }
     @include mq(sp) {
       width: vw(220);
-      margin-bottom: vw(50);
+      margin-bottom: vw(46);
     }
   }
 
@@ -193,7 +194,7 @@
     @include mq(sp) {
       font-size: vw(14);
       flex-wrap: wrap;
-      gap: vw(30) vw(40);
+      gap: vw(25) vw(40);
     }
   }
 
@@ -206,7 +207,7 @@
     @include mq(sp) {
       flex-direction: column;
       align-items: flex-start;
-      gap: vw(24);
+      gap: vw(20);
     }
   }
 
@@ -216,6 +217,7 @@
     font-size: 1.2rem;
     @include mq(sp) {
       margin-left: 0;
+      margin-top: vw(7);
     }
   }
 }

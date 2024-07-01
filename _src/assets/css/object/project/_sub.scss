@@ -3,6 +3,11 @@
   .c-lead {
     span {
       width: 6.2rem;
+      @include mq(sp) {
+        width: vw(37);
+        line-height: vw(35);
+        font-size: vw(20);
+      }
     }
   }
 
@@ -13,6 +18,10 @@
   height: vw_pc(489);
   background: url('../img/sub/bg_mainvisual_01.png') no-repeat center bottom / cover;
   position: relative;
+  @include mq(sp) {
+    height: vw(304);
+    background-image: url('../img/sub/bg_mainvisual_01_sp.png');
+  }
   &::before {
     content: '';
     width: 130.2rem;
@@ -22,7 +31,16 @@
     left: calc(50% + 1.1rem);
     bottom: -3rem;
     transform: translateX(-50%);
-    z-index: 3;
+    z-index: 5;
+    @include mq(sp) {
+      width: 100vw;
+      height: vw(90.5);
+      left: 0;
+      bottom: vw(-13);
+      transform: unset;
+      background-image: url('../img/sub/bg_mainvisual_02_sp.png');
+    }
+
   }
   &::after {
     content: '';
@@ -34,6 +52,12 @@
     bottom: -.2rem;
     transform: translateX(-50%);
     z-index: 2;
+    @include mq(sp) {
+      width: vw(110);
+      height: vw(37);
+      left: calc(50% + #{vw(20)});
+      bottom: vw(21);
+    }
   }
   &.is-inview {
     .bg-icon {
@@ -60,6 +84,10 @@
     opacity: 0;
     transform: translateY(100%);
     transition: opacity 0.5s 1s, transform 0.5s 2s, top 0.5s 2s;
+    @include mq(sp) {
+      top: vw(84);
+      transform: translateY(vw(100));
+    }
   }
 
   .bg-icon {
@@ -81,6 +109,12 @@
       width: 10.3rem;
       top: vw_pc(22);
       left: vw_pc(576);
+      @include mq(sp) {
+        width: vw(67);
+        top: vw(47);
+        right: vw(17);
+        left: auto;
+      }
     }
 
     &.icon03 {
@@ -111,16 +145,23 @@
       width: 14.1rem;
       bottom: vw_pc(70);
       left: vw_pc(447);
+      @include mq(sp) {
+        width: vw(61);
+        bottom: vw(45);
+        left: vw(82);
+      }
     }
   }
 
   .c-hashtag {
     font-size: 5.6rem;
+    @include mq(sp) {
+      font-size: vw(48);
+    }
   }
 
   &_ttl {
     margin: 1rem 0 0 7.7rem;
-
     .c-ttl {
       font-size: 2.8rem;
     }
@@ -131,11 +172,25 @@
         line-height: 9.1rem;
       }
     }
+    @include mq(sp) {
+      margin: vw(16) 0 0;
+      .c-ttl {
+        font-size: vw(14);
+      }
+      .c-lead {
+        span {
+          font-size: vw(24);
+          width: vw(41);
+          line-height: vw(40);
+        }
+      }
+    }
   }
 
   &_image {
     position: absolute;
     bottom: 0;
+    z-index: 4;
     img {
       opacity: 0;
       visibility: hidden;
@@ -148,6 +203,11 @@
     .sub-mainvisual_image {
       width: 31.4rem;
       left: calc(50% + 14rem);
+      @include mq(sp) {
+        width: vw(130);
+        left: auto;
+        right: vw(20);
+      }
     }
   }
 
@@ -163,6 +223,20 @@
     .sub-mainvisual_image {
       width: 48.15rem;
       left: calc(50% + 8rem);
+    }
+    @include mq(sp) {
+      &::before {
+        width: 100vw;
+        height: vw(90.5);
+        background-image: url('../img/sub/bg_mainvisual_03_sp.png');
+        left: 0;
+        transform: unset;
+        bottom: vw(-12);
+      }
+      .sub-mainvisual_image {
+        width: 48.15rem;
+        left: calc(50% + 8rem);
+      }
     }
   }
 

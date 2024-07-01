@@ -1,9 +1,15 @@
 .company-message {
   padding: 14.2rem 0 0;
+  @include mq(sp) {
+    padding: vw(54) 0 0;
+  }
 
   &_content {
     position: relative;
     padding-bottom: 5rem;
+    @include mq(sp) {
+      padding-bottom: vw(48);
+    }
     &::before {
       content: '';
       width: calc(50% + 58rem);
@@ -13,22 +19,34 @@
       position: absolute;
       top: 0;
       left: 0;
+      @include mq(sp) {
+        width: vw(351);
+        border-radius: 0 vw(40) vw(40) 0;
+      }
     }
     &::after {
       content: '';
       width: calc(50% - 10rem);
       height: 41.1rem;
-      background: url('../img/company/bg_mainvisual_01.png') no-repeat right bottom / cover;
+      background: url('../img/company/bg_message_01.png') no-repeat right bottom / cover;
       position: absolute;
       top: 0;
       left: 0;
       border-radius: 0 0 10rem 0;
+      @include mq(sp) {
+        width: vw(351);
+        height: vw(200);
+        border-radius: 0 vw(40) 0 0;
+      }
     }
   }
 
   &_heading {
     display: flex;
     gap: 2.4rem;
+    @include mq(sp) {
+      display: block;
+    }
   }
 
   &_image {
@@ -47,14 +65,29 @@
       left: 50%;
       transform: translateX(-50%);
     }
+    @include mq(sp) {
+      width: vw(153);
+      height: vw(200);
+      margin: 0 vw(24) 0 vw(75);
+      img {
+        width: 100%;
+        bottom: auto;
+        top: vw(-28);
+      }
+    }
   }
 
   &_info {
     padding: 5.2rem 4rem 0 0;
+    @include mq(sp) {
+      padding: vw(24) vw(24) 0 0;
+    }
   }
 
   &_ttl {
-
+    @include mq(sp) {
+      width: vw(246);
+    }
   }
 
   &_lead {
@@ -64,12 +97,22 @@
     margin: 3.6rem 0 2.4rem;
     padding-bottom: 3rem;
     border-bottom: 1px solid #222;
+    @include mq(sp) {
+      font-size: vw(16);
+      margin: vw(8) 0 vw(16);
+      padding-bottom: vw(24);
+    }
   }
 
   &_desc {
     font-size: 2.2rem;
     line-height: 1.6;
     font-weight: 700;
+    @include mq(sp) {
+      font-size: vw(16);
+      text-align: justify;
+      letter-spacing: 0;
+    }
   }
 
   &_copy {
@@ -79,12 +122,20 @@
     margin-top: 3rem;
     padding: 0 10.4rem 0 5.5rem;
     letter-spacing: 0.05em;
+    @include mq(sp) {
+      font-size: vw(14);
+      margin-top: vw(24);
+      padding: 0 vw(24) 0 0;
+    }
   }
 }
 
 
 .company-instruction {
   padding: 11.9rem 0 15rem;
+  @include mq(sp) {
+    padding: vw(80) 0 0;
+  }
 
   &_inner {
     max-width: 117.8rem;
@@ -101,28 +152,60 @@
       left: 0;
       z-index: -1;
     }
+    @include mq(sp) {
+      &::before {
+        width: vw(351);
+        background: url('../img/company/bg_instruction_sp.png') no-repeat center / cover;
+        height: vw(1611);
+        left: auto;
+        right: 0;
+        top: vw(-56);
+      }
+    }
   }
 
   &_content {
     position: relative;
     z-index: 1;
     padding: 9.8rem 7.8rem 0;
+    @include mq(sp) {
+      padding: 0;
+    }
   }
 
   &_ttl {
     max-width: 74.3rem;
     margin-left: 2.5rem;
+    @include mq(sp) {
+      max-width: vw(281);
+      margin-left: vw(24);
+      margin-top: vw(56);
+      .c-lead {
+        &:last-child {
+          margin-top: -1px;
+        }
+      }
+    }
   }
 
   &_list {
     margin-top: 6.8rem;
+    @include mq(sp) {
+      margin-top: vw(32);
+    }
   }
 
   &_item {
     display: flex;
+    @include mq(sp) {
+      flex-direction: column-reverse;
+    }
 
     & + .company-instruction_item {
       margin-top: 12.2rem;
+      @include mq(sp) {
+        margin-top: vw(50);
+      }
     }
 
     &:nth-child(2n) {
@@ -131,7 +214,17 @@
         transform: rotate(-2.73deg);
         left: 1.6rem;
       }
+      @include mq(sp) {
+        flex-direction: column-reverse;
+        .item-image {
+          left: 0;
+          margin-right: auto;
+          margin-left: 0;
+          transform: rotate(-2deg);
+        }
+      }
     }
+
 
     .item-text {
       width: 51rem;
@@ -142,6 +235,14 @@
       flex-direction: column;
       justify-content: center;
       padding: 0 0 0 2.5rem;
+      position: relative;
+      @include mq(sp) {
+        width: vw(327);
+        height: auto;
+        padding: vw(40) vw(24) vw(36);
+        margin: vw(-16) vw(24) 0;
+        display: block;
+      }
     }
 
     .item-ttl {
@@ -149,6 +250,11 @@
       line-height: 1.3;
       letter-spacing: 0.05em;
       min-height: 6.2rem;
+      position: relative;
+      @include mq(sp) {
+        font-size: vw(16);
+        min-height: auto;
+      }
     }
 
     .item-copy {
@@ -156,6 +262,13 @@
       font-weight: 700;
       line-height: 2;
       margin-top: 2.4rem;
+      position: relative;
+      @include mq(sp) {
+        font-size: vw(14);
+        margin-top: vw(19);
+        letter-spacing: 0;
+        text-align: justify;
+      }
     }
 
     .item-image {
@@ -174,14 +287,27 @@
         height: 100%;
         object-fit: cover;
       }
+      @include mq(sp) {
+        width: vw(305);
+        height: vw(198);
+        padding: vw(6);
+        transform: rotate(2deg);
+        margin-top: 0;
+        left: auto;
+        margin-left: auto;
+      }
     }
   }
 }
 
 
 
+
 .company-intro {
   padding: 11.9rem 0 8.5rem;
+  @include mq(sp) {
+    padding: vw(112) 0 vw(80);
+  }
 
   &_content {
     border: 1px solid #222;
@@ -198,6 +324,17 @@
       bottom: 1.5rem;
       left: -1.6rem;
     }
+    @include mq(sp) {
+      border-radius: vw(40);
+      padding: vw(56) vw(24) vw(98);
+      &::after {
+        width: vw(350);
+        height: vw(125);
+        background-image: url('../img/company/icon_01_sp.png');
+        bottom: vw(-12);
+        left: vw(-11);
+      }
+    }
   }
 
   &_box {
@@ -205,6 +342,11 @@
     margin-top: 4rem;
     border-radius: 4rem;
     padding: 5.6rem 6rem;
+    @include mq(sp) {
+      margin-top: vw(40);
+      border-radius: vw(20);
+      padding: vw(16) vw(24) vw(40);
+    }
 
     dl {
       display: flex;
@@ -213,15 +355,28 @@
       line-height: 1.3;
       font-weight: 700;
       padding: 2.8rem 1rem;
+      @include mq(sp) {
+        display: block;
+        font-size: vw(14);
+        padding: vw(24) 0;
+      }
     }
 
     dt {
       width: 20rem;
       flex: 0 0 auto;
+      @include mq(sp) {
+        width: 100%;
+        margin-bottom: vw(7);
+      }
     }
 
     dd {
       width: 100%;
+      @include mq(sp) {
+        font-size: vw(16);
+        line-height: 1.3;
+      }
     }
   }
 }
