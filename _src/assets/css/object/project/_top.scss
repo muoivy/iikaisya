@@ -5,6 +5,9 @@
   .c-lead {
     span {
       font-size: 4.4rem;
+      @include mq(sp) {
+        font-size: vw(24);
+      }
     }
   }
   .sec-recruit {
@@ -16,6 +19,10 @@
   position: relative;
   z-index: 5;
   margin-bottom: vw_pc(104);
+  @include mq(sp) {
+    height: vw(720);
+    background: url('../img/top/bg_mainvisual_01_sp.png') no-repeat center / cover;
+  }
   &::before {
     content: '';
     width: 100%;
@@ -26,6 +33,14 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
+    @include mq(sp) {
+      background-image: url('../img/top/bg_mainvisual_03_sp.png');
+      width: 100vw;
+      height: vw(93);
+      left: 0;
+      transform: unset;
+      bottom: vw(-53);
+    }
   }
   &::after {
     content: '';
@@ -37,12 +52,24 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
+    @include mq(sp) {
+      background-image: url('../img/top/bg_mainvisual_02_sp.png');
+      width: 100vw;
+      height: vw(90.5);
+      left: 0;
+      bottom: vw(28);
+      transform: unset;
+    }
   }
   &.is-inview {
     .top-mainvisual_ttl {
       opacity: 1;
       // transform: translateY(0);
       bottom: 32rem;
+      @include mq(sp) {
+        bottom: auto;
+        top: vw(108);
+      }
     }
     .top-mainvisual_image img {
       opacity: 1;
@@ -57,6 +84,9 @@
 
   &_bg {
     position: relative;
+    @include mq(sp) {
+      position: static;
+    }
     .bg-image {
       width: 100%;
       height: 76rem;
@@ -98,12 +128,23 @@
         width: 6rem;
         top: vw_pc(69);
         left: vw_pc(411);
+        @include mq(sp) {
+          width: vw(60);
+          top: vw(82);
+          left: vw(33);
+        }
       }
       &.icon05 {
         // width: vw_pc(103);
         width: 10.3rem;
         top: vw_pc(52);
         left: vw_pc(644);
+        @include mq(sp) {
+          width: vw(103);
+          top: vw(62);
+          left: auto;
+          right: vw(17);
+        }
       }
       &.icon06 {
         // width: vw_pc(55);
@@ -151,6 +192,12 @@
       position: relative;
       z-index: 4;
     }
+    @include mq(sp) {
+      width: vw(364);
+      bottom: auto;
+      top: vw(230);
+      left: vw(9);
+    }
   }
 
   &_handle {
@@ -172,6 +219,15 @@
       width: 8.6rem;
       animation: rotate 20s linear infinite;
     }
+    @include mq(sp) {
+      width: vw(47);
+      height: vw(47);
+      top: vw(-8);
+      right: vw(26);
+      .icon-handle {
+        width: vw(40);
+      }
+    }
   }
 
   &_image {
@@ -189,6 +245,10 @@
       visibility: hidden;
       transform: scale(0.7);
       transition: opacity 1.2s 3s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    @include mq(sp) {
+      width: 100vw;
+      bottom: vw(13);
     }
   }
 
@@ -225,6 +285,14 @@
     .arrow02 {
       animation: move 3s ease-out 2s infinite;
     }
+    @include mq(sp) {
+      font-size: vw(16);
+      bottom: vw(-10);
+      .arrow {
+        width: vw(16);
+        height: vw(16);
+      }
+    }
   }
 }
 
@@ -255,6 +323,9 @@
   // padding: vw_pc(266) 0 0;
   padding: 16.2rem 0 0;
   position: relative;
+  @include mq(sp) {
+    padding: vw(110) 0 0;
+  }
   &::before {
     content: '';
     width: 127.9rem;
@@ -265,11 +336,21 @@
     right: -3.7rem;
     @media only screen and (min-width: 1280px) {
     }
+    @include mq(sp) {
+      width: vw(354);
+      height: vw(291);
+      top: vw(-84);
+      right: 0;
+      background-image: url('../img/top/bg_company_02_sp.png');
+    }
   }
 
   &_content {
     position: relative;
     padding: 7.2rem 0;
+    @include mq(sp) {
+      padding: vw(48) 0 vw(56);
+    }
     &::after {
       content: '';
       width: calc(50% + 58rem);
@@ -279,19 +360,25 @@
       top: 0;
       left: 0;
       border-radius: 0 10rem 10rem 0;
+      @include mq(sp) {
+        width: vw(351);
+        border-radius: 0 vw(40) vw(40) 0;
+      }
     }
 
     .l-inner {
       position: relative;
       z-index: 2;
-      &::after {
-        content: '';
-        width: 36.9rem;
-        height: 19.4rem;
-        background: url('../img/top/bg_company_03.png') no-repeat center / contain;
-        position: absolute;
-        top: -10.4rem;
-        right: 8.4rem;
+      @include mq(pc) {
+        &::after {
+          content: '';
+          width: 36.9rem;
+          height: 19.4rem;
+          background: url('../img/top/bg_company_03.png') no-repeat center / contain;
+          position: absolute;
+          top: -10.4rem;
+          right: 8.4rem;
+        }
       }
     }
 
@@ -299,6 +386,16 @@
       position: absolute;
       top: -13.5rem;
       left: 0;
+      @include mq(sp) {
+        top: vw(-70);
+        left: vw(24);
+      }
+    }
+  }
+
+  &_text {
+    @include mq(sp) {
+      width: vw(303);
     }
   }
 
@@ -330,6 +427,18 @@
         }
       }
     }
+    @include mq(sp) {
+      max-width: 100%;
+      margin-top: vw(20);
+      &::before {
+        width: vw(315);
+        height: vw(235);
+        background-image: url('../img/top/bg_img_company_01_sp.png');
+        top: vw(3);
+        left: vw(3);
+      }
+
+    }
   }
 
   &_copy {
@@ -339,6 +448,10 @@
     letter-spacing: 0.05em;
     font-weight: 700;
     position: relative;
+    @include mq(sp) {
+      font-size: vw(14);
+      margin-top: vw(22);
+    }
   }
 
   &_btn {
@@ -357,15 +470,17 @@
     display: flex;
     align-items: flex-end;
     padding: 1rem 6rem 4.7rem 3.2rem;
-    &::after {
-      content: '';
-      width: 38.8rem;
-      height: 7.6rem;
-      background: url('../img/top/icon_company_03.png') no-repeat center / contain;
-      position: absolute;
-      top: -67px;
-      left: 71px;
-      z-index: -1;
+    @include mq(sp) {
+      position: relative;
+      margin-top: vw(63);
+      max-width: vw(327);
+      border-radius: 0 0 0 vw(60);
+      right: vw(-24);
+      bottom: auto;
+      margin-right: vw(-48);
+      display: block;
+      padding: 0 vw(60) vw(12);
+      text-align: center;
     }
     &::before {
       content: '';
@@ -377,6 +492,24 @@
       left: -4.5rem;
       transform-origin: bottom;
       animation: boyon_ug4m426 3s linear infinite;
+      @include mq(sp) {
+        width: vw(95);
+        height: vw(95);
+        top: vw(-24);
+        left: vw(-24);
+      }
+    }
+    @include mq(pc) {
+      &::after {
+        content: '';
+        width: 38.8rem;
+        height: 7.6rem;
+        background: url('../img/top/icon_company_03.png') no-repeat center / contain;
+        position: absolute;
+        top: -67px;
+        left: 71px;
+        z-index: -1;
+      }
     }
     .pickup-image {
       padding-bottom: 3.2rem;
@@ -385,6 +518,13 @@
       flex: 0 0 auto;
       margin-right: 2.4rem;
       text-align: center;
+      @include mq(sp) {
+        width: vw(140);
+        margin-right: 0;
+        display: inline-block;
+        padding-bottom: vw(30);
+        margin-top: vw(-29);
+      }
       &::before {
         content: '';
         width: 18rem;
@@ -394,6 +534,11 @@
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
+        @include mq(sp) {
+          width: vw(140);
+          height: vw(146);
+          background-image: url('../img/top/bg_img_company_02_sp.png');
+        }
       }
       img {
         width: 10.4rem;
@@ -401,6 +546,9 @@
         position: relative;
         transform-origin: bottom;
         transition: all .3s ease-in-out;
+        @include mq(sp) {
+          width: vw(78);
+        }
       }
       p {
         position: absolute;
@@ -410,6 +558,11 @@
         width: 15.3rem;
         left: 2.1rem;
         bottom: .5rem;
+        @include mq(sp) {
+          font-size: vw(14);
+          width: 100%;
+          left: 0;
+        }
       }
       &.is-zoom {
         img {
@@ -421,6 +574,11 @@
     .pickup-ttl {
       font-size: 2rem;
       text-align: center;
+      @include mq(sp) {
+        font-size: vw(16);
+        margin: vw(20) 0 vw(16);
+        line-height: 1;
+      }
     }
 
     .pickup-copy {
@@ -428,6 +586,10 @@
       line-height: 1.4;
       text-align: center;
       margin: 1.9rem 0 3.7rem;
+      @include mq(sp) {
+        font-size: vw(14);
+        margin: 0 0 vw(32);
+      }
     }
 
     .pickup-btn {
@@ -442,6 +604,9 @@
 .top-business {
   position: relative;
   padding: 18.4rem 0 0;
+  @include mq(sp) {
+    padding: vw(80) 0 0;
+  }
   &::before {
     content: '';
     width: 124.9rem;
@@ -450,11 +615,20 @@
     position: absolute;
     top: -5.5rem;
     left: 0;
+    @include mq(sp) {
+      width: vw(290);
+      height: vw(186);
+      background-image: url('../img/top/bg_business_01_sp.png');
+      top: -.4rem;
+    }
   }
 
   &_content {
     position: relative;
     padding: 13.2rem 0 12.4rem;
+    @include mq(sp) {
+      padding: vw(48) 0 0;
+    }
     &::before {
       content: '';
       width: 42.9rem;
@@ -474,6 +648,10 @@
       top: 0;
       right: 0;
       border-radius: 10rem 0 0 10rem;
+      @include mq(sp) {
+        width: vw(351);
+        border-radius: vw(40) 0 0 vw(40);
+      }
     }
 
     .l-inner {
@@ -481,12 +659,19 @@
       z-index: 2;
       display: flex;
       justify-content: flex-end;
+      @include mq(sp) {
+        flex-direction: column-reverse;
+        padding-left: vw(48);
+      }
     }
 
     .c-hashtag {
       position: absolute;
       top: -19.5rem;
       right: 0;
+      @include mq(sp) {
+        top: vw(-72);
+      }
     }
   }
 
@@ -495,6 +680,13 @@
     position: absolute;
     bottom: -14.6rem;
     left: -6rem;
+    @include mq(sp) {
+      position: relative;
+      width: vw(338.5);
+      bottom: auto;
+      left: auto;
+      margin: vw(14) 0 0 vw(-26);
+    }
   }
 
   &_box {
@@ -502,6 +694,10 @@
     align-items: center;
     gap: 1.7rem;
     margin-top: 3.2rem;
+    @include mq(sp) {
+      display: block;
+      margin-top: vw(16);
+    }
   }
 
   &_copy {
@@ -509,6 +705,10 @@
     line-height: 1.6;
     letter-spacing: 0.05em;
     font-weight: 700;
+    @include mq(sp) {
+      font-size: vw(14);
+      margin-bottom: vw(29);
+    }
   }
 
   &_btn {
@@ -519,6 +719,10 @@
     display: flex;
     gap: 2.4rem;
     margin-top: 6rem;
+    @include mq(sp) {
+      margin-top: vw(38);
+      display: block;
+    }
     li {
       width: 28.2rem;
       a {
@@ -550,6 +754,19 @@
       }
       .c-btn {
         pointer-events: none;
+      }
+      @include mq(sp) {
+        width: 100%;
+        & + li {
+          margin-top: vw(20);
+        }
+        a {
+          padding: 0 vw(47);
+        }
+        .item-ttl {
+          font-size: vw(16);
+          margin-bottom: vw(23);
+        }
       }
     }
   }

@@ -13,6 +13,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include mq(sp) {
+      padding: 0 vw(24) 0 0;
+    }
   }
 
   &_logo {
@@ -28,6 +31,14 @@
       }
       &:hover {
         opacity: .5;
+      }
+    }
+    @include mq(sp) {
+      a {
+        padding: vw(12) vw(29) vw(15) vw(24);
+        img {
+          max-width: vw(187);
+        }
       }
     }
   }
@@ -137,6 +148,21 @@
         }
       }
     }
+    @include mq(sp) {
+      width: vw(44);
+      height: vw(44);
+      border: vw(2) solid #F9D20E;
+      span {
+        width: 14px;
+        height: 1px;
+        &::before {
+          transform: translateY(-5px);
+        }
+        &::after {
+          transform: translateY(5px);
+        }
+      }
+    }
   }
 
   &_overlay {
@@ -179,6 +205,12 @@
       visibility: visible;
       pointer-events: all;
     }
+    @include mq(sp) {
+      // overflow-y: auto;
+      padding-top: vw(286);
+      display: block;
+      overflow-y: auto;
+    }
 
     .nav-content {
       position: relative;
@@ -202,6 +234,10 @@
           animation: contentWrap .2s ease .45s both;
         }
       }
+      @include mq(sp) {
+        padding-bottom: 0;
+      }
+
     }
 
     .nav-bg {
@@ -222,6 +258,14 @@
         top: -12.5rem;
         left: 0;
       }
+      @include mq(sp) {
+        width: vw(708);
+        &::before {
+          height: vw(147);
+          background-image: url('../img/bg_nav_01_sp.png');
+          top: vw(-80);
+        }
+      }
     }
 
     .nav-inner {
@@ -230,6 +274,11 @@
       margin: 0 auto;
       position: relative;
       z-index: 2;
+      @include mq(sp) {
+        max-width: 100%;
+        padding: 0 vw(36) vw(40);
+        overflow-y: auto;
+      }
     }
 
     .nav-image {
@@ -245,6 +294,10 @@
         visibility: hidden;
         transform: scale(0.7);
         transition: all 1.2s 1s cubic-bezier(0.19, 1, 0.22, 1)
+      }
+      @include mq(sp) {
+        width: vw(297);
+        top: vw(-187);
       }
     }
 
@@ -297,6 +350,28 @@
           }
           &:hover {
             opacity: .5;
+          }
+        }
+      }
+      @include mq(sp) {
+        display: block;
+        li {
+          width: 100%;
+          padding-bottom: vw(20);
+          & + li {
+            margin-top: vw(30);
+            &:last-child,
+            &:nth-last-child(2) {
+              border-bottom: 1px solid #1559A6;
+              padding-bottom: vw(20);
+            }
+          }
+          a {
+            display: block;
+            font-size: vw(24);
+            span {
+              font-size: vw(16);
+            }
           }
         }
       }

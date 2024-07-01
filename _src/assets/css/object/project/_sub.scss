@@ -1,24 +1,117 @@
 .sub-page {
 
+  .c-lead {
+    span {
+      width: 6.2rem;
+    }
+  }
+
 }
 
 .sub-mainvisual {
-  // max-height: 49.1rem;
-  // background: url('../img/bg_mainvisual_01.png') no-repeat center bottom / cover;
-  //
+  // height: 48.9rem;
+  height: vw_pc(489);
+  background: url('../img/sub/bg_mainvisual_01.png') no-repeat center bottom / cover;
   position: relative;
-  &_bg {
-    width: 100%;
-    img {
-      width: 100%;
+  &::before {
+    content: '';
+    width: 130.2rem;
+    height: 20.2rem;
+    background: url('../img/sub/bg_mainvisual_02.png') no-repeat center / contain;
+    position: absolute;
+    left: calc(50% + 1.1rem);
+    bottom: -3rem;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+  &::after {
+    content: '';
+    width: 32.9rem;
+    height: 11.1rem;
+    background: url('../img/sub/icon_mainvisual_08.png') no-repeat center / contain;
+    position: absolute;
+    left: calc(50% + 4rem);
+    bottom: -.2rem;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+  &.is-inview {
+    .bg-icon {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .l-inner {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .sub-mainvisual_image img {
+      opacity: 1;
+      visibility: visible;
+      animation: scaleIn 1.2s 2.5s forwards;
     }
   }
+
   .l-inner {
     position: absolute;
-    top: 0;
+    top: vw_pc(152);
     left: 0;
     right: 0;
-    padding: 15rem 0 0;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s 1s, transform 0.5s 2s, top 0.5s 2s;
+  }
+
+  .bg-icon {
+    position: absolute;
+    transform: translateY(20px);
+    opacity: 0;
+    transition-duration: 0.5s, 1s;
+    transition-property: opacity, transform;
+    transition-delay: 0s;
+    transition-timing-function: ease, cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    &.icon01 {
+      width: 6.2rem;
+      top: vw_pc(69);
+      left: vw_pc(347);
+    }
+
+    &.icon02 {
+      width: 10.3rem;
+      top: vw_pc(22);
+      left: vw_pc(576);
+    }
+
+    &.icon03 {
+      width: 5.5rem;
+      top: vw_pc(97);
+      right: vw_pc(205);
+    }
+
+    &.icon04 {
+      width: 12.25rem;
+      top: vw_pc(171);
+      right: vw_pc(123);
+    }
+
+    &.icon05 {
+      width: 8.6rem;
+      top: vw_pc(141);
+      right: vw_pc(17);
+    }
+
+    &.icon06 {
+      width: 5.75rem;
+      bottom: vw_pc(56);
+      left: vw_pc(368);
+    }
+
+    &.icon07 {
+      width: 14.1rem;
+      bottom: vw_pc(70);
+      left: vw_pc(447);
+    }
   }
 
   .c-hashtag {
@@ -35,16 +128,142 @@
       span {
         font-size: 6rem;
         width: 9.3rem;
-        line-height: 9.3rem;
+        line-height: 9.1rem;
       }
     }
   }
 
   &_image {
-    width: 130.2rem;
     position: absolute;
-    bottom: -2.9rem;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 0;
+    img {
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0.7);
+      transition: opacity 1.2s 3s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+  &_company {
+    .sub-mainvisual_image {
+      width: 31.4rem;
+      left: calc(50% + 14rem);
+    }
+  }
+
+  &_business {
+    &::before {
+      content: '';
+      width: 126.95rem;
+      height: 19.2rem;
+      background-image: url('../img/sub/bg_mainvisual_03.png');
+      left: calc(50% + 1.1rem);
+      bottom: -3rem;
+    }
+    .sub-mainvisual_image {
+      width: 48.15rem;
+      left: calc(50% + 8rem);
+    }
+  }
+
+  &_interview {
+    &::before {
+      content: '';
+      width: 128.3rem;
+      height: 19.7rem;
+      background-image: url('../img/sub/bg_mainvisual_04.png');
+      left: calc(50% + 1.1rem);
+      bottom: -3rem;
+    }
+    .sub-mainvisual_image {
+      width: 46.65rem;
+      left: calc(50% + 14rem);
+    }
+
+    &_detail {
+      &::before {
+        content: '';
+        width: 124.2rem;
+        height: 34.15rem;
+        background-image: url('../img/sub/bg_mainvisual_05.png');
+        left: calc(50% - 2rem);
+        bottom: -3.4rem;
+      }
+
+      &.is-inview {
+        .l-inner {
+          transform: translateY(-2rem);
+        }
+      }
+
+      .l-inner {
+        width: 98rem;
+        transform: translateY(1rem);
+        z-index: 3;
+      }
+
+      .number {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      .sub-mainvisual_ttl {
+        margin: 0;
+        display: flex;
+        align-items: flex-end;
+        gap: 2rem;
+        .c-lead span {
+          font-size: 4.2rem;
+          width: 6.2rem;
+          line-height: 6.8rem;
+        }
+        .info {
+          font-size: 1.6rem;
+          font-weight: 700;
+        }
+      }
+      .copy {
+        width: 56.1rem;
+        height: 21.2rem;
+        background: url('../img/interview/bg_text_01.png') no-repeat center / cover;
+        display: flex;
+        align-items: center;
+        padding: 0 7rem;
+        margin-top: 1.7rem;
+        margin-left: -2.2rem;
+        position: relative;
+        z-index: 3;
+      }
+      .text {
+        font-size: 1.8rem;
+        line-height: 2;
+        font-weight: 700;
+      }
+      .sub-mainvisual_image {
+        width: 24.1rem;
+        left: calc(50% + 18rem);
+      }
+    }
+  }
+
+  &_culture {
+    .sub-mainvisual_image {
+      width: 30.6rem;
+      left: calc(50% + 14rem);
+    }
+  }
+
+  &_program {
+    .sub-mainvisual_image {
+      width: 22.25rem;
+      left: calc(50% + 20rem);
+    }
+  }
+
+  &_recruit {
+    .sub-mainvisual_image {
+      width: 29.85rem;
+      left: calc(50% + 16rem);
+    }
   }
 }

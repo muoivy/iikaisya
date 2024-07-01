@@ -268,69 +268,6 @@
   }
 }
 
-.interview-detail_mainvisual {
-  .l-inner {
-    width: 98rem;
-    padding: 13.1rem 0 0;
-    height: 100%;
-    &::before {
-      content: '';
-      width: 124.2rem;
-      height: 34.15rem;
-      background: url('../img/interview/bg_mainvisual_detail.png') no-repeat center / contain;
-      position: absolute;
-      bottom: -3.2rem;
-      left: -15rem;
-      z-index: 2;
-    }
-  }
-  .number {
-    font-size: 2rem;
-    font-weight: 700;
-  }
-
-  .sub-mainvisual_ttl {
-    margin: 0;
-    display: flex;
-    align-items: flex-end;
-    gap: 2rem;
-    .c-lead span {
-      font-size: 4.2rem;
-      width: 6.2rem;
-      line-height: 6.8rem;
-    }
-    .info {
-      font-size: 1.6rem;
-      font-weight: 700;
-    }
-  }
-  .copy {
-    width: 56.1rem;
-    height: 21.2rem;
-    background: url('../img/interview/bg_text_01.png') no-repeat center / cover;
-    display: flex;
-    align-items: center;
-    padding: 0 7rem;
-    margin-top: 1.7rem;
-    margin-left: -2.2rem;
-    position: relative;
-    z-index: 3;
-  }
-  .text {
-    font-size: 1.8rem;
-    line-height: 2;
-    font-weight: 700;
-  }
-  .sub-mainvisual_image {
-    width: 24.1rem;
-    position: absolute;
-    right: calc(50% - 42rem);
-    left: auto;
-    transform: unset;
-    bottom: 0;
-  }
-}
-
 .interview-detail {
   padding: 14.4rem 0 12rem;
 

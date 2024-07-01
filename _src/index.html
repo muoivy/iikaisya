@@ -42,7 +42,7 @@
     <main class="l-main">
 
       <section class="top-mainvisual inview js-anim_elm">
-        <div class="top-mainvisual_bg">
+        <div class="top-mainvisual_bg is-pc">
           <div class="bg-image"><img src="assets/img/top/bg_mainvisual_01.png" alt=""></div>
           <div class="bg-icon icon01 -delay1"><img src="assets/img/top/icon_mainvisual_01.png" alt=""></div>
           <div class="bg-icon icon02 -delay2"><img src="assets/img/top/icon_mainvisual_02.png" alt=""></div>
@@ -54,11 +54,23 @@
           <div class="bg-icon icon08 -delay8"><img src="assets/img/top/icon_mainvisual_08.png" alt=""></div>
           <div class="bg-icon icon09 -delay9"><img src="assets/img/top/icon_mainvisual_09.png" alt=""></div>
         </div>
+        <div class="top-mainvisual_bg is-sp">
+          <div class="bg-icon icon04 -delay4 is-sp"><img src="assets/img/top/icon_mainvisual_04.png" alt=""></div>
+          <div class="bg-icon icon05 -delay5 is-sp"><img src="assets/img/top/icon_mainvisual_05.png" alt=""></div>
+        </div>
         <h2 class="top-mainvisual_ttl">
-          <img src="assets/img/top/ttl_mainvisual.png" alt="">
+          <picture>
+            <source media="(min-width:769px)" srcset="assets/img/top/ttl_mainvisual.png">
+            <img src="assets/img/top/ttl_mainvisual_sp.png" loading="lazy" alt="">
+          </picture>
           <div class="top-mainvisual_handle"><div class="icon-handle"><img src="assets/img/top/icon_handle.png" alt=""></div></div>
         </h2>
-        <div class="top-mainvisual_image"><img src="assets/img/top/img_mainvisual.png" alt=""></div>
+        <div class="top-mainvisual_image">
+          <picture>
+            <source media="(min-width:769px)" srcset="assets/img/top/img_mainvisual.png">
+            <img src="assets/img/top/img_mainvisual_sp.png" loading="lazy" alt="">
+          </picture>
+        </div>
         <div class="top-mainvisual_scroll"><a href="#company" class="js-anchor">
           <span class="txt">SCROLL DOWN</span>
           <div class="arrow arrow01"></div>
@@ -75,7 +87,12 @@
               <h2 class="c-ttl js-bounce-target">COMPANY</h2>
               <h3 class="c-lead js-letter js-bounce-target">会社案内</h3>
               <div class="top-company_image js-zoom01 js-bounce-target">
-                <figure><img src="assets/img/top/img_company_01.png" alt=""></figure>
+                <figure>
+                  <picture>
+                    <source media="(min-width:769px)" srcset="assets/img/top/img_company_01.png">
+                    <img src="assets/img/top/img_company_01_sp.png" loading="lazy" alt="">
+                  </picture>
+                </figure>
               </div>
               <div class="top-company_copy">この物語はここから始まった...<br>クオリティ・ワンについて紹介しています。</div>
               <div class="top-company_btn"><a href="/company" class="c-btn js-btn-hover01">VIEW COMPANY</a></div>
@@ -90,7 +107,7 @@
                 </div>
                 <div class="pickup-right">
                   <h3 class="pickup-ttl">代表からの挨拶</h3>
-                  <div class="pickup-copy">ゲームマスター笠原 大助の説明書も公開！</div>
+                  <div class="pickup-copy">ゲームマスター笠原 大助の<br class="is-sp">説明書も公開！</div>
                   <div class="pickup-btn"><a href="#" class="c-btn c-btn_border js-btn-hover02">VIEW MORE</a></div>
                 </div>
               </div>
@@ -102,7 +119,12 @@
       <section class="top-business">
         <div class="top-business_content js-bounce-trigger">
           <div class="l-inner">
-            <div class="top-business_image js-bounce-target"><img src="assets/img/top/img_business_01.png" alt=""></div>
+            <div class="top-business_image js-bounce-target">
+              <picture>
+                <source media="(min-width:769px)" srcset="assets/img/top/img_business_01.png">
+                <img src="assets/img/top/img_business_01_sp.png" loading="lazy" alt="">
+              </picture>
+            </div>
             <div class="top-business_text js-bounce-target">
               <div id="business" class="c-hashtag">#QUEST</div>
               <h2 class="c-ttl">BUSINESS</h2>
@@ -129,7 +151,7 @@
               </ul>
             </div>
           </div>
-          <div class="top-business_sub splide">
+          <div class="top-business_sub splide is-pc">
             <div class="splide__track">
               <div class="splide__list">
                 <figure class="splide__slide"><img src="assets/img/top/ttl_02.svg" alt="QUALITY-ONE"></figure>

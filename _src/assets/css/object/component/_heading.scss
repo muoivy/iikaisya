@@ -22,6 +22,13 @@
     //   width: 6.7rem;
     // }
   }
+  @include mq(sp) {
+    span {
+      font-size: vw(24);
+      width: vw(41);
+      line-height: vw(42);
+    }
+  }
 }
 
 .c-hashtag {
@@ -35,6 +42,9 @@
   background-clip: text;
   background-image: url('../img/bg_ttl.png');
 	color: transparent;
+  @include mq(sp) {
+    font-size: vw(48);
+  }
 }
 
 .c-ttl {
@@ -43,4 +53,8 @@
   line-height: 1;
   letter-spacing: 0;
   margin-bottom: .4rem;
+  @include mq(sp) {
+    font-size: vw(14);
+    margin-bottom: vw(8);
+  }
 }

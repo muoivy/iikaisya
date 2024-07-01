@@ -13,7 +13,7 @@ html {
     font-size: calc(var(--vw)/128);  // Desgin PC width 2000px/10
   }
   @include mq(sp) {
-    font-size: 62.5%;
+    font-size: calc(var(--vw)/37.5);
     &.no-scroll {
       overflow: hidden;
       touch-action: none;
@@ -113,7 +113,7 @@ textarea {
     width: 116rem;
   }
   @include mq(sp) {
-    padding: 0 vw(21);
+    padding: 0 vw(24);
     width: auto;
   }
 }

@@ -3,7 +3,7 @@
         <div class="l-header_logo"><a href="/">
           <img src="/assets/img/logo.png" alt="クオリティ・ワン株式会社">
         </a></div>
-        <div class="l-header_btn"><a href="/recruit">ENTRY</a></div>
+        <div class="l-header_btn is-pc"><a href="/recruit">ENTRY</a></div>
         <div class="l-header_hamburger">
           <span></span>
         </div>
@@ -13,9 +13,14 @@
 
       <nav class="l-header_nav">
         <div class="nav-content">
-          <div class="nav-image"><img src="/assets/img/img_nav_01.png" alt=""></div>
-          <div class="nav-icon icon01"><img src="/assets/img/icon_nav_01.png" alt=""></div>
-          <div class="nav-icon icon02"><img src="/assets/img/icon_nav_02.png" alt=""></div>
+          <div class="nav-image">
+            <picture>
+              <source media="(min-width:769px)" srcset="/assets/img/img_nav_01.png">
+              <img src="/assets/img/img_nav_01_sp.png" loading="lazy" alt="">
+            </picture>
+          </div>
+          <div class="nav-icon icon01 is-pc"><img src="/assets/img/icon_nav_01.png" alt=""></div>
+          <div class="nav-icon icon02 is-pc"><img src="/assets/img/icon_nav_02.png" alt=""></div>
           <div class="nav-bg"></div>
           <div class="nav-inner">
             <ul class="nav-menu">
