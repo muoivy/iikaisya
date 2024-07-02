@@ -264,7 +264,7 @@
     padding-left: 8rem;
     @include mq(sp) {
       display: block;
-      padding-left: 0;
+      padding-left: vw(24);
     }
   }
 
@@ -281,27 +281,48 @@
   &_image {
     padding: 6rem 4rem 0 2rem;
     @include mq(sp) {
-      padding: 0 0 vw(24);
+      padding: 0 0 vw(28);
       overflow-x: auto;
+      overflow-y: unset;
       margin-top: vw(25);
-      &::-webkit-scrollbar {
-        height: vw(8);
+      margin-right: vw(-24);
+      // &::-webkit-scrollbar {
+      //   height: vw(8);
+      // }
+      // &::-webkit-scrollbar-track {
+      //   background: #F9F7F7;
+      //   border-radius: vw(8);
+
+      // }
+      // &::-webkit-scrollbar-thumb {
+      //   background: #1559A6;
+      //   border-radius: vw(8);
+      // }
+      // &::-webkit-scrollbar-thumb:hover {
+      //   background: #1559A6;
+      // }
+      figure {
+        min-width: vw(873.5);
+        padding-right: vw(24);
+        img {
+        }
       }
-      &::-webkit-scrollbar-track {
+      .os-scrollbar {
         background: #F9F7F7;
         border-radius: vw(8);
+        padding: 0;
+        height: vw(8);
+        width: vw(337);
+        // left: vw(-10) !important;
+      }
+      .os-padding {
 
       }
-      &::-webkit-scrollbar-thumb {
-        background: #1559A6;
-        border-radius: vw(8);
-      }
-      &::-webkit-scrollbar-thumb:hover {
+      .os-scrollbar .os-scrollbar-track > .os-scrollbar-handle {
         background: #1559A6;
       }
-      img {
-        max-width: vw(849.5);
-        width: vw(849.5);
+      .os-scrollbar-vertical {
+        display: none;
       }
     }
   }

@@ -366,6 +366,40 @@ if ($(".top-business_sub").length > 0) {
   }).mount(window.splide.Extensions);
 }
 
+function scrollbarForSP() {
+  function initializeOverlayScrollbars() {
+    $(".js-scrollbar-sp").each(function () {
+      if ($(window).width() < 768) {
+        if (!$(this).hasClass("os-host")) {
+          OverlayScrollbars($(this)[0], {
+            resize: "none",
+            sizeAutoCapable: true,
+            paddingAbsolute: true,
+            overflow: {
+              y: 'hidden',
+            },
+            scrollbars: {
+              clickScrolling: true,
+              autoHide: "never",
+            },
+          });
+        }
+      } else {
+        if ($(this).hasClass("os-host")) {
+          OverlayScrollbars($(this)[0]).destroy();
+        }
+      }
+    });
+  }
+
+  initializeOverlayScrollbars();
+
+  $(window).resize(function () {
+    initializeOverlayScrollbars();
+  });
+}
+
+scrollbarForSP();
 
 /* INVIEW
 ********************************************** */

@@ -481,6 +481,10 @@
           span {
             font-family: $cabin_condensed;
             font-size: 4.2rem;
+            -webkit-background-clip: text;
+            background-clip: text;
+            background-image: url('../img/bg_ttl.png');
+            color: transparent;
           }
         }
         @include mq(sp) {
@@ -511,6 +515,10 @@
         span {
           font-family: $cabin_condensed;
           font-size: 9.6rem;
+          -webkit-background-clip: text;
+          background-clip: text;
+          background-image: url('../img/bg_ttl.png');
+          color: transparent;
         }
         @include mq(sp) {
           font-size: vw(16);

@@ -425,6 +425,12 @@
     .sub-mainvisual_image {
       width: 29.85rem;
       left: calc(50% + 16rem);
+      @include mq(sp) {
+        left: auto;
+        right: vw(25);
+        width: vw(155);
+        transform: unset;
+      }
     }
   }
 }
