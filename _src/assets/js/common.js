@@ -236,7 +236,13 @@ if ($(".interview-gallery_slider").length > 0) {
     pagination  : false,
     isNavigation: true,
     perPage: 5,
-    gap: 15
+    gap: 15,
+    breakpoints: {
+      768: {
+        perPage: 3,
+        gap: 8
+      },
+    }
   } );
 
   main.sync( thumbnails );

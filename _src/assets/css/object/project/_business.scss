@@ -1,5 +1,8 @@
 .business-content {
   padding: 12.5rem 0 0;
+  @include mq(sp) {
+    padding: vw(56) 0 0;
+  }
 
   &_wrap {
     max-width: 117.8rem;
@@ -8,14 +11,36 @@
     margin: 0 auto;
     position: relative;
     background: url('../img/business/bg_content.png') no-repeat center / contain;
+    @include mq(sp) {
+      background: url('../img/business/bg_content_sp.png') no-repeat center / cover;
+      height: auto;
+      max-width: 100%;
+    }
   }
 
   &_inner {
     padding: 8.7rem 9.2rem 0;
+    @include mq(sp) {
+      padding: vw(98) vw(24) vw(144);
+    }
+  }
+
+  &_ttl {
+    @include mq(sp) {
+      margin-bottom: vw(130);
+    }
   }
 
   &_btn {
     position: absolute;
+    @include mq(sp) {
+      position: relative;
+      top: auto !important;
+      right: auto !important;
+      left: auto !important;
+      bottom: auto !important;
+      margin-bottom: vw(32);
+    }
     a {
       display: flex;
       align-items: flex-end;
@@ -36,6 +61,11 @@
             }
           }
         }
+      }
+      @include mq(sp) {
+        width: 100%;
+        height: vw(141) !important;
+        background-image: url('../img/business/bg_btn_05.png') !important;
       }
     }
     &.btn01 {
@@ -75,6 +105,14 @@
       height: 16.3rem;
       padding-top: 4.5rem;
       padding-left: 3.9rem;
+      @include mq(sp) {
+        width: 100%;
+        height: 100%;
+        padding: 0 vw(58) 0 vw(45);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
     }
 
     .btn-link {
@@ -85,6 +123,9 @@
         font-size: 1.8rem;
         line-height: 1.3;
         font-weight: 700;
+        @include mq(sp) {
+          font-size: vw(18);
+        }
       }
       .icon {
         svg, img {
@@ -98,14 +139,28 @@
           transition: all .3s ease-in-out;
         }
       }
+      @include mq(sp) {
+        display: block;
+        .icon {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: vw(58);
+        }
+      }
     }
 
     .btn-note {
       font-size: 1.2rem;
       font-weight: 700;
-      margin-top: 1.5rem;
+      margin-top: 1rem;
+      @include mq(sp) {
+        margin-top: vw(5);
+        font-size: vw(12);
+      }
     }
   }
+
   &_modal {
     position: relative;
     width: 100%;
@@ -125,6 +180,9 @@
       }
       .modal-content {
         transform: translateX(0);
+        @include mq(sp) {
+          transform: unset;
+        }
       }
     }
 
@@ -148,16 +206,31 @@
       top: 0;
       right: 0;
       max-width: 46rem;
+      width: 100%;
       height: 100%;
       background: #1559A6;
       z-index: 101;
       overflow-y: auto;
       transform: translateX(100%);
       transition: all .2s ease-in-out .3s;
+      @include mq(sp) {
+        max-width: 100%;
+        background: none;
+        transform: unset;
+      }
     }
 
     .modal-inner {
       padding: 6rem 5rem;
+      @include mq(sp) {
+        padding: vw(5) vw(24) vw(64);
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background: #1559A6;
+        border-radius: vw(20) vw(20) 0 0;
+      }
     }
 
     .modal-heading {
@@ -171,11 +244,15 @@
         left: 4.5rem;
         height: 16.3rem;
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: center;
         span {
           display: block;
           font-size: 1.2rem;
           margin-top: 2rem;
+        }
+        @include mq(sp) {
+          font-size: vw(18);
         }
       }
     }
@@ -187,6 +264,11 @@
       line-height: 2;
       margin-top: 4.5rem;
       min-height: 31.3rem;
+      @include mq(sp) {
+        font-size: vw(14);
+        margin-top: vw(40);
+        min-height: auto;
+      }
     }
 
     .modal-btn {
@@ -211,6 +293,11 @@
       &:hover {
         background: #E1E1E1;
       }
+      @include mq(sp) {
+        font-size: vw(18);
+        line-height: vw(60);
+        margin-top: vw(40);
+      }
     }
   }
 }
@@ -218,19 +305,33 @@
 
 .business-fun {
   padding: 12.8rem 0 16rem;
+  @include mq(sp) {
+    padding: 0 0 vw(80);
+    margin-top: vw(-13);
+  }
 
   &_content {
     padding: 0 4rem;
+    @include mq(sp) {
+      padding: 0;
+    }
   }
 
   &_ttl {
     margin: 0 0 7.6rem 4rem;
+    @include mq(sp) {
+      margin: 0;
+    }
   }
 
   &_list {
     display: flex;
     flex-direction: column;
     gap: 5.7rem;
+    @include mq(sp) {
+      margin-top: vw(48);
+      display: block;
+    }
   }
 
   &_item {
@@ -238,6 +339,13 @@
     border: 1px solid #222;
     background: rgba($color: #FEC75D, $alpha: .2);
     padding: 3rem 4rem;
+    @include mq(sp) {
+      padding: vw(46) vw(22) vw(24);
+
+      & + .business-fun_item {
+        margin-top: vw(48);
+      }
+    }
 
     .item-ttl {
       background: url('../img/business/bg_ttl_01.png') no-repeat center / cover;
@@ -245,17 +353,25 @@
       line-height: 5.4rem;
       position: absolute;
       top: -2.7rem;
-      left: 50%;
-      transform: translateX(-50%);
+      left: calc(50% - 16.15rem);
       text-align: center;
       font-size: 2rem;
       letter-spacing: 0.05em;
+      @include mq(sp) {
+        min-width: vw(280);
+        line-height: vw(54);
+        left: calc(50% - #{vw(140)});
+        font-size: vw(16);
+      }
     }
 
     .item-content {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @include mq(sp) {
+        flex-direction: column-reverse;
+      }
     }
 
     .item-text {
@@ -264,10 +380,18 @@
       font-size: 1.8rem;
       line-height: 2;
       font-weight: 700;
+      @include mq(sp) {
+        width: 100%;
+        font-size: vw(14);
+        margin-top: vw(16);
+      }
     }
 
     .item-image {
       width: 24.9rem;
+      @include mq(sp) {
+        width: vw(80);
+      }
     }
   }
 

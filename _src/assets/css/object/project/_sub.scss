@@ -31,7 +31,7 @@
     left: calc(50% + 1.1rem);
     bottom: -3rem;
     transform: translateX(-50%);
-    z-index: 5;
+    z-index: 6;
     @include mq(sp) {
       width: 100vw;
       height: vw(90.5);
@@ -80,7 +80,7 @@
     top: vw_pc(152);
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 5;
     opacity: 0;
     transform: translateY(100%);
     transition: opacity 0.5s 1s, transform 0.5s 2s, top 0.5s 2s;
@@ -234,8 +234,9 @@
         bottom: vw(-12);
       }
       .sub-mainvisual_image {
-        width: 48.15rem;
-        left: calc(50% + 8rem);
+        width: vw(210);
+        left: auto;
+        right: vw(10);
       }
     }
   }
@@ -243,42 +244,75 @@
   &_interview {
     &::before {
       content: '';
-      width: 128.3rem;
-      height: 19.7rem;
+      width: 124.3rem;
+      height: 34.15rem;
       background-image: url('../img/sub/bg_mainvisual_04.png');
       left: calc(50% + 1.1rem);
       bottom: -3rem;
+      @include mq(sp) {
+        width: 100vw;
+        height: vw(153.5);
+        background-image: url('../img/sub/bg_mainvisual_04_sp.png');
+        left: 0;
+        transform: unset;
+        bottom: vw(-12);
+      }
     }
     .sub-mainvisual_image {
-      width: 46.65rem;
+      width: 39.1rem;
       left: calc(50% + 14rem);
+      @include mq(sp) {
+        width: vw(173);
+        left: auto;
+        right: vw(30);
+      }
     }
 
-    &_detail {
-      &::before {
-        content: '';
-        width: 124.2rem;
-        height: 34.15rem;
-        background-image: url('../img/sub/bg_mainvisual_05.png');
-        left: calc(50% - 2rem);
-        bottom: -3.4rem;
+    &--detail {
+      @include mq(sp) {
+        height: vw(438);
+        background-image: url('../img/sub/bg_mainvisual_06.png');
+        &::before {
+          width: 100vw;
+          height: vw(90.5);
+          left: 0;
+          bottom: vw(-13);
+          transform: unset;
+          background-image: url('../img/sub/bg_mainvisual_02_sp.png');
+        }
       }
 
       &.is-inview {
         .l-inner {
           transform: translateY(-2rem);
+          @include mq(sp) {
+            transform: translateY(1rem);
+          }
+        }
+        .sub-mainvisual_image:after {
+          opacity: 1;
+          visibility: visible;
+          animation: scaleIn 1.2s 2.5s forwards;
         }
       }
 
       .l-inner {
         width: 98rem;
         transform: translateY(1rem);
-        z-index: 3;
+        z-index: 6;
+        @include mq(sp) {
+          width: auto;
+          transform: translateY(2rem);
+        }
       }
 
       .number {
         font-size: 2rem;
         font-weight: 700;
+        @include mq(sp) {
+          font-size: vw(14);
+          margin-bottom: vw(7);
+        }
       }
 
       .sub-mainvisual_ttl {
@@ -295,7 +329,20 @@
           font-size: 1.6rem;
           font-weight: 700;
         }
+        @include mq(sp) {
+          display: block;
+          .c-lead span {
+            font-size: vw(24);
+            width: vw(41);
+            line-height: vw(40);
+          }
+          .info {
+            font-size: vw(14);
+            margin-top: vw(2);
+          }
+        }
       }
+
       .copy {
         width: 56.1rem;
         height: 21.2rem;
@@ -307,15 +354,45 @@
         margin-left: -2.2rem;
         position: relative;
         z-index: 3;
+        @include mq(sp) {
+          width: vw(327);
+          height: vw(194);
+          margin: 0 auto;
+          background-image: url('../img/interview/bg_text_02.png');
+          padding: 0 vw(42);
+          margin-top: vw(33);
+        }
       }
       .text {
         font-size: 1.8rem;
         line-height: 2;
         font-weight: 700;
+        @include mq(sp) {
+          font-size: vw(14);
+        }
       }
       .sub-mainvisual_image {
         width: 24.1rem;
         left: calc(50% + 18rem);
+        @include mq(sp) {
+          width: vw(115);
+          left: auto;
+          top: vw(85);
+          right: vw(50);
+          &::after {
+            content: '';
+            width: vw(56.5);
+            height: vw(140.5);
+            background: url('../img/interview/icon_01.png') no-repeat center / contain;
+            position: absolute;
+            top: vw(40);
+            right: vw(-30);
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(.7);
+            transition: opacity 1.2s 3s cubic-bezier(.19,1,.22,1);
+          }
+        }
       }
     }
   }
@@ -324,6 +401,11 @@
     .sub-mainvisual_image {
       width: 30.6rem;
       left: calc(50% + 14rem);
+      @include mq(sp) {
+        width: vw(150);
+        left: auto;
+        right: vw(21);
+      }
     }
   }
 
@@ -331,6 +413,11 @@
     .sub-mainvisual_image {
       width: 22.25rem;
       left: calc(50% + 20rem);
+      @include mq(sp) {
+        width: vw(114);
+        left: auto;
+        right: vw(48);
+      }
     }
   }
 

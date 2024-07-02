@@ -1,5 +1,8 @@
 .culture-appeal {
   padding: 14rem 0 0;
+  @include mq(sp) {
+    padding: vw(56) 0 0;
+  }
 
   &_content {
     position: relative;
@@ -14,6 +17,13 @@
       top: 0;
       left: 0;
     }
+    @include mq(sp) {
+      padding: vw(56) 0 0;
+      &::before {
+        width: vw(352);
+        border-radius: 0 vw(40) vw(40) 0;
+      }
+    }
   }
 
   .l-inner {
@@ -27,6 +37,26 @@
       bottom: -7rem;
       right: 9rem;
     }
+    @include mq(sp) {
+      padding-left: vw(24);
+      padding-right: vw(48);
+      padding-bottom: vw(121);
+      &::before {
+        content: '';
+        width: vw(95);
+        height: vw(95);
+        background: url('../img/culture/icon_03.png') no-repeat center / contain;
+        position: absolute;
+        top: vw(-68);
+        right: vw(47);
+      }
+      &::after {
+        width: vw(152);
+        height: vw(68);
+        bottom: vw(24);
+        right: vw(200);
+      }
+    }
   }
 
   &_lead {
@@ -35,6 +65,10 @@
     font-weight: 700;
     margin: 3rem 0 3.4rem;
     letter-spacing: 0.05em;
+    @include mq(sp) {
+      font-size: vw(16);
+      margin: vw(40) 0 vw(38);
+    }
   }
 
   &_copy {
@@ -43,6 +77,10 @@
     font-weight: 700;
     max-width: 67.4rem;
     letter-spacing: 0.05em;
+    @include mq(sp) {
+      font-size: vw(14);
+      max-width: 100%;
+    }
   }
 
   &_image {
@@ -50,20 +88,36 @@
     position: absolute;
     top: -8.6rem;
     right: -6.5rem;
+    @include mq(sp) {
+      top: auto;
+      bottom: vw(-72);
+      right: vw(13);
+      width: vw(187);
+    }
   }
 }
 
 
 .culture-welfare {
   padding: 6.5rem 0 0;
+  @include mq(sp) {
+    padding: vw(100) 0 0;
+  }
 
   .l-inner {
     padding: 0 4rem;
+    @include mq(sp) {
+      padding: 0 vw(24);
+    }
   }
 
   &_ttl {
     margin-left: 4rem;
     margin-bottom: 5.5rem;
+    @include mq(sp) {
+      margin-left: 0;
+      margin-bottom: vw(40);
+    }
   }
 
   &_box {
@@ -73,9 +127,17 @@
     display: flex;
     padding: 4.3rem 8.5rem 3.2rem 38rem;
     position: relative;
+    @include mq(sp) {
+      border-radius: vw(15);
+      padding: vw(16) vw(20) vw(30);
+      display: block;
+    }
 
     & + .culture-welfare_box {
       margin-top: 3.7rem;
+      @include mq(sp) {
+        margin-top: vw(24);
+      }
     }
 
     &:nth-last-child(2) {
@@ -83,6 +145,11 @@
         width: 31.2rem;
         top: -2.6rem;
         left: 4.2rem;
+        @include mq(sp) {
+          width: vw(145);
+          top: auto;
+          left: auto;
+        }
       }
     }
 
@@ -91,10 +158,23 @@
       width: 32.85rem;
       left: 2.7rem;
       top: .8rem;
+      @include mq(sp) {
+        width: vw(152);
+        position: relative;
+        left: auto;
+        top: auto;
+        margin: 0 auto;
+      }
     }
 
     .box-ttl {
       font-size: 2.2rem;
+      @include mq(sp) {
+        font-size: vw(16);
+        text-align: center;
+        line-height: 2;
+        margin-top: vw(16);
+      }
     }
 
     .box-copy {
@@ -103,6 +183,10 @@
       line-height: 2;
       letter-spacing: 0.05em;
       margin-top: 3.1rem;
+      @include mq(sp) {
+        font-size: vw(14);
+        margin-top: vw(16);
+      }
     }
   }
 
@@ -111,16 +195,25 @@
     flex-wrap: wrap;
     gap: 1rem;
     margin-top: 5.3rem;
+    @include mq(sp) {
+      gap: vw(40) vw(17);
+      margin-top: vw(64);
+    }
     .item {
       width: calc(25% - 0.7%);
       border: 1px solid #643617;
       background: url('../img/culture/bg_02.png') no-repeat center / cover;
       border-radius: 1.5rem;
       padding: 1.6rem 1rem 2rem;
+      position: relative;
+      @include mq(sp) {
+        width: 47%;
+        padding: vw(44) vw(9) vw(32);
+      }
     }
     .item-ttl {
       font-size: 2rem;
-      background: #fff;
+      background: #FFFBD7;
       border: 1px solid #222;
       border-radius: 3rem;
       line-height: 1;
@@ -128,10 +221,25 @@
       width: max-content;
       margin: 0 auto 1.4rem;
       letter-spacing: 0;
+      @include mq(sp) {
+        font-size: vw(14);
+        min-width: vw(120);
+        padding: 0;
+        line-height: vw(25);
+        text-align: center;
+      }
     }
     .item-icon {
       width: 11.5rem;
       margin: 0 auto .8rem;
+      @include mq(sp) {
+        width: vw(48);
+        height: vw(48);
+        margin: 0;
+        position: absolute;
+        top: vw(-24);
+        left: calc(50% - #{vw(24)});
+      }
     }
     .item-copy {
       font-size: 1.6rem;
@@ -139,6 +247,10 @@
       font-weight: 700;
       letter-spacing: 0.05em;
       padding: 0 .5rem;
+      @include mq(sp) {
+        font-size: vw(14);
+        padding: 0
+      }
     }
   }
 }
@@ -146,22 +258,29 @@
 
 .culture-number {
   padding: 14rem 0 18.6rem;
+  @include mq(sp) {
+    padding: vw(56) 0 vw(107);
+  }
 
   .l-inner {
-    padding: 0 4rem;
-    &::after {
-      content: '';
-      width: 31.65rem;
-      height: 15.35rem;
-      background: url('../img/culture/icon_02.png') no-repeat center / contain;
-      position: absolute;
-      top: -6.5rem;
-      right: 3.5rem;
+    @include mq(pc) {
+      padding: 0 4rem;
+      &::after {
+        content: '';
+        width: 31.65rem;
+        height: 15.35rem;
+        background: url('../img/culture/icon_02.png') no-repeat center / contain;
+        position: absolute;
+        top: -6.5rem;
+        right: 3.5rem;
+      }
     }
   }
 
   &_ttl {
-    margin-left: 4rem;
+    @include mq(pc) {
+      margin-left: 4rem;
+    }
   }
 
   &_list {
@@ -169,6 +288,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 7rem 1rem;
+    @include mq(sp) {
+      margin-top: vw(35);
+      gap: vw(51) 0;
+    }
 
     .item {
       width: 35.3rem;
@@ -176,41 +299,95 @@
       border: 1px solid #222;
       background: url('../img/culture/bg_number_01.png') no-repeat center / cover;
       position: relative;
+      @include mq(sp) {
+        width: vw(164);
+        height: vw(204);
+        margin-left: -1px;
+      }
+
+      &:nth-child(1) {
+        @include mq(sp) {
+          width: 100%;
+          height: vw(150);
+          background-image: url('../img/culture/bg_number_01_sp.png');
+        }
+      }
 
       &:nth-child(2) {
         background-image: url('../img/culture/bg_number_02.png');
+        @include mq(sp) {
+          background-image: url('../img/culture/bg_number_02_sp.png');
+        }
       }
+
       &:nth-child(3) {
         background-image: url('../img/culture/bg_number_03.png');
+        @include mq(sp) {
+          background-image: url('../img/culture/bg_number_03_sp.png');
+        }
       }
+
       &:nth-child(4) {
         background-image: url('../img/culture/bg_number_04.png');
+        @include mq(sp) {
+          background-image: url('../img/culture/bg_number_04_sp.png');
+        }
       }
+
       &:nth-child(5) {
         background-image: url('../img/culture/bg_number_05.png');
+        @include mq(sp) {
+          background-image: url('../img/culture/bg_number_05_sp.png');
+        }
       }
+
       &:nth-child(6) {
         background-image: url('../img/culture/bg_number_06.png');
+        @include mq(sp) {
+          background-image: url('../img/culture/bg_number_06_sp.png');
+        }
       }
+
       &:nth-child(7) {
         background-image: url('../img/culture/bg_number_07.png');
+        @include mq(sp) {
+          background-image: url('../img/culture/bg_number_07_sp.png');
+        }
       }
+
       &:nth-child(8) {
         background-image: url('../img/culture/bg_number_08.png');
+        @include mq(sp) {
+          width: 100%;
+          height: vw(129);
+          background-image: url('../img/culture/bg_number_08_sp.png');
+          .item-ttl {
+            width: vw(180);
+          }
+        }
       }
     }
 
     .item-ttl {
       width: 28.2rem;
       line-height: 5.4rem;
-      background: url('../img/culture/bg_ttl_01.png') no-repeat center / contain;
-      border: 1px solid #222;
+      background: url('../img/culture/bg_ttl_01.png') no-repeat center / cover;
       position: absolute;
       bottom: -2.7rem;
       left: 50%;
       transform: translateX(-50%);
       text-align: center;
       font-size: 2rem;
+      @include mq(sp) {
+        font-size: vw(15);
+        width: vw(132);
+        height: vw(54);
+        line-height: 1.3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
     }
 
     .item-number {
@@ -218,24 +395,48 @@
       font-weight: 700;
       position: absolute;
       line-height: 1;
+      @include mq(sp) {
+        text-align: center;
+        width: 100%;
+      }
       &.number01 {
         top: .8rem;
         left: 0;
         right: 0;
         margin: 0 auto;
         width: max-content;
+        @include mq(sp) {
+          top: vw(23);
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+          justify-content: center;
+          gap: vw(19) vw(34);
+        }
       }
       &.number02 {
         top: 9rem;
         right: 3rem;
+        @include mq(sp) {
+          top: vw(120);
+          right: auto;
+        }
       }
       &.number03 {
         top: 9rem;
         left: 2rem;
+        @include mq(sp) {
+          top: vw(120);
+          left: auto;
+        }
       }
       &.number04 {
         top: 10rem;
         left: 3rem;
+        @include mq(sp) {
+          top: vw(120);
+          left: auto;
+        }
       }
       &.number05 {
         top: 3rem;
@@ -243,6 +444,11 @@
         right: 0;
         width: max-content;
         margin: 0 auto;
+        @include mq(sp) {
+          top: vw(120);
+          left: auto;
+          width: 100%;
+        }
       }
       &.number06,
       &.number07,
@@ -252,6 +458,16 @@
         right: 0;
         width: max-content;
         margin: 0 auto;
+      }
+      &.number08 {
+        @include mq(sp) {
+          top: vw(24);
+          left: vw(64);
+          right: auto;
+          .txt02 {
+            margin-bottom: vw(6);
+          }
+        }
       }
       dl {
         display: flex;
@@ -267,10 +483,28 @@
             font-size: 4.2rem;
           }
         }
+        @include mq(sp) {
+          font-size: vw(18);
+          dt {
+            width: vw(50);
+          }
+          dd {
+            span {
+              font-size: vw(32);
+            }
+          }
+        }
       }
       ul {
         display: flex;
         gap: 1rem;
+        @include mq(sp) {
+          display: block;
+          text-align: center;
+          li + li {
+            margin-top: vw(16);
+          }
+        }
       }
       .txt01 {
         font-size: 3.2rem;
@@ -278,10 +512,19 @@
           font-family: $cabin_condensed;
           font-size: 9.6rem;
         }
+        @include mq(sp) {
+          font-size: vw(16);
+          span {
+            font-size: vw(44);
+          }
+        }
       }
       .txt02 {
         font-size: 2.2rem;
         text-align: center;
+        @include mq(sp) {
+          font-size: vw(16);
+        }
       }
     }
   }
