@@ -909,8 +909,7 @@
           }
           .item-image {
             img {
-              max-height: 33.8rem;
-              object-fit: cover;
+              height: 33.8rem;
             }
           }
           .item-text {
@@ -983,11 +982,12 @@
       }
       .item-image {
         img {
-          max-height: 28rem;
+          width: auto;
+          height: 28rem;
+          object-fit: cover;
           transition: all .3s ease-in-out;
           @include mq(sp) {
-            width: auto;
-            max-height: vw(300);
+            height: vw(300);
           }
         }
       }

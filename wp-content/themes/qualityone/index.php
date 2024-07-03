@@ -31,7 +31,7 @@
     <div class="top-mainvisual_image">
       <picture>
         <source media="(min-width:769px)" srcset="<?php echo THEME_URL ?>/assets/img/top/img_mainvisual.png">
-        <img src="<?php echo THEME_URL ?>/assets/img/top/img_mainvisual_sp.png" loading="lazy" alt="" width="750" height="906">
+        <img src="<?php echo THEME_URL ?>/assets/img/top/img_mainvisual_sp.png" loading="lazy" alt="">
       </picture>
     </div>
     <div class="top-mainvisual_scroll"><a href="#company" class="js-anchor">
@@ -137,39 +137,30 @@
         <div class="top-interview_slider splide">
           <div class="splide__track">
             <ul class="splide__list">
-              <li class="splide__slide item">
-                <a href="#">
-                  <div class="item-image"><img src="<?php echo THEME_URL ?>/assets/img/top/img_interview_01.png" alt=""></div>
-                  <div class="item-text">
-                    <div class="item-position">○年目：役職</div>
-                    <div class="item-name">氏名 名前</div>
-                  </div>
-                  <div class="item-btn c-btn c-btn_border">VIEW MORE</div>
-                  <div class="item-num">#01</div>
-                </a>
-              </li>
-              <li class="splide__slide item">
-                <a href="#">
-                  <div class="item-image"><img src="<?php echo THEME_URL ?>/assets/img/top/img_interview_02.png" alt=""></div>
-                  <div class="item-text">
-                    <div class="item-position">○年目：役職</div>
-                    <div class="item-name">氏名 名前</div>
-                  </div>
-                  <div class="item-btn c-btn c-btn_border">VIEW MORE</div>
-                  <div class="item-num">#02</div>
-                </a>
-              </li>
-              <li class="splide__slide item">
-                <a href="#">
-                  <div class="item-image"><img src="<?php echo THEME_URL ?>/assets/img/top/img_interview_03.png" alt=""></div>
-                  <div class="item-text">
-                    <div class="item-position">○年目：役職</div>
-                    <div class="item-name">氏名 名前</div>
-                  </div>
-                  <div class="item-btn c-btn c-btn_border">VIEW MORE</div>
-                  <div class="item-num">#03</div>
-                </a>
-              </li>
+            <?php
+              $interview = array(
+                'post_type' => 'interview'
+              );
+              $query_interview = new WP_Query($interview);
+              $counter = 1;
+
+              if ($query_interview->have_posts()) :
+                while ($query_interview->have_posts()) : $query_interview->the_post();
+                $formatted_counter = sprintf('%02d', $counter);
+                ?>
+                  <li class="splide__slide item">
+                    <a href="<?php the_permalink(); ?>">
+                      <div class="item-image"><?php echo get_the_post_thumbnail(get_the_ID(), 'full', array('class' => 'fit')) ?></div>
+                      <div class="item-text">
+                        <div class="item-position"><?php the_field('date'); ?>年目：<?php the_field('position'); ?></div>
+                        <div class="item-name"><?php the_title(); ?></div>
+                      </div>
+                      <div class="item-btn c-btn c-btn_border">VIEW MORE</div>
+                      <div class="item-num">#<?php echo $formatted_counter; ?></div>
+                    </a>
+                  </li>
+            <?php $counter++; endwhile; wp_reset_postdata(); ?>
+            <?php endif; ?>
             </ul>
           </div>
           <div class="splide__arrows"></div>
