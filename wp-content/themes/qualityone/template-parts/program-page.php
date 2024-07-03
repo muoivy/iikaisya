@@ -1,0 +1,105 @@
+<?php
+
+/**
+ * Template Name: PROGRAM
+ *
+ */
+get_header(); ?>
+
+<main class="l-main bg01">
+
+  <section class="sub-mainvisual sub-mainvisual_program inview js-anim_elm">
+    <div class="bg-icon icon01 -delay1 is-pc"><img src="<?php echo THEME_URL ?>/assets/img/sub/icon_mainvisual_01.png" alt=""></div>
+    <div class="bg-icon icon02 -delay2"><img src="<?php echo THEME_URL ?>/assets/img/sub/icon_mainvisual_02.png" alt=""></div>
+    <div class="bg-icon icon03 -delay3 is-pc"><img src="<?php echo THEME_URL ?>/assets/img/sub/icon_mainvisual_03.png" alt=""></div>
+    <div class="bg-icon icon04 -delay4 is-pc"><img src="<?php echo THEME_URL ?>/assets/img/sub/icon_mainvisual_04.png" alt=""></div>
+    <div class="bg-icon icon05 -delay5 is-pc"><img src="<?php echo THEME_URL ?>/assets/img/sub/icon_mainvisual_05.png" alt=""></div>
+    <div class="bg-icon icon06 -delay6 is-pc"><img src="<?php echo THEME_URL ?>/assets/img/sub/icon_mainvisual_06.png" alt=""></div>
+    <div class="bg-icon icon07 -delay7"><img src="<?php echo THEME_URL ?>/assets/img/sub/icon_mainvisual_07.png" alt=""></div>
+    <div class="l-inner">
+      <div class="c-hashtag">#EXP</div>
+      <div class="sub-mainvisual_ttl">
+        <h2 class="c-ttl">PROGRAM</h2>
+        <h3 class="c-lead js-letter">研修について</h3>
+      </div>
+    </div>
+    <div class="sub-mainvisual_image"><img src="<?php echo THEME_URL ?>/assets/img/program/img_mainvisual.png" alt=""></div>
+  </section>
+
+  <section class="program-experience">
+    <div class="l-inner">
+      <div class="program-experience_content js-bounce-trigger">
+        <div class="program-experience_text">
+          <h2 class="program-experience_ttl c-lead js-letter js-bounce-target">半日体験・同乗見学</h2>
+          <div class="program-experience_lead js-bounce-target">ここから始まる<br class="is-sp">あなたのドライバー物語。<br>あなたの進むべき道を固めよう。</div>
+          <div class="program-experience_copy js-bounce-target">クオリティ・ワンでは、私たちが日ごろどのような仕事をしているかを、肌で感じて知っていただくために「半日体験」を実施しています。配送車両に同乗し、ドライバーに色々と仕事やお客様の話を聞いて、現場を見て、ご自身の方向性を決めていただければと思います。</div>
+        </div>
+        <div class="program-experience_image js-bounce-target"><img src="<?php echo THEME_URL ?>/assets/img/program/img_01.png" alt=""></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="program-sec01 sec01 js-bounce-trigger">
+    <div class="l-inner">
+      <h2 class="program-sec01_ttl c-lead js-letter js-bounce-target">研修期間</h2>
+      <div class="program-sec01_content">
+        <div class="program-sec01_image js-bounce-target">
+          <picture>
+            <source media="(min-width:769px)" srcset="<?php echo THEME_URL ?>/assets/img/program/img_02.png">
+            <img src="<?php echo THEME_URL ?>/assets/img/program/img_02_sp.png" loading="lazy" alt="">
+          </picture>
+        </div>
+        <div class="program-sec01_text js-bounce-target">
+          <div class="c-borderBg"><span></span><span></span><span></span><span></span></div>
+          <h3 class="lead">先輩勇者から技を伝授。<br>自分のスキルを高めて旅の準備を！</h3>
+          <div class="copy">
+            <p>入社後、２週間〜３週間程度は、ベテランドライバーと同行し仕事の内容を覚えていただきます。荷受けの方法、伝票の見方、配送先での対応、動脈となる道など一連の仕事の流れをしっかり覚えていただき、独り立ちをバックアップいたします。</p>
+            <p>未経験AT限定免許を所有していれば入社が可能！<br>軽自動車からスタートし、ゆくゆくは大型トラックの免許取得までサポートします！　</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="program-sec01 sec02 js-bounce-trigger">
+    <div class="l-inner">
+      <h2 class="program-sec01_ttl c-lead js-letter js-bounce-target">レギュラードライバー</h2>
+      <div class="program-sec01_content">
+        <div class="program-sec01_image js-bounce-target">
+          <picture>
+            <source media="(min-width:769px)" srcset="<?php echo THEME_URL ?>/assets/img/program/img_03.png">
+            <img src="<?php echo THEME_URL ?>/assets/img/program/img_03_sp.png" loading="lazy" alt="">
+          </picture>
+        </div>
+        <div class="program-sec01_text text01 js-bounce-target">
+          <div class="c-borderBg"><span></span><span></span><span></span><span></span></div>
+          <h3 class="lead">いよいよ新しい旅の物語が始まる。<br>様々なクエストをクリアしていこう！</h3>
+          <div class="copy">
+            <p>研修後は、実際に一人で配送を行っていただきます。ただし、最初は通常より少ない配送箇所です。徐々に件数を増やして行き、スピードを身につけてからレギュラードライバーとして活躍していただきます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="program-flow">
+    <div class="l-inner">
+      <div class="program-flow_content js-bounce-trigger">
+        <div class="program-flow_heading js-bounce-target">
+          <h2 class="program-flow_ttl c-lead js-letter">入社後の流れ</h2>
+          <div class="program-flow_lead">入社後1年勤務時点で免許取得サポートあり！</div>
+        </div>
+        <div class="program-flow_image is-pc js-bounce-target">
+          <figure><img src="<?php echo THEME_URL ?>/assets/img/program/img_flow.png" loading="lazy" alt=""></figure>
+        </div>
+        <div class="program-flow_image is-sp js-scrollbar-sp js-bounce-target">
+          <figure><img src="<?php echo THEME_URL ?>/assets/img/program/img_flow_sp.png" loading="lazy" alt=""></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<!-- .l-main -->
+
+<?php get_footer(); ?>

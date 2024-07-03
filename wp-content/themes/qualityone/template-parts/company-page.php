@@ -1,0 +1,122 @@
+<?php
+
+/**
+ * Template Name: COMPANY
+ *
+ */
+get_header(); ?>
+
+<main class="l-main">
+
+  <section class="sub-mainvisual sub-mainvisual_company inview js-anim_elm">
+    <div class="bg-icon icon01 -delay1 is-pc"><img src="<?php echo THEME_URL ?>/assets/img/sub/icon_mainvisual_01.png" alt=""></div>
+    <div class="bg-icon icon02 -delay2"><img src="<?php echo THEME_URL ?>/assets/img/sub/icon_mainvisual_02.png" alt=""></div>
+    <div class="bg-icon icon03 -delay3 is-pc"><img src="<?php echo THEME_URL ?>/assets/img/sub/icon_mainvisual_03.png" alt=""></div>
+    <div class="bg-icon icon04 -delay4 is-pc"><img src="<?php echo THEME_URL ?>/assets/img/sub/icon_mainvisual_04.png" alt=""></div>
+    <div class="bg-icon icon05 -delay5 is-pc"><img src="<?php echo THEME_URL ?>/assets/img/sub/icon_mainvisual_05.png" alt=""></div>
+    <div class="bg-icon icon06 -delay6 is-pc"><img src="<?php echo THEME_URL ?>/assets/img/sub/icon_mainvisual_06.png" alt=""></div>
+    <div class="bg-icon icon07 -delay7"><img src="<?php echo THEME_URL ?>/assets/img/sub/icon_mainvisual_07.png" alt=""></div>
+    <div class="l-inner">
+      <div class="c-hashtag">#PROLOGUE</div>
+      <div class="sub-mainvisual_ttl">
+        <h2 class="c-ttl">COMPANY</h2>
+        <h3 class="c-lead js-letter">会社案内</h3>
+      </div>
+    </div>
+    <div class="sub-mainvisual_image"><img src="<?php echo THEME_URL ?>/assets/img/company/img_mainvisual.png" alt=""></div>
+  </section>
+
+  <section class="company-message">
+    <div class="company-message_content js-bounce-trigger">
+      <div class="l-inner">
+        <div class="company-message_heading">
+          <div class="company-message_image js-bounce-target">
+            <picture>
+              <source media="(min-width:769px)" srcset="<?php echo THEME_URL ?>/assets/img/company/img_message_01.png">
+              <img src="<?php echo THEME_URL ?>/assets/img/company/img_message_01_sp.png" loading="lazy" alt="">
+            </picture>
+          </div>
+          <div class="company-message_info js-bounce-target">
+            <h2 class="company-message_ttl c-lead js-letter">ゲームマスターからの挨拶</h2>
+            <h3 class="company-message_lead">代表取締役　笠原大助</h3>
+            <div class="company-message_desc">お客様からいただく「いつもありがとう！」の一言、<br class="is-pc">
+              そして時々いただける缶ジュースは<br class="is-pc">
+              本当に励みになっています。</div>
+          </div>
+        </div>
+        <div class="company-message_copy js-bounce-target">はじめまして！クオリティ・ワンの代表を務めています笠原です。現在も現役バリバリで車で走り回っています。僕は、とにかく昔から配送の仕事が好きでして、自分自身、もっと仕事の質を高めたいと思い、会社を立ち上げる時に「クオリティ・ワン」という社名にしました。仕事中は一人になる配送の仕事も、色んな人の協力や助け合いで成り立っています。その気持ちがお客様へのサービス向上に繋がるという信念で今も頑張っています。頑張る人たちを応援したいです。是非一度みなさんのやりたい事をお聞かせください！お待ちしています！</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="company-instruction">
+    <div class="company-instruction_inner">
+      <div class="company-instruction_content js-bounce-trigger">
+        <h2 class="company-instruction_ttl c-lead js-letter js-bounce-target is-pc">ゲームマスター笠原大助の説明書</h2>
+        <h2 class="company-instruction_ttl js-bounce-target is-sp">
+          <span class="c-lead js-letter">ゲームマスター</span>
+          <span class="c-lead js-letter">笠原大助の説明書</span>
+        </h2>
+        <div class="company-instruction_list">
+          <div class="company-instruction_item js-bounce-target">
+            <div class="item-text">
+              <div class="c-borderBg"><span></span><span></span><span></span><span></span></div>
+              <h3 class="item-ttl">20歳でトラックドライバーに</h3>
+              <div class="item-copy">20歳にトラックドライバーデビュー。<br>様々な配送に携わった後、29歳で軽貨物業界に転身。<br class="is-pc">その時に初めて軽貨物ドライバーとして仕事に従事。</div>
+            </div>
+            <div class="item-image"><img src="<?php echo THEME_URL ?>/assets/img/company/img_instruction_01.png" alt=""></div>
+          </div>
+          <div class="company-instruction_item js-bounce-target">
+            <div class="item-text">
+              <div class="c-borderBg"><span></span><span></span><span></span><span></span></div>
+              <h3 class="item-ttl">32歳で独立を決意 </h3>
+              <div class="item-copy">平成30年3月4日に軽貨物配送の会社立ち上げを行う。<br class="is-pc">半年近くはコンビニバイトをしながら生計を立てつつ、<br class="is-pc">順調にお客様を増やしていく。</div>
+            </div>
+            <div class="item-image"><img src="<?php echo THEME_URL ?>/assets/img/company/img_instruction_02.png" alt=""></div>
+          </div>
+          <div class="company-instruction_item js-bounce-target">
+            <div class="item-text">
+              <div class="c-borderBg"><span></span><span></span><span></span><span></span></div>
+              <h3 class="item-ttl">従業員全員が快適に働ける<br>会社を目指して</h3>
+              <div class="item-copy">会社設立4年目で1人目の社員を採用。<br>社員全員と足並みを揃えて会社と共に社員も<br class="is-pc">成長していくことができ、社員全員が快適に<br class="is-pc">働くことができる環境を目指して日々奔走中。</div>
+            </div>
+            <div class="item-image"><img src="<?php echo THEME_URL ?>/assets/img/company/img_instruction_03.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="company-intro">
+    <div class="l-inner">
+      <div class="company-intro_content js-bounce-trigger">
+        <h2 class="company-intro_ttl c-lead js-letter js-bounce-target">ギルドの紹介</h2>
+        <div class="company-intro_box js-bounce-target">
+          <dl>
+            <dt>会社名</dt>
+            <dd>クオリティ・ワン株式会社</dd>
+          </dl>
+          <dl>
+            <dt>代表</dt>
+            <dd>笠原 大助</dd>
+          </dl>
+          <dl>
+            <dt>所在地</dt>
+            <dd>〒333-0861　<br class="is-sp">埼玉県川口市柳崎2-14-3</dd>
+          </dl>
+          <dl>
+            <dt>TEL</dt>
+            <dd>080-4369-0091</dd>
+          </dl>
+          <dl>
+            <dt>FAX</dt>
+            <dd>048-424-4616</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- .l-main -->
+
+<?php get_footer(); ?>

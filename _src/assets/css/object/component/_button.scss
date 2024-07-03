@@ -94,4 +94,8 @@
       background-image: url('../img/icon_arrow_05.svg');
     }
   }
+  @include mq(sp) {
+    gap: vw(16);
+    margin-top: vw(30);
+  }
 }

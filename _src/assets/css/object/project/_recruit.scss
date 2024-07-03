@@ -84,6 +84,8 @@
         width: vw(261);
         height: vw(200);
         background-image: url('../img/recruit/bg_02_sp.png');
+        top: vw(-118);
+        left: 0;
       }
     }
   }
@@ -102,6 +104,9 @@
     }
     @include mq(sp) {
       padding: 0;
+      &::after {
+        content: none;
+      }
     }
   }
 
@@ -112,51 +117,86 @@
     }
 
     &.box01 {
-      margin-top: -2.6rem;
+      margin-top: 8.9rem;
       .box-image {
-        width: 87.65rem;
+        width: 38.65rem;
+        bottom: -1.5rem;
+        right: 11.7rem;
       }
       @include mq(sp) {
-        margin-top: 0;
+        margin-top: vw(194);
+        .box-image {
+          width: vw(161);
+          bottom: 100%;
+          right: 0;
+        }
       }
     }
 
     &.box02 {
-      flex-direction: row-reverse;
-      margin-top: -4rem;
-      margin-right: -12rem;
+      margin-top: 11rem;
+      margin-right: 9.3rem;
       .box-image {
-        width: 84.75rem;
+        width: 36.2rem;
+        bottom: -1.5rem;
+        right: -21.2rem;
       }
       .box-text {
-        left: 27.5rem;
+        margin-left: auto;
+      }
+      .box-ttl {
+        left: 15rem;
       }
       @include mq(sp) {
-        margin-top: 0;
+        margin-top: vw(200);
         margin-right: 0;
+        .box-image {
+          width: vw(150);
+        }
       }
+
     }
 
     &.box03 {
-      margin-top: -9.5rem;
-      margin-left: -24rem;
+      margin-top: 8.7rem;
+      margin-left: 11.8rem;
       .box-image {
-        width: 98.45rem;
+        width: 64.05rem;
+        bottom: -1.5rem;
+        left: -36rem;
       }
       .box-text {
-        left: 41rem;
+        background-image: url('../img/recruit/bg_box_02.png');
+        width: 62.4rem;
+        height: 24.25rem;
       }
       .box-copy {
-        padding-left: 4.8rem;
+        padding-left: 10rem;
+      }
+      .box-ttl {
+        left: 18.2rem;
       }
       @include mq(sp) {
-        margin-top: 0;
+        margin-top: vw(205);
         margin-left: 0;
+        .box-image {
+          width: vw(256);
+          left: auto;
+          right: vw(30) !important;
+        }
+        .box-copy {
+          padding-left: vw(30);
+        }
       }
     }
 
     .box-image {
-
+      position: absolute;
+      z-index: 2;
+      @include mq(sp) {
+        bottom: calc(100% + #{vw(12)}) !important;
+        right: vw(73) !important;
+      }
     }
 
     .box-text {
@@ -167,7 +207,10 @@
       flex-direction: column;
       position: relative;
       @include mq(sp) {
-
+        width: vw(319) !important;
+        height: vw(224) !important;
+        background-image: url('../img/recruit/bg_box_03.png') !important;
+        margin: 0 auto;
       }
     }
 
@@ -180,11 +223,14 @@
       padding-right: 1.6rem;
       position: absolute;
       top: -.9rem;
-      left: 13.3rem;
+      left: 13rem;
       @include mq(sp) {
-        font-size: vw(16);
+        min-width: vw(213);
         line-height: vw(54);
-        padding-right: 0;
+        font-size: vw(16);
+        left: 50% !important;
+        transform: translateX(-50%);
+        top: vw(-24) !important;
       }
     }
 
@@ -195,13 +241,13 @@
       height: 100%;
       display: flex;
       align-items: center;
-      padding-bottom: 3rem;
-      padding-left: 6.8rem;
+      padding: 4rem 5rem 3rem 7.3rem;
+      letter-spacing: 0.05em;
       @include mq(sp) {
         font-size: vw(14);
-        display: block;
-        padding-bottom: 0;
-        padding-left: 0;
+        text-align: center;
+        justify-content: center;
+        padding: vw(30);
       }
     }
   }
@@ -210,9 +256,14 @@
 
 .recruit-process {
   padding: 13.3rem 0 0;
+  @include mq(sp) {
+    padding: vw(56) 0 0;
+  }
 
   &_ttl {
-    margin-left: 8rem;
+    @include mq(pc) {
+      margin-left: 8rem;
+    }
   }
 
   &_list {
@@ -220,14 +271,36 @@
     justify-content: space-between;
     padding: 0 1.2rem;
     margin-top: 10.7rem;
+    @include mq(sp) {
+      display: block;
+      padding: 0;
+      margin-top: vw(73);
+    }
   }
 
   &_item {
     width: 34.4rem;
     height: 28.7rem;
-    background: url('../img/recruit/bg_07.png') no-repeat center / contain;
+    background: url('../img/recruit/bg_07.png') no-repeat center / cover;
+    border-radius: 0 10rem 0 10rem;
+    border: 1px solid #222;
     position: relative;
     padding: 2.7rem 2.5rem;
+    @include mq(sp) {
+      width: 100%;
+      height: auto;
+      min-height: vw(213);
+      border-radius: 0 vw(100) 0 vw(100);
+      padding: vw(39) vw(22) vw(50);
+      & + .recruit-process_item {
+        margin-top: vw(40);
+      }
+
+      &:nth-child(3) {
+        text-align: center;
+        padding-bottom: vw(133);
+      }
+    }
 
     .item-step {
       width: 10rem;
@@ -243,6 +316,13 @@
       position: absolute;
       top: -4.8rem;
       left: -4.2rem;
+      @include mq(sp) {
+        width: vw(63);
+        height: vw(62);
+        top: vw(-31);
+        left: -1px;
+        font-size: vw(14);
+      }
     }
 
     .item-ttl {
@@ -256,6 +336,12 @@
       border: 1px solid #222;
       border-radius: 1.85rem;
       padding: 0 1.5rem;
+      @include mq(sp) {
+        min-width: vw(153);
+        line-height: vw(33);
+        font-size: vw(16);
+        margin-bottom: vw(24);
+      }
     }
 
     .item-copy {
@@ -263,6 +349,9 @@
       line-height: 2;
       font-weight: 700;
       letter-spacing: 0.05em;
+      @include mq(sp) {
+        font-size: vw(14);
+      }
     }
 
     .item-image {
@@ -270,26 +359,42 @@
       position: absolute;
       bottom: 0;
       right: 2.6rem;
+      @include mq(sp) {
+        width: vw(187);
+        right: vw(44);
+      }
     }
   }
 }
 
 .recruit-app {
   padding: 14rem 0 0;
+  @include mq(sp) {
+    padding: vw(57) 0 0;
+  }
 
   &_ttl {
-    margin-left: 8rem;
+    @include mq(pc) {
+      margin-left: 8rem;
+    }
   }
 
   &_list {
     max-width: 100rem;
     width: 100%;
     margin: 4.8rem auto 0;
+    @include mq(sp) {
+      max-width: 100%;
+      margin-top: vw(40);
+    }
   }
 
   &_item {
     & + .recruit-app_item {
       margin-top: 4rem;
+      @include mq(sp) {
+        margin-top: vw(40);
+      }
     }
     dl {
       display: flex;
@@ -300,14 +405,27 @@
       &:nth-child(even) {
         background: #fff;
       }
+      @include mq(sp) {
+        display: block;
+        font-size: vw(14);
+        padding: vw(30) vw(24);
+      }
     }
     dt {
       font-weight: 700;
       width: 21.4rem;
       flex: 0 0 auto;
+      @include mq(sp) {
+        width: 100%;
+        margin-bottom: vw(20);
+      }
     }
     dd {
       font-weight: 500;
+      @include mq(sp) {
+        font-size: vw(16);
+        letter-spacing: 0.08em;
+      }
     }
     .text01 {
       display: flex;
@@ -327,6 +445,21 @@
           padding: 0 1.5rem;
         }
       }
+      @include mq(sp) {
+        &:last-of-type {
+          align-items: flex-start;
+        }
+        span {
+          &:first-child {
+            padding: 0 vw(10);
+            line-height: vw(36);
+          }
+        }
+      }
+    }
+    .txt-note {
+      text-indent: -1em;
+      padding-left: 1em;
     }
   }
 }
@@ -334,6 +467,9 @@
 
 .recruit-contact {
   padding: 14rem 0;
+  @include mq(sp) {
+    padding: vw(56) 0 vw(80);
+  }
 
   &_confirm {
     padding: 19.5rem 0 17rem;
@@ -342,6 +478,15 @@
     }
     .recruit-contact_wrap {
       padding: 0 4rem;
+    }
+    @include mq(sp) {
+      padding: vw(144) 0 vw(80);
+      .recruit-app_ttl {
+        margin-left: 0;
+      }
+      .recruit-contact_wrap {
+        padding: 0;
+      }
     }
   }
 
@@ -353,10 +498,15 @@
     .recruit-contact_wrap {
       padding: 0;
     }
+    @include mq(sp) {
+      padding: vw(144) 0 vw(80);
+    }
   }
 
   &_ttl {
-    margin-left: 8rem;
+    @include mq(pc) {
+      margin-left: 8rem;
+    }
   }
 
   &_heading {
@@ -365,6 +515,11 @@
     line-height: 2;
     .txt-required {
       margin-right: 1rem;
+    }
+    @include mq(sp) {
+      margin: vw(40) 0;
+      font-size: vw(14);
+      letter-spacing: 0.02em;
     }
   }
 
@@ -384,6 +539,11 @@
     margin-top: 6rem;
     display: flex;
     padding: 0 8rem;
+    @include mq(sp) {
+      display: block;
+      margin-top: vw(40);
+      padding: 0;
+    }
   }
 
   &_nav {
@@ -422,6 +582,12 @@
         }
       }
     }
+    @include mq(sp) {
+      width: 100%;
+      ul {
+        gap: vw(16);
+      }
+    }
   }
 
   &_content {
@@ -449,6 +615,9 @@
         display: flex;
         align-items: center;
       }
+      .txt-small {
+        font-size: 1.3rem;
+      }
     }
     dd {
       &.is-error {
@@ -456,6 +625,9 @@
           border-color: #D74848;
         }
       }
+    }
+    @include mq(sp) {
+
     }
   }
   .txt-required {
@@ -538,13 +710,12 @@
   }
 
   .formErrorContent {
-    font-size: 1.6rem;
     color: #D74848;
     font-weight: 400;
     margin-top: 1rem;
     @include mq(sp) {
-      font-size: 1.3rem;
       margin-top: 1rem;
+      margin-top: vw(14);
     }
   }
 
@@ -563,6 +734,12 @@
         text-align: justify;
         p + p {
           margin-top: 2rem;
+        }
+      }
+      @include mq(sp) {
+        max-width: 100%;
+        .box-inner {
+          padding: vw(16);
         }
       }
     }
@@ -615,14 +792,15 @@
           position: absolute;
           top: 50%;
           left: .6rem;
+          border-radius: 1px;
           transform: scale(0) translateY(-50%);
           transform-origin: top;
           transition: all .1s ease-in-out;
           @include mq(sp) {
-            width: 1.2rem;
-            height: 1.2rem;
-            top: .7rem;
-            left: .7rem;
+            // width: 1.2rem;
+            // height: 1.2rem;
+            // top: .7rem;
+            // left: .7rem;
           }
         }
         a {
@@ -656,6 +834,9 @@
   input {
 
   }
+  @include mq(sp) {
+    margin-top: vw(40);
+  }
 }
 
 
@@ -672,6 +853,19 @@
     font-weight: 700;
     width: 16.5rem;
     flex: 0 0 auto;
+  }
+  @include mq(sp) {
+    margin-top: vw(40);
+    dl {
+      display: block;
+      font-size: vw(16);
+      letter-spacing: 0.02em;
+      padding: vw(24) 0;
+    }
+    dt {
+      margin-bottom: vw(10);
+      width: 100%;
+    }
   }
 }
 
@@ -700,6 +894,24 @@
     text-decoration: underline;
     &:hover {
       text-decoration: none;
+    }
+  }
+  @include mq(sp) {
+    margin-top: vw(56);
+    font-size: vw(14);
+    h3 {
+      font-size: vw(18);
+      & + p {
+        margin-top: vw(16);
+      }
+    }
+    p {
+      & + h3 {
+        margin-top: vw(40);
+      }
+      & + p {
+        margin-top: vw(24);
+      }
     }
   }
 }

@@ -375,9 +375,6 @@ function scrollbarForSP() {
             resize: "none",
             sizeAutoCapable: true,
             paddingAbsolute: true,
-            overflow: {
-              y: 'hidden',
-            },
             scrollbars: {
               clickScrolling: true,
               autoHide: "never",
