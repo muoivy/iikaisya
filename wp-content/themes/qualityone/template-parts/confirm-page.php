@@ -21,28 +21,7 @@ get_header(); ?>
           </ul>
         </nav>
         <div class="recruit-contact_content">
-          <div class="c-form_confirm">
-            <dl>
-              <dt>雇用形態</dt>
-              <dd>正社員</dd>
-            </dl>
-            <dl>
-              <dt>お名前</dt>
-              <dd>山田　太郎</dd>
-            </dl>
-            <dl>
-              <dt>メールアドレス</dt>
-              <dd>email@example.com</dd>
-            </dl>
-            <dl>
-              <dt>志望動機/自己PR</dt>
-              <dd>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</dd>
-            </dl>
-          </div>
-          <div class="c-form_btn">
-            <button type="submit" class="c-btn">確認画面へ</button>
-            <button class="c-btn-back">編集する</button>
-          </div>
+          <?php echo apply_shortcodes( '[contact-form-7 id="c2ad241" title="Entry Confirm"]' ); ?>
         </div>
       </div>
     </div>

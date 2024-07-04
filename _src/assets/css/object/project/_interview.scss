@@ -526,6 +526,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex: 0 0 auto;
       }
       @include mq(sp) {
         border-radius: vw(28) vw(28) vw(28) 0;

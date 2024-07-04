@@ -10,6 +10,23 @@ Version: 1.0
 Text Domain: qualityone
 */
 
+.wpcf7-list-item {
+  margin: 0;
+}
+
+.wpcf7-not-valid-tip {
+  display: none;
+}
+
+.c-form_btn p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.c-form_btn br {
+  display: none;
+}
 
 @media screen and (min-width: 768px) {
 

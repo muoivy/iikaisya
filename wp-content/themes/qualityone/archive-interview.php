@@ -61,88 +61,44 @@
     </div>
   </section>
 
+
+
   <section class="interview-gallery">
     <div class="l-inner">
-      <div class="interview-gallery_content js-bounce-trigger">
-        <h2 class="interview-gallery_ttl c-lead js-bounce-target"><span>ギ</span><span>ャ</span><span>ラ</span><span>リ</span><span>ー</span></h2>
-        <div class="interview-gallery_box">
-          <div class="interview-gallery_slider js-bounce-target">
-            <div class="interview-gallery_main splide">
-              <div class="splide__track">
-                <ul class="splide__list">
-                  <li class="splide__slide">
-                    <img src="<?php echo THEME_URL ?>/assets/img/interview/img_gallery_01.png" alt="">
-                  </li>
-                  <li class="splide__slide">
-                    <img src="<?php echo THEME_URL ?>/assets/img/interview/img_gallery_01.png" alt="">
-                  </li>
-                  <li class="splide__slide">
-                    <img src="<?php echo THEME_URL ?>/assets/img/interview/img_gallery_01.png" alt="">
-                  </li>
-                  <li class="splide__slide">
-                    <img src="<?php echo THEME_URL ?>/assets/img/interview/img_gallery_01.png" alt="">
-                  </li>
-                  <li class="splide__slide">
-                    <img src="<?php echo THEME_URL ?>/assets/img/interview/img_gallery_01.png" alt="">
-                  </li>
-                  <li class="splide__slide">
-                    <img src="<?php echo THEME_URL ?>/assets/img/interview/img_gallery_01.png" alt="">
-                  </li>
-                  <li class="splide__slide">
-                    <img src="<?php echo THEME_URL ?>/assets/img/interview/img_gallery_01.png" alt="">
-                  </li>
-                  <li class="splide__slide">
-                    <img src="<?php echo THEME_URL ?>/assets/img/interview/img_gallery_01.png" alt="">
-                  </li>
-                  <li class="splide__slide">
-                    <img src="<?php echo THEME_URL ?>/assets/img/interview/img_gallery_01.png" alt="">
-                  </li>
-                  <li class="splide__slide">
-                    <img src="<?php echo THEME_URL ?>/assets/img/interview/img_gallery_01.png" alt="">
-                  </li>
-                </ul>
+    <?php
+      $gallerys = get_field('image', 'gallery');
+      if( $gallerys ): ?>
+        <div class="interview-gallery_content js-bounce-trigger">
+          <h2 class="interview-gallery_ttl c-lead js-bounce-target"><span>ギ</span><span>ャ</span><span>ラ</span><span>リ</span><span>ー</span></h2>
+          <div class="interview-gallery_box">
+            <div class="interview-gallery_slider js-bounce-target">
+              <div class="interview-gallery_main splide">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <?php foreach( $gallerys as $gallery ): ?>
+                      <li class="splide__slide">
+                        <img src="<?php echo esc_html($gallery); ?>" alt="">
+                      </li>
+                    <?php endforeach; ?>
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div class="interview-gallery_thumbnail splide">
-              <div class="splide__track">
-                <ul class="splide__list">
-                  <li class="splide__slide">
-                    <img src="<?php echo THEME_URL ?>/assets/img/interview/img_gallery_01.png" alt="">
-                  </li>
-                  <li class="splide__slide">
-                    <img src="<?php echo THEME_URL ?>/assets/img/interview/img_gallery_01.png" alt="">
-                  </li>
-                  <li class="splide__slide">
-                    <img src="<?php echo THEME_URL ?>/assets/img/interview/img_gallery_01.png" alt="">
-                  </li>
-                  <li class="splide__slide">
-                    <img src="<?php echo THEME_URL ?>/assets/img/interview/img_gallery_01.png" alt="">
-                  </li>
-                  <li class="splide__slide">
-                    <img src="<?php echo THEME_URL ?>/assets/img/interview/img_gallery_01.png" alt="">
-                  </li>
-                  <li class="splide__slide">
-                    <img src="<?php echo THEME_URL ?>/assets/img/interview/img_gallery_01.png" alt="">
-                  </li>
-                  <li class="splide__slide">
-                    <img src="<?php echo THEME_URL ?>/assets/img/interview/img_gallery_01.png" alt="">
-                  </li>
-                  <li class="splide__slide">
-                    <img src="<?php echo THEME_URL ?>/assets/img/interview/img_gallery_01.png" alt="">
-                  </li>
-                  <li class="splide__slide">
-                    <img src="<?php echo THEME_URL ?>/assets/img/interview/img_gallery_01.png" alt="">
-                  </li>
-                  <li class="splide__slide">
-                    <img src="<?php echo THEME_URL ?>/assets/img/interview/img_gallery_01.png" alt="">
-                  </li>
-                </ul>
+              <div class="interview-gallery_thumbnail splide">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <?php foreach( $gallerys as $gallery ): ?>
+                      <li class="splide__slide">
+                        <img src="<?php echo esc_html($gallery); ?>" alt="">
+                      </li>
+                    <?php endforeach; ?>
+                  </ul>
+                </div>
+                <div class="splide__arrows"></div>
               </div>
-              <div class="splide__arrows"></div>
             </div>
           </div>
         </div>
-      </div>
+      <?php endif; ?>
     </div>
   </section>
 

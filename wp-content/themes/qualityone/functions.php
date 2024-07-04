@@ -113,5 +113,22 @@ function my_acf_op_init()
   }
 }
 
-
 add_filter( 'acf/admin/prevent_escaped_html_notice', '__return_true' );
+
+
+// Add custom validation for email confirmation
+add_filter('wpcf7_validate_email*', 'custom_email_confirmation_validation_filter', 20, 2);
+
+function custom_email_confirmation_validation_filter($result, $tag)
+{
+  if ('your-email_confirm' == $tag->name) {
+    $your_email = isset($_POST['your-email']) ? trim($_POST['your-email']) : '';
+    $your_email_confirm = isset($_POST['your-email_confirm']) ? trim($_POST['your-email_confirm']) : '';
+
+    if ($your_email != $your_email_confirm) {
+      $result->invalidate($tag, "メールアドレスが一致しません。");
+    }
+  }
+
+  return $result;
+}

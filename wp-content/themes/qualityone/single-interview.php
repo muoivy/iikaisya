@@ -30,14 +30,16 @@
     <div class="l-inner">
       <div class="interview-detail_content">
         <?php
+          $message_count = 0;
           if( have_rows('content') ):
             while ( have_rows('content') ) : the_row();
 
               if( get_row_layout() == 'message' ):
+                $message_count++;
                 $title = get_sub_field('title');
                 $content = get_sub_field('content');
                 echo '<div class="content-text js-bounce-trigger">';
-                echo '<h3 class="content-text_ttl js-bounce-target"><span>01</span>' . $title . '</h3>';
+                echo '<h3 class="content-text_ttl js-bounce-target"><span>' . sprintf('%02d', $message_count) . '</span>' . $title . '</h3>';
                 echo '<div class="content-text_copy js-bounce-target">' . $content . '</div>';
                 echo '</div>';
 
