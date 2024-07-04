@@ -15,7 +15,7 @@
       <div class="sub-mainvisual_ttl">
         <h3 class="c-lead js-letter"><?php the_title(); ?></h3>
         <div class="info">
-          <span><?php the_field('date'); ?>年目：</span>
+          <span><?php the_field('date'); ?>：</span>
           <span><?php the_field('position'); ?></span>
         </div>
       </div>
@@ -23,7 +23,7 @@
         <div class="text"><?php the_field('intro'); ?></div>
       </div>
     </div>
-    <div class="sub-mainvisual_image"><?php echo get_the_post_thumbnail(get_the_ID(), 'full', array('class' => 'fit')) ?>/div>
+    <div class="sub-mainvisual_image"><?php echo get_the_post_thumbnail(get_the_ID(), 'full', array('class' => 'fit')) ?></div>
   </section>
 
   <section class="interview-detail">
@@ -70,24 +70,22 @@
                 'post_type' => 'interview'
               );
               $query_interview = new WP_Query($interview);
-              $counter = 1;
 
               if ($query_interview->have_posts()) :
                 while ($query_interview->have_posts()) : $query_interview->the_post();
-                $formatted_counter = sprintf('%02d', $counter);
                 ?>
                   <li class="splide__slide item">
                     <a href="<?php the_permalink(); ?>">
                       <div class="item-image"><?php echo get_the_post_thumbnail(get_the_ID(), 'full', array('class' => 'fit')) ?></div>
                       <div class="item-text">
-                        <div class="item-position"><?php the_field('date'); ?>年目：<?php the_field('position'); ?></div>
+                        <div class="item-position"><?php the_field('date'); ?>：<?php the_field('position'); ?></div>
                         <div class="item-name"><?php the_title(); ?></div>
                       </div>
                       <div class="item-btn c-btn c-btn_border">VIEW MORE</div>
-                      <div class="item-num">#<?php echo $formatted_counter; ?></div>
+                      <div class="item-num"><?php the_field('number'); ?></div>
                     </a>
                   </li>
-            <?php $counter++; endwhile; wp_reset_postdata(); ?>
+            <?php endwhile; wp_reset_postdata(); ?>
             <?php endif; ?>
           </ul>
         </div>

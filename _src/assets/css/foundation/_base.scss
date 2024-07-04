@@ -9,15 +9,15 @@
 
 html {
   font-size: 62.5%;
+  &.no-scroll {
+    overflow: hidden;
+    touch-action: none;
+  }
   @media only screen and (max-width: 1280px) {
     font-size: calc(var(--vw)/128);  // Desgin PC width 2000px/10
   }
   @include mq(sp) {
     font-size: calc(var(--vw)/37.5);
-    &.no-scroll {
-      overflow: hidden;
-      touch-action: none;
-    }
   }
 }
 

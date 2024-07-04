@@ -114,57 +114,20 @@ get_header(); ?>
     <div class="l-inner">
       <h2 class="recruit-app_ttl c-lead js-letter js-bounce-target">募集要項</h2>
       <div class="recruit-app_list">
-        <div class="recruit-app_item js-bounce-target">
-          <dl>
-            <dt>雇用形態</dt>
-            <dd>正社員</dd>
-          </dl>
-          <dl>
-            <dt>職種</dt>
-            <dd>軽貨物ドライバー</dd>
-          </dl>
-          <dl>
-            <dt>給与</dt>
-            <dd>
-              <div class="text01">
-                <span>a</span>
-                <span>基本給（月額平均）<br class="is-sp">200,000円〜</span>
-              </div>
-              <div class="text01">
-                <span>b</span>
-                <span>定額的に支払われる手当</span>
-              </div>
-              <div class="text01">
-                <span>a＋b</span>
-                <span>200,000円～250,000円</span>
-              </div>
-              <div class="text01">
-                <span>c</span>
-                <span>その他の手当てなど付記事項（その他手当て有り）<br>年に1回誕生日月に5000円の<br class="is-sp">誕生日手当支給</span>
-              </div>
-              <p class="txt-note">※アルバイトの場合は業務内容により日給が異なります。</p>
-              <p>休日休暇：土日祝日</p>
-            </dd>
-          </dl>
-        </div>
-        <div class="recruit-app_item js-bounce-target">
-          <dl>
-            <dt>雇用形態</dt>
-            <dd>委託契約</dd>
-          </dl>
-          <dl>
-            <dt>職種</dt>
-            <dd>軽貨物ドライバー</dd>
-          </dl>
-          <dl>
-            <dt>給与</dt>
-            <dd>売上合計の90％を支給</dd>
-          </dl>
-          <dl>
-            <dt>その他</dt>
-            <dd>その他の手数料は一切かかりません。</dd>
-          </dl>
-        </div>
+        <?php if( have_rows('infor') ):?>
+          <?php while( have_rows('infor') ): the_row(); ?>
+            <div class="recruit-app_item js-bounce-target">
+              <?php if( have_rows('item_list') ): ?>
+                <?php while( have_rows('item_list') ): the_row(); ?>
+                  <dl>
+                    <dt><?php the_sub_field('title') ?></dt>
+                    <dd><?php the_sub_field('content') ?></dd>
+                  </dl>
+                <?php endwhile; ?>
+              <?php endif; ?>
+            </div>
+          <?php endwhile; ?>
+        <?php endif; ?>
       </div>
     </div>
   </section>

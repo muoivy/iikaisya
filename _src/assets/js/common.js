@@ -205,10 +205,12 @@ $('.business-content_btn a').on('click', function(e) {
   e.preventDefault();
   var modalId = $(this).attr('href');
   $(modalId).addClass('is-acitve');
+  $('html').toggleClass('no-scroll');
 });
 
 $('.modal-btn, .modal-overlay').on('click', function() {
   $(this).closest('.business-content_modal').removeClass('is-acitve'); // Close the modal
+  $('html').toggleClass('no-scroll');
 });
 
 /* INTERVIEW

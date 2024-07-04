@@ -27,24 +27,22 @@
           'post_type' => 'interview'
         );
         $query_interview = new WP_Query($interview);
-        $counter = 1;
 
         if ($query_interview->have_posts()) :
           while ($query_interview->have_posts()) : $query_interview->the_post();
-          $formatted_counter = sprintf('%02d', $counter);
           ?>
             <div class="interview-content_item js-bounce-trigger">
               <div class="l-inner">
                 <div class="item-content js-bounce-target">
                   <div class="item-image">
                     <figure class="image"><?php echo get_the_post_thumbnail(get_the_ID(), 'full', array('class' => 'fit')) ?></figure>
-                    <div class="number">#<?php echo $formatted_counter; ?></div>
+                    <div class="number"><?php the_field('number'); ?></div>
                   </div>
                   <div class="item-text">
                     <div class="item-heading">
                       <h3 class="item-ttl c-lead js-letter"><?php the_title(); ?></h3>
                       <div class="item-info">
-                        <span><?php the_field('date'); ?>年目：</span>
+                        <span><?php the_field('date'); ?>：</span>
                         <span><?php the_field('position'); ?></span>
                       </div>
                     </div>

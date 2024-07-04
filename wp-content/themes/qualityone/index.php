@@ -142,25 +142,23 @@
                 'post_type' => 'interview'
               );
               $query_interview = new WP_Query($interview);
-              $counter = 1;
 
               if ($query_interview->have_posts()) :
                 while ($query_interview->have_posts()) : $query_interview->the_post();
-                $formatted_counter = sprintf('%02d', $counter);
                 ?>
                   <li class="splide__slide item">
                     <a href="<?php the_permalink(); ?>">
                       <div class="item-image"><?php echo get_the_post_thumbnail(get_the_ID(), 'full', array('class' => 'fit')) ?></div>
                       <div class="item-text">
-                        <div class="item-position"><?php the_field('date'); ?>年目：<?php the_field('position'); ?></div>
+                        <div class="item-position"><?php the_field('date'); ?>：<?php the_field('position'); ?></div>
                         <div class="item-name"><?php the_title(); ?></div>
                       </div>
                       <div class="item-btn c-btn c-btn_border">VIEW MORE</div>
-                      <div class="item-num">#<?php echo $formatted_counter; ?></div>
+                      <div class="item-num"><?php the_field('number'); ?></div>
                     </a>
                   </li>
-            <?php $counter++; endwhile; wp_reset_postdata(); ?>
-            <?php endif; ?>
+                <?php endwhile; wp_reset_postdata(); ?>
+              <?php endif; ?>
             </ul>
           </div>
           <div class="splide__arrows"></div>
