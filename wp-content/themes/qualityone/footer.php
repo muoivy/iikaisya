@@ -18,7 +18,7 @@
       <div class="l-footer_top">
         <div class="l-footer_logo"><a href="<?php echo home_url() ?>"><img src="<?php echo THEME_URL ?>/assets/img/logo.png" loading="lazy"  alt="" width="624" height="110"></a></div>
         <ul class="l-footer_menu">
-          <li><a href="<?php echo home_url() ?>/company">会社概要</a></li>
+          <li><a href="<?php echo home_url() ?>/company">会社案内</a></li>
           <li><a href="<?php echo home_url() ?>/business">仕事内容</a></li>
           <li><a href="<?php echo home_url() ?>/interview">社員紹介</a></li>
           <li><a href="<?php echo home_url() ?>/culture">働く環境</a></li>

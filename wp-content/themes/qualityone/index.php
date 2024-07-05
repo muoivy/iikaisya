@@ -22,7 +22,7 @@
     <h2 class="top-mainvisual_ttl">
       <picture>
         <source media="(min-width:769px)" srcset="<?php echo THEME_URL ?>/assets/img/top/ttl_mainvisual.png">
-        <img src="<?php echo THEME_URL ?>/assets/img/top/ttl_mainvisual_sp.png" loading="lazy" alt="" width="728" height="302">
+        <img src="<?php echo THEME_URL ?>/assets/img/top/ttl_mainvisual_sp.png" loading="lazy" alt="">
       </picture>
       <div class="top-mainvisual_handle">
         <div class="icon-handle"><img src="<?php echo THEME_URL ?>/assets/img/top/icon_handle.png" loading="lazy" alt="" width="172" height="172"></div>
@@ -53,7 +53,7 @@
             <figure>
               <picture>
                 <source media="(min-width:769px)" srcset="<?php echo THEME_URL ?>/assets/img/top/img_company_01.png">
-                <img src="<?php echo THEME_URL ?>/assets/img/top/img_company_01_sp.png" loading="lazy" alt="" width="606" height="400">
+                <img src="<?php echo THEME_URL ?>/assets/img/top/img_company_01_sp.png" loading="lazy" alt="">
               </picture>
             </figure>
           </div>
@@ -85,7 +85,7 @@
         <div class="top-business_image js-bounce-target">
           <picture>
             <source media="(min-width:769px)" srcset="<?php echo THEME_URL ?>/assets/img/top/img_business_01.png">
-            <img src="<?php echo THEME_URL ?>/assets/img/top/img_business_01_sp.png" loading="lazy" alt="" width="677" height="618">
+            <img src="<?php echo THEME_URL ?>/assets/img/top/img_business_01_sp.png" loading="lazy" alt="">
           </picture>
         </div>
         <div class="top-business_text js-bounce-target">
@@ -262,7 +262,7 @@
                 <figure>
                   <picture>
                     <source media="(min-width:769px)" srcset="<?php echo THEME_URL ?>/assets/img/top/img_program_03.png">
-                    <img src="<?php echo THEME_URL ?>/assets/img/top/img_program_03_sp.png" loading="lazy" alt="" width="623" height="441">
+                    <img src="<?php echo THEME_URL ?>/assets/img/top/img_program_03_sp.png" loading="lazy" alt="">
                   </picture>
                 </figure>
               </div>

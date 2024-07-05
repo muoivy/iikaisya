@@ -14,12 +14,14 @@
       content: '';
       width: calc(50% + 58rem);
       height: 100%;
-      background: #FDE467;
+      // background: #FDE467;
+      background: url('../img/company/bg_02.png') no-repeat right bottom / cover;
       border-radius: 0 8rem 8rem 0;
       position: absolute;
       top: 0;
       left: 0;
       @include mq(sp) {
+        background-image: url('../img/company/bg_02_sp.png');
         width: vw(351);
         border-radius: 0 vw(40) vw(40) 0;
       }

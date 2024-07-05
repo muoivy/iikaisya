@@ -56,10 +56,13 @@
         .item-heading {
           text-align: left;
         }
+        .item-btn {
+          text-align: center;
+        }
       }
     }
 
-    &:nth-child(1) {
+    &:nth-child(4n+1) {
       .item-image figure {
         &::after {
           width: 29.05rem;
@@ -78,7 +81,7 @@
       }
     }
 
-    &:nth-child(2) {
+    &:nth-child(4n+2) {
       .item-image figure {
         &::after {
           width: 26.95rem;
@@ -96,7 +99,7 @@
       }
     }
 
-    &:nth-child(3) {
+    &:nth-child(4n+3) {
       .item-image figure {
         &::after {
           width: 24.7rem;
@@ -114,7 +117,7 @@
       }
     }
 
-    &:nth-child(4) {
+    &:nth-child(4n+4) {
       .item-image figure {
         &::after {
           width: 24.35rem;
@@ -496,6 +499,55 @@
       display: block;
     }
 
+    &:nth-child(1) {
+      .content-text_ttl {
+        max-width: 44.1rem;
+        @include mq(sp) {
+          max-width: vw(200);
+        }
+      }
+    }
+    &:nth-child(2) {
+      .content-text_ttl {
+        max-width: 44.3rem;
+        @include mq(sp) {
+          max-width: vw(183);
+        }
+      }
+    }
+    &:nth-child(4) {
+      .content-text_ttl {
+        max-width: 46.8rem;
+        @include mq(sp) {
+          max-width: vw(218);
+        }
+      }
+    }
+    &:nth-child(5) {
+      .content-text_ttl {
+        max-width: 42.7rem;
+        @include mq(sp) {
+          max-width: vw(200);
+        }
+      }
+    }
+    &:nth-child(6) {
+      .content-text_ttl {
+        max-width: 39.2rem;
+        @include mq(sp) {
+          max-width: vw(270);
+        }
+      }
+    }
+    &:nth-child(8) {
+      .content-text_ttl {
+        max-width: 31.3rem;
+        @include mq(sp) {
+          max-width: vw(217);
+        }
+      }
+    }
+
     & + .content-text {
       margin-top: 3rem;
       @include mq(sp) {
@@ -504,16 +556,17 @@
     }
 
     &_ttl {
+      width: 100%;
       background: #fff;
       border-radius: 2.8rem 2.8rem 2.8rem 0;
       font-size: 2.4rem;
       line-height: 1.45833333;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.05em;
       font-weight: 500;
       display: flex;
       align-items: flex-start;
       gap: .8rem;
-      padding: 2rem;
+      padding: 2rem 1.5rem 2rem 2rem;
       span {
         width: 3.4rem;
         height: 3.4rem;
@@ -532,7 +585,7 @@
         border-radius: vw(28) vw(28) vw(28) 0;
         font-size: vw(16);
         line-height: 1.4375;
-        padding: vw(16) vw(20) vw(16) vw(12);
+        padding: vw(16) vw(15) vw(16) vw(12);
         display: inline-flex;
         span {
           width: vw(23);

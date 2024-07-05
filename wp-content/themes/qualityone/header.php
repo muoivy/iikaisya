@@ -56,7 +56,7 @@
           <div class="nav-bg"></div>
           <div class="nav-inner">
             <ul class="nav-menu">
-              <li><a href="<?php echo home_url() ?>/company"><span>COMPANY</span>会社概要</a></li>
+              <li><a href="<?php echo home_url() ?>/company"><span>COMPANY</span>会社案内</a></li>
               <li><a href="<?php echo home_url() ?>/business"><span>BUSINESS</span>仕事内容</a></li>
               <li><a href="<?php echo home_url() ?>/interview"><span>INTERVIEW</span>社員紹介</a></li>
               <li><a href="<?php echo home_url() ?>/culture"><span>CULTURE</span>働く環境</a></li>

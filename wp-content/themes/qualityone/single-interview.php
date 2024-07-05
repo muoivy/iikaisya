@@ -14,9 +14,7 @@
       <div class="number"><?php the_field('number'); ?></div>
       <div class="sub-mainvisual_ttl">
         <h3 class="c-lead js-letter"><?php the_title(); ?></h3>
-        <div class="info">
-          <span><?php the_field('date'); ?>：</span>
-          <span><?php the_field('position'); ?></span>
+        <div class="info"><span><?php the_field('date'); ?>：</span><span><?php the_field('position'); ?></span>
         </div>
       </div>
       <div class="copy">

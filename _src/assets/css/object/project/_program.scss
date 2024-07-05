@@ -140,6 +140,9 @@
     @include mq(pc) {
       margin-left: 8rem;
     }
+    @include mq(sp) {
+      max-width: vw(180);
+    }
   }
 
   &_content {

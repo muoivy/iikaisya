@@ -217,6 +217,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: -1;
     .icon-handle {
       // width: vw_pc(86);
       width: 8.6rem;
@@ -408,8 +409,8 @@
     margin-top: 2rem;
     &::before {
       content: '';
-      width: 67.5rem;
-      height: 34.5rem;
+      width: 65.65rem;
+      height: 34.45rem;
       background: url('../img/top/bg_img_company_01.png') no-repeat center / contain;
       position: absolute;
       top: .6rem;
@@ -831,6 +832,7 @@
       position: absolute;
       bottom: -1.7rem;
       left: -3.2rem;
+      z-index: 2;
     }
     @include mq(sp) {
       display: block;

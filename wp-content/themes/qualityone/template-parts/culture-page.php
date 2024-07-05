@@ -77,7 +77,12 @@ get_header(); ?>
         </div>
         <div class="item js-bounce-target">
           <h3 class="item-ttl">厚生年金あり</h3>
-          <div class="item-icon"><img src="<?php echo THEME_URL ?>/assets/img/culture/icon_welfare_04.png" alt=""></div>
+          <div class="item-icon">
+            <picture>
+              <source media="(min-width:769px)" srcset="<?php echo THEME_URL ?>/assets/img/culture/icon_welfare_04.png">
+              <img src="<?php echo THEME_URL ?>/assets/img/culture/icon_welfare_04_sp.png" loading="lazy" alt="">
+            </picture>
+          </div>
           <div class="item-copy">労働者やその家族が将来の年金を受け取るための制度です。 </div>
         </div>
         <div class="item js-bounce-target">
@@ -93,10 +98,10 @@ get_header(); ?>
         <div class="item js-bounce-target">
           <h3 class="item-ttl">通勤手当</h3>
           <div class="item-icon"><img src="<?php echo THEME_URL ?>/assets/img/culture/icon_welfare_07.png" alt=""></div>
-          <div class="item-copy">実費支給（上限あり）<br>通勤時の交通費を一部支給いたします。 </div>
+          <div class="item-copy">実費支給<br class="is-sp">（上限あり）<br>通勤時の交通費を一部支給いたします。 </div>
         </div>
         <div class="item js-bounce-target">
-          <h3 class="item-ttl">昇給あり・退職金あり</h3>
+        <h3 class="item-ttl">昇給あり・<br class="is-sp">退職金あり</h3>
           <div class="item-icon"><img src="<?php echo THEME_URL ?>/assets/img/culture/icon_welfare_08.png" alt=""></div>
           <div class="item-copy">退職金は入社後、勤続1年以上で支給いたします。 </div>
         </div>

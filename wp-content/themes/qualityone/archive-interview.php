@@ -41,9 +41,7 @@
                   <div class="item-text">
                     <div class="item-heading">
                       <h3 class="item-ttl c-lead js-letter"><?php the_title(); ?></h3>
-                      <div class="item-info">
-                        <span><?php the_field('date'); ?>：</span>
-                        <span><?php the_field('position'); ?></span>
+                      <div class="item-info"><span><?php the_field('date'); ?>：</span><span><?php the_field('position'); ?></span>
                       </div>
                     </div>
                     <div class="item-copy">
