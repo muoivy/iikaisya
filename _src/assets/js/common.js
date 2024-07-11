@@ -234,11 +234,13 @@ if ($(".interview-gallery_slider").length > 0) {
   } );
 
   var thumbnails = new Splide( '.interview-gallery_thumbnail', {
+    autoplay  : true,
     rewind      : true,
     pagination  : false,
     isNavigation: true,
     perPage: 5,
     gap: 15,
+    interval     : 3000,
     breakpoints: {
       768: {
         perPage: 3,

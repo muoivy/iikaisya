@@ -160,13 +160,13 @@
     position: absolute;
     top: -10.4rem;
     left: 3rem;
+    z-index: 2;
     @include mq(sp) {
       width: vw(360);
       max-width: unset;
       position: relative;
       top: vw(-10);
       left: vw(-16);
-      z-index: 2;
     }
   }
 

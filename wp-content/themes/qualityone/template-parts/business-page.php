@@ -151,7 +151,12 @@ get_header(); ?>
             </h3>
             <div class="item-content">
               <div class="item-text">なんといっても配送業の面白さは、与えられたノルマを素早く丁寧にこなすこと！<br>ノルマ達成のためには、効率的な計画や素早く丁寧な行動が求められ、それによって達成感や充実感を得ることができ、お客様からの喜びや感謝の声を受け取ることができる！<br class="is-pc">さらに、日々変化する環境や課題に対処することで、自己成長や新たな挑戦の機会が与えられることも、配送業の面白さの一つ！</div>
-              <div class="item-image"><img src="<?php echo THEME_URL ?>/assets/img/business/img_fun_02.png" alt=""></div>
+              <div class="item-image">
+                <picture>
+                  <source media="(min-width:769px)" srcset="<?php echo THEME_URL ?>/assets/img/business/img_fun_02.png">
+                  <img src="<?php echo THEME_URL ?>/assets/img/business/img_fun_02_sp.png" loading="lazy" alt="">
+                </picture>
+              </div>
             </div>
           </div>
           <div class="business-fun_item js-bounce-target">
@@ -159,7 +164,12 @@ get_header(); ?>
             </h3>
             <div class="item-content">
               <div class="item-text">すべての配達が終われば今日のお仕事は終了！<br class="is-pc">早く運べば運ぶほど、自分の時間が増えていく。</div>
-              <div class="item-image"><img src="<?php echo THEME_URL ?>/assets/img/business/img_fun_03.png" alt=""></div>
+              <div class="item-image">
+                <picture>
+                  <source media="(min-width:769px)" srcset="<?php echo THEME_URL ?>/assets/img/business/img_fun_03.png">
+                  <img src="<?php echo THEME_URL ?>/assets/img/business/img_fun_03_sp.png" loading="lazy" alt="">
+                </picture>
+              </div>
             </div>
           </div>
         </div>

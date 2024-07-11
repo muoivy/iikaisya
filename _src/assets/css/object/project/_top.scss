@@ -970,8 +970,7 @@
             color: #1559A6 !important;
             border-color: #1559A6 !important;
             &::after {
-              width: 1.6rem;
-              height: 1.6rem;
+              transform: scale(2.25);
             }
           }
         }

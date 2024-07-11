@@ -103,7 +103,7 @@
 
     .btn-text {
       height: 16.3rem;
-      padding-top: 4.5rem;
+      padding-top: 4.9rem;
       padding-left: 3.9rem;
       @include mq(sp) {
         width: 100%;
@@ -129,8 +129,7 @@
       }
       .icon {
         svg, img {
-          width: 5.4rem;
-          height: 5.4rem;
+          width: 5.7rem;
         }
         ellipse {
           transition: all .3s ease-in-out;
@@ -339,6 +338,36 @@
     border: 1px solid #222;
     background: rgba($color: #FEC75D, $alpha: .2);
     padding: 3rem 4rem;
+    &:nth-child(2) {
+      padding: 2.5rem 8.3rem 2.4rem 4rem;
+      .item-image {
+        width: 24.9rem;
+      }
+      @include mq(sp) {
+        padding: 4.4rem 2.2rem 2.3rem;
+        .item-image {
+          width: 8rem;
+          margin-left: 0;
+        }
+        .item-text {
+          margin-top: 1.7rem;
+        }
+      }
+    }
+    &:nth-child(3) {
+      .item-text {
+        padding-top: 0;
+      }
+      @include mq(sp) {
+        .item-image {
+          width: 9rem;
+          margin-left: 0;
+        }
+        .item-text {
+          padding-top: .4rem;
+        }
+      }
+    }
     @include mq(sp) {
       padding: vw(46) vw(22) vw(24);
 
@@ -352,7 +381,7 @@
       min-width: 32.3rem;
       line-height: 5.4rem;
       position: absolute;
-      top: -2.7rem;
+      top: -3rem;
       left: calc(50% - 16.15rem);
       text-align: center;
       font-size: 2rem;
@@ -362,6 +391,7 @@
         line-height: vw(54);
         left: calc(50% - #{vw(140)});
         font-size: vw(16);
+        top: -2.4rem;
       }
     }
 
@@ -380,17 +410,21 @@
       font-size: 1.8rem;
       line-height: 2;
       font-weight: 700;
+      padding-top: 1.6rem;
+      letter-spacing: 0.05em;
       @include mq(sp) {
         width: 100%;
         font-size: vw(14);
-        margin-top: vw(16);
+        margin-top: vw(10);
+        padding-top: 0;
       }
     }
 
     .item-image {
-      width: 24.9rem;
+      width: 29.2rem;
       @include mq(sp) {
-        width: vw(80);
+        width: vw(99);
+        margin-left: 2rem;
       }
     }
   }

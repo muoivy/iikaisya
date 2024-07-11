@@ -656,7 +656,8 @@
   }
 
   textarea {
-    min-height: 20rem;
+    height: 20rem;
+    resize: none;
   }
 
   .input-checkbox {
