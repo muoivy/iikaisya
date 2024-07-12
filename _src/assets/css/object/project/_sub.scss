@@ -60,19 +60,19 @@
     }
   }
   &.is-inview {
-    .bg-icon {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .l-inner {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .sub-mainvisual_image img {
-      opacity: 1;
-      visibility: visible;
-      animation: scaleIn 1.2s 2.5s forwards;
-    }
+    // .bg-icon {
+    //   opacity: 1;
+    //   transform: translateY(0);
+    // }
+    // .l-inner {
+    //   opacity: 1;
+    //   transform: translateY(0);
+    // }
+    // .sub-mainvisual_image img {
+    //   opacity: 1;
+    //   visibility: visible;
+    //   animation: scaleIn 1.2s 2.5s forwards;
+    // }
   }
 
   .l-inner {
@@ -81,23 +81,23 @@
     left: 0;
     right: 0;
     z-index: 5;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: opacity 0.5s 1s, transform 0.5s 2s, top 0.5s 2s;
+    // opacity: 0;
+    // transform: translateY(100%);
+    // transition: opacity 0.5s 1s, transform 0.5s 2s, top 0.5s 2s;
     @include mq(sp) {
       top: vw(84);
-      transform: translateY(vw(100));
+      // transform: translateY(vw(100));
     }
   }
 
   .bg-icon {
     position: absolute;
     transform: translateY(20px);
-    opacity: 0;
-    transition-duration: 0.5s, 1s;
-    transition-property: opacity, transform;
-    transition-delay: 0s;
-    transition-timing-function: ease, cubic-bezier(0.215, 0.61, 0.355, 1);
+    // opacity: 0;
+    // transition-duration: 0.5s, 1s;
+    // transition-property: opacity, transform;
+    // transition-delay: 0s;
+    // transition-timing-function: ease, cubic-bezier(0.215, 0.61, 0.355, 1);
 
     &.icon01 {
       width: 6.2rem;
@@ -192,10 +192,10 @@
     bottom: 0;
     z-index: 4;
     img {
-      opacity: 0;
-      visibility: hidden;
-      transform: scale(0.7);
-      transition: opacity 1.2s 3s cubic-bezier(0.19, 1, 0.22, 1);
+      // opacity: 0;
+      // visibility: hidden;
+      // transform: scale(0.7);
+      // transition: opacity 1.2s 3s cubic-bezier(0.19, 1, 0.22, 1);
     }
   }
 

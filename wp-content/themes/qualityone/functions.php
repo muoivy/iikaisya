@@ -101,14 +101,14 @@ function my_acf_op_init()
   if (function_exists('acf_add_options_page')) {
 
     // Register options page.
-    $option_page = acf_add_options_page(array(
-      'page_title'    => __('GALLERY'),
-      'menu_title'    => __('GALLERY'),
-      'menu_slug'     => 'gallery',
-      'capability'    => 'edit_posts',
-      'redirect'      => false,
-      'post_id'       => 'gallery',
-    ));
+    // $option_page = acf_add_options_page(array(
+    //   'page_title'    => __('GALLERY'),
+    //   'menu_title'    => __('GALLERY'),
+    //   'menu_slug'     => 'gallery',
+    //   'capability'    => 'edit_posts',
+    //   'redirect'      => false,
+    //   'post_id'       => 'gallery',
+    // ));
 
   }
 }

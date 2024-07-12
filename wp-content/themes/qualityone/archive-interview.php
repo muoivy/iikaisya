@@ -57,46 +57,64 @@
     </div>
   </section>
 
+  <?php
+    $gallerys = array(
+      'post_type' => 'interview'
+    );
+    $query_gallery = new WP_Query($gallerys);
+    $images = array();
+    if ($query_gallery->have_posts()) :
+      while ($query_gallery->have_posts()) : $query_gallery->the_post();
+        if (have_rows('content')) :
+          while (have_rows('content')) : the_row();
+            if (get_row_layout() == 'images') :
+              $image = get_sub_field('image');
+              if ($image) :
+                $images[] = $image;
+              endif;
+            endif;
+          endwhile;
+        endif;
+      endwhile;
+      wp_reset_postdata();
+    endif;
 
-
-  <section class="interview-gallery">
-    <div class="l-inner">
-    <?php
-      $gallerys = get_field('image', 'gallery');
-      if( $gallerys ): ?>
-        <div class="interview-gallery_content js-bounce-trigger">
-          <h2 class="interview-gallery_ttl c-lead js-bounce-target"><span>ギ</span><span>ャ</span><span>ラ</span><span>リ</span><span>ー</span></h2>
-          <div class="interview-gallery_box">
-            <div class="interview-gallery_slider js-bounce-target">
-              <div class="interview-gallery_main splide">
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <?php foreach( $gallerys as $gallery ): ?>
-                      <li class="splide__slide">
-                        <img src="<?php echo esc_html($gallery); ?>" alt="">
-                      </li>
-                    <?php endforeach; ?>
-                  </ul>
+    if (!empty($images)) : ?>
+      <section class="interview-gallery">
+        <div class="l-inner">
+          <div class="interview-gallery_content js-bounce-trigger">
+            <h2 class="interview-gallery_ttl c-lead js-bounce-target"><span>ギ</span><span>ャ</span><span>ラ</span><span>リ</span><span>ー</span></h2>
+            <div class="interview-gallery_box">
+              <div class="interview-gallery_slider js-bounce-target">
+                <div class="interview-gallery_main splide">
+                  <div class="splide__track">
+                    <ul class="splide__list">
+                      <?php foreach ($images as $image) : ?>
+                        <li class="splide__slide">
+                          <img src="<?php echo esc_html($image); ?>" alt="">
+                        </li>
+                      <?php endforeach; ?>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              <div class="interview-gallery_thumbnail splide">
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <?php foreach( $gallerys as $gallery ): ?>
-                      <li class="splide__slide">
-                        <img src="<?php echo esc_html($gallery); ?>" alt="">
-                      </li>
-                    <?php endforeach; ?>
-                  </ul>
+                <div class="interview-gallery_thumbnail splide">
+                  <div class="splide__track">
+                    <ul class="splide__list">
+                      <?php foreach ($images as $image) : ?>
+                        <li class="splide__slide">
+                          <img src="<?php echo esc_html($image); ?>" alt="">
+                        </li>
+                      <?php endforeach; ?>
+                    </ul>
+                  </div>
+                  <div class="splide__arrows"></div>
                 </div>
-                <div class="splide__arrows"></div>
               </div>
             </div>
           </div>
         </div>
-      <?php endif; ?>
-    </div>
-  </section>
+      </section>
+    <?php endif; ?>
 
 
 </main>
