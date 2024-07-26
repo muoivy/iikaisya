@@ -888,19 +888,21 @@
       @include mq(pc) {
         overflow: unset;
         height: 53rem;
-        gap: 4.7rem;
+        // gap: 4.7rem;
       }
     }
     .item {
-      width: 26rem;
+      // width: 26rem;
       // height: 35.1rem;
+      transform: scale(.8);
       position: relative;
       transition: all .3s ease-in-out;
       transform-origin: top;
       @include mq(pc) {
         opacity: .6;
-        &.is-zoom {
-          width: 33.3rem;
+        &.is-active {
+          // width: 33.3rem;
+          transform: scale(1);
           opacity: 1;
           a {
             padding-bottom: 8rem;
@@ -926,12 +928,12 @@
           .item-name {
             font-size: 2rem;
           }
-          &:not(.is-first) {
-            margin-left: 6rem;
-          }
-          &.is-last {
-            margin-left: 12rem;
-          }
+          // &:not(.is-first) {
+          //   margin-left: 12rem;
+          // }
+          // &.is-last {
+          //   margin-left: -12rem;
+          // }
         }
       }
       @include mq(sp) {

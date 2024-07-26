@@ -148,9 +148,15 @@
                 ?>
                   <li class="splide__slide item">
                     <a href="<?php the_permalink(); ?>">
-                      <div class="item-image"><?php echo get_the_post_thumbnail(get_the_ID(), 'full', array('class' => 'fit')) ?></div>
+                      <!-- <div class="item-image"><?php echo get_the_post_thumbnail(get_the_ID(), 'full', array('class' => 'fit')) ?></div> -->
+                      <?php if(has_post_thumbnail()): ?>
+                        <div class="item-image"><?php echo get_the_post_thumbnail(get_the_ID(), 'full', array('class' => 'fit')) ?></div>
+                      <?php else: ?>
+                        <div class="item-image"><img class="image-default" src="<?php echo THEME_URL ?>/assets/img/interview/img_default.png" alt=""></div>
+                      <?php endif; ?>
                       <div class="item-text">
-                        <div class="item-position"><?php the_field('date'); ?>：<?php the_field('position'); ?></div>
+                        <!-- <div class="item-position"><?php the_field('date'); ?>：<?php the_field('position'); ?></div> -->
+                        <div class="item-position"><?php the_field('date'); ?></div>
                         <div class="item-name"><?php the_title(); ?></div>
                       </div>
                       <div class="item-btn c-btn c-btn_border">VIEW MORE</div>

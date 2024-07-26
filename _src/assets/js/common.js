@@ -165,37 +165,43 @@ if ($(".top-interview_slider").length > 0) {
     type: 'loop',
     autoWidth: true,
     pagination: false,
+    cloneStatus: false,
+    rewind: true,
+    updateOnMove: true,
+    // padding: { left: '4rem', right: '0' },
+    // gap: '4.7rem',
   }).mount({
     SlideNumber
   });
 
-  interviewSlider.on('mounted move', function () {
-    var activeSlide = interviewSlider.Components.Elements.slides[interviewSlider.index];
-    var allSlides = interviewSlider.Components.Elements.slides;
-    var totalSlides = allSlides.length;
 
-    allSlides.forEach(slide => {
-      slide.classList.remove('is-zoom');
-    });
+  // interviewSlider.on('mounted move', function () {
+  //   var activeSlide = interviewSlider.Components.Elements.slides[interviewSlider.index];
+  //   var allSlides = interviewSlider.Components.Elements.slides;
+  //   var totalSlides = allSlides.length;
 
-    activeSlide.classList.add('is-zoom');
+  //   allSlides.forEach(slide => {
+  //     slide.classList.remove('is-zoom');
+  //   });
 
-    // Add is-last class if on the last slide
-    if (interviewSlider.index === totalSlides - 1) {
-      activeSlide.classList.add('is-last');
-    } else {
-      activeSlide.classList.remove('is-last');
-    }
+  //   activeSlide.classList.add('is-zoom');
 
-    // Add is-first class if on the first slide
-    if (interviewSlider.index === 0) {
-      activeSlide.classList.add('is-first');
-    } else {
-      activeSlide.classList.remove('is-first');
-    }
-  });
+  //   // Add is-last class if on the last slide
+  //   if (interviewSlider.index === totalSlides - 1) {
+  //     activeSlide.classList.add('is-last');
+  //   } else {
+  //     activeSlide.classList.remove('is-last');
+  //   }
 
-  interviewSlider.emit('move');
+  //   // Add is-first class if on the first slide
+  //   if (interviewSlider.index === 0) {
+  //     activeSlide.classList.add('is-first');
+  //   } else {
+  //     activeSlide.classList.remove('is-first');
+  //   }
+  // });
+
+  // interviewSlider.emit('move');
 
 }
 
