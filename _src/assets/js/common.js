@@ -165,11 +165,9 @@ if ($(".top-interview_slider").length > 0) {
     type: 'loop',
     autoWidth: true,
     pagination: false,
-    cloneStatus: false,
-    rewind: true,
     updateOnMove: true,
-    // padding: { left: '4rem', right: '0' },
-    // gap: '4.7rem',
+    gap: '4.8rem',
+    cloneStatus: false,
   }).mount({
     SlideNumber
   });
@@ -182,9 +180,11 @@ if ($(".top-interview_slider").length > 0) {
 
   //   allSlides.forEach(slide => {
   //     slide.classList.remove('is-zoom');
+  //     slide.style.margin = '0';
   //   });
 
   //   activeSlide.classList.add('is-zoom');
+  //   activeSlide.style.margin = '0 6rem 0 0';
 
   //   // Add is-last class if on the last slide
   //   if (interviewSlider.index === totalSlides - 1) {
@@ -199,9 +199,13 @@ if ($(".top-interview_slider").length > 0) {
   //   } else {
   //     activeSlide.classList.remove('is-first');
   //   }
+
+  //   interviewSlider.updated
   // });
 
   // interviewSlider.emit('move');
+
+
 
 }
 
